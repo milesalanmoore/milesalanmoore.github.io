@@ -1,8 +1,12 @@
 ---
-permalink: /about/
+permalink: /
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I am a **quantitative ecologist** interested in the intersection between landscape scale vegetation dynamics, phenology, plasticity, and evolution. In my work, I seek to join long term climate data, both *in-situ* and modeled, remotely sensed data, and field methods. To do this, I enjoying using spatiotemporal statistical models and other quantitative methods, especially bayesian heirarchical models!
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+I am currently a first year PhD student in Ecology and Evolutionary Biology at the University of Colorado Boulder and where I work in the alpine tundra at the [Niwot Ridge Long Term Ecological Research Site](https://nwt.lternet.edu/). I am a skilled programmer in R, Python, and Stan, and enjoy studying ecological theory!
+
+Previously, I worked as a **Professional Scientist** for the [Institute of Arctic and Alpine Research](https://www.colorado.edu/instaar/) where I engineered data pipelines to algorithmicly clean and publish long term climate time series, including eddy-covariance flux tower data. Before that, I interned for the [National Aeronautics and Space Administration's Arctic-Boreal Vulnerability Experiment](https://above.nasa.gov/) (NASA ABoVE) as a **Remote Sensing Data Analyst**.
+
+*-Miles Alan Moore, Nov. 2024*
