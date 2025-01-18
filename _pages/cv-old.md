@@ -92,7 +92,7 @@ Kittel, T., et al. (2024). Infilled daily air temperature and precipitation data
 ## Technical Skills  
 **Programming:** R, Python, bash, JavaScript, Fortran, awk  
 **Applications:** ArcGIS Pro, Google Earth Engine, ENVI, GDAL, TensorFlow, scikit-learn  
-**Quantitative Skills:** Bayesian hierarchical models, remote sensing, machine learning, spatiotemporal statistics  
+**computational Skills:** Bayesian hierarchical models, remote sensing, machine learning, spatiotemporal statistics  
 
 ---
 

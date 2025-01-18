@@ -1,5 +1,5 @@
 main:
   - title: "CV"
-    url: /CV/
-  - title: "Posts"
-    url: /posts/
+    url: /static/MilesMoore_CV.pdf
+  # - title: "Posts"
+  #   url: /posts/

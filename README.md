@@ -13,7 +13,7 @@ excerpt: "PhD Student: Alpine Tundra Vegetation Dynamics"
 intro:
     - image_path: /assets/images/bio-photo.jpg
       excerpt: 
-        I am a **quantitative ecologist** interested in the intersection between landscape scale vegetation dynamics, phenology, plasticity, and evolution. In my work, I seek to use Bayesian statistical models to join long term climate data, both *in-situ* and modeled, remotely sensed data, and field methods.
+        I am a **computational ecologist** interested in the intersection between landscape scale vegetation dynamics, phenology, plasticity, and evolution. In my work, I seek to use Bayesian statistical models to join long term climate data, both *in-situ* and modeled, remotely sensed data, and field methods.
         <br /><br />
         I am currently a first year PhD student in Ecology and Evolutionary Biology at the University of Colorado Boulder and where I work in the alpine tundra at the [Niwot Ridge Long Term Ecological Research Site](https://nwt.lternet.edu/). I am a skilled programmer in R, Python, and Stan, and enjoy studying ecological theory!
         <br /><br />
