@@ -101,8 +101,8 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false
-      share: false
+      comments: true
+      share: true
       related: false
   # _pages
   - scope:
