@@ -64,10 +64,10 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "PhD Student, University of Colorado Boulder."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://milesalanmoore.github.io"
-    - label: "Mastadon"
+    - label: "LinkedIn"
+      icon: "fa-brands fa-linkedin"
+      url: "https://www.linkedin.com/in/milesalanmoore/"
+    - label: "Mastodon"
       icon: "fa-brands fa-mastodon"
       url: "https://ecoevo.social/@MilesAlanMoore"
     - label: "Bluesky"
@@ -79,10 +79,10 @@ author:
 
 footer:
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://milesalanmoore.github.io"
-    - label: "Mastadon"
+    - label: "LinkedIn"
+      icon: "fa-brands fa-linkedin"
+      url: "https://www.linkedin.com/in/milesalanmoore/"
+    - label: "Mastodon"
       icon: "fa-brands fa-mastodon"
       url: "https://ecoevo.social/@MilesAlanMoore"
     - label: "Bluesky"
