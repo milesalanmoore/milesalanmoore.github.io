@@ -30,9 +30,6 @@ Boulder, Colorado
 ---
 
 ## Research & Work Experience  
-**Visiting Scientist**  
-*National Center for Atmospheric Research – Climate & Global Dynamics*  
-NCAR Mesa Lab, Boulder, CO (12/2023 – Present)  
 
 **Professional Scientist I**  
 *Institute of Arctic and Alpine Research, University of Colorado Boulder* (12/2023 – 08/2024)  
