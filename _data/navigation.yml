@@ -5,3 +5,5 @@ main:
   #   url: /posts/
   - title: "projects"
     url: /projects/
+  - title: "teaching"
+    url: /teaching/
