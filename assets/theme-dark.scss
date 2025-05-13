@@ -7,6 +7,7 @@
 // Colors: Quarto variables
 $primary:                    $spc-primary-light;
 $secondary:                  $spc-secondary-light;
+
 // Colors: custom variables
 $primary-dark:               $spc-primary;
 $secondary-light:            $spc-secondary;
@@ -17,18 +18,19 @@ $accent-dark:                $spc-accent-dark;
 // Body
 $body-color:                 $primary-dark;
 $body-bg:                    $spc-bg-0;
-$body-secondary:             #9DA3AA; // 6c757d
+$body-secondary:             #909aa7;
 
 // Fonts
 
-// stylelint-disable-next-line value-keyword-case
-$font-family-sans-serif:     "Red Hat Text", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-// $font-family-serif: "Petrona", serif,;
+$font-family-sans-serif:    "IBM Plex Sans", "Noto Sans", "Red Hat Text", "Source Sans Pro", "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+
+$font-family-serif:         "Cormorant", "Petrona", "Lora", "Crimson Pro", "Libre Baskerville", "Georgia", serif;
+
 $headings-font-weight:       400;
 
-$font-family-monospace:      "Dank Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-monospace:      "Fira Code", "Fira Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-$headings-font-family:       "Petrona";
+$headings-font-family:       "Cormorant";
 
 // Links
 
@@ -343,5 +345,10 @@ details > summary {
 
   .navbar .quarto-navbar-tools {
     text-align: left;
+  }
+  
+  .about-contents {
+    border-left: solid 1px $primary;
+    padding-left: 1.5em;
   }
 }

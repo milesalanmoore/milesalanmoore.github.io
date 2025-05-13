@@ -18,6 +18,9 @@ website:
         href: https://www.linkedin.com/in/milesalanmoore
       # - icon: "{{< ai orcid >}}"
       #   href: https://orcid.org/0009-0003-0173-7602
+  page-footer:  
+    left: >-
+     &#169; 2025 Miles Alan Moore &#8729; Made with [Quarto](https://quarto.org)
       
 format:
   html:
