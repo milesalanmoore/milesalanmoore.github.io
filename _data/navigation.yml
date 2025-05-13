@@ -1,9 +1,0 @@
-main:
-  # - title: "cv"
-  #   url: /static/MilesMoore_CV.pdf
-  # - title: "posts"
-  #   url: /posts/
-  - title: "projects"
-    url: /projects/
-  - title: "teaching"
-    url: /teaching/

@@ -1,0 +1,57 @@
+---
+title: "About"
+about:
+  template: trestles
+  image: archive/images/bio-photo.jpg
+page-layout: article
+format:
+  html: 
+    grid:
+      sidebar-width: 100px
+      body-width: 1500px
+      margin-width: 150px
+      gutter-width: 1.5rem
+---
+
+I am a **computational scientist** and PhD student at the University of Colorado Boulder, developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. My work focuses on plant phenology—the temporal dynamics of key plant life cycle events—in response to variable and often unreliable exogenous information. By integrating **Bayesian generative modeling**, **machine learning**, and **high-performance computing**, I aim to build theoretically-grounded, data-driven models that inform resource management and decision-making in dynamic systems, including agricultural and mountain landscapes. I work across **R**, **Python**, **Stan**, and **Julia**, with expertise in applied computational statistics, geospatial analysis, and remote sensing.
+
+I am passionate about building **generalizable computational tools** that bridge scientific discovery and real-world application.
+
+Outside of research, I enjoy rock climbing, running, cycling, fly-fishing, reading, and most of all, spending time with my wife.
+
+# Education
+**Ph.D. Ecology and Evolutionary Biology**  
+University of Colorado Boulder | Boulder, CO  
+08.2024 - 05.2029 (expected)
+
+**B.A. Ecology and Evolutionary Biology**  
+University of Colorado Boulder | Boulder, CO  
+*summa cum laude*, With distinction, GPA: 4.0  
+01.2022 - 12.2023  
+
+**Associate of Science**  
+Front Range Community College | Westminster, CO    
+08.2019 – 12.2021
+
+
+# Experience 
+05.2025 – 08.2025  
+Graduate Research Assistant, *Cooperative Institute for Research in Environmental Sciences*, Boulder, CO  
+
+12.2023 – 08.2024  
+Professional Scientist I, *Institute of Arctic and Alpine Research*, Boulder, CO  
+
+05.2023 – 12.2023  
+Remote Sensing Intern, *National Aeronautics and Space Administration*, Greenbelt, MD  
+
+08.2021 – 12.2023  
+Data Management Assistant, *Institute of Arctic and Alpine Research*, Boulder, CO  
+
+05.2021 – 08.2021  
+Field Research Assistant, *Niwot Ridge Long Term Ecological Research (LTER) site*, Boulder, CO  
+
+
+# Teaching
+08.2024 – 12.2024  
+Teaching Assistant, *University of Colorado Boulder*  
+EBIO 4410 / 5410 Biological Statistics   
