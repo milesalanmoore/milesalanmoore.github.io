@@ -16,6 +16,8 @@ website:
         target: "_blank"
       - icon: linkedin
         href: https://www.linkedin.com/in/milesalanmoore
+      # - icon: "{{< ai orcid >}}"
+      #   href: https://orcid.org/0009-0003-0173-7602
       
 format:
   html:
@@ -25,7 +27,7 @@ format:
         - cosmo
         - assets/theme-light.scss
         - assets/miles/colors-light.scss
-        - assets/miles/fonts.scss
+        # - assets/miles/fonts.scss
       dark: 
         - cosmo
         - assets/theme-dark.scss

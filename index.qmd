@@ -27,7 +27,7 @@ resources:
 
 ::: {#hero-heading}
 
-I am a **computational scientist** and PhD student at the University of Colorado Boulder, developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. By integrating **Bayesian generative modeling**, **machine learning**, and **high-performance computing**, I aim to build theoretically-grounded, data-driven models that inform resource management and decision-making in dynamic systems, including agricultural and mountain landscapes.
+I am a **computational scientist** and PhD student at the University of Colorado Boulder developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. By integrating **Bayesian generative modeling**, **machine learning**, and **high-performance computing**, I aim to build theoretically-grounded, data-driven models that inform resource management and decision-making in dynamic systems, including agricultural and mountain landscapes.
 
 
 [Learn more about me &rarr;](/about.html){.about-links .subtitle}
