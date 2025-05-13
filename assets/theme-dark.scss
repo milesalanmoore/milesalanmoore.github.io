@@ -5,23 +5,22 @@
 // Rules: https://github.com/quarto-dev/quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-rules.scss
 
 // Colors: Quarto variables
-$primary:                    $spc-primary-light;
-$secondary:                  $spc-secondary-light;
+$primary:                    $mm-primary-light;
+$secondary:                  $mm-secondary-light;
 
-// Colors: custom variables
-$primary-dark:               $spc-primary;
-$secondary-light:            $spc-secondary;
-$accent:                     $spc-accent; 
-$accent-light:               $spc-accent-light;
-$accent-dark:                $spc-accent-dark;
+// Allocating my color palette
+$primary-dark:               $mm-primary;
+$secondary-light:            $mm-secondary;
+$accent:                     $mm-accent; 
+$accent-light:               $mm-accent-light;
+$accent-dark:                $mm-accent-dark;
 
-// Body
+// Body text
 $body-color:                 $primary-dark;
-$body-bg:                    $spc-bg-0;
+$body-bg:                    $mm-bg-0;
 $body-secondary:             #909aa7;
 
-// Fonts
-
+// Defining font stack
 $font-family-sans-serif:    "IBM Plex Sans", "Noto Sans", "Red Hat Text", "Source Sans Pro", "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 
 $font-family-serif:         "Cormorant", "Petrona", "Lora", "Crimson Pro", "Libre Baskerville", "Georgia", serif;
@@ -32,21 +31,19 @@ $font-family-monospace:      "Fira Code", "Fira Mono", SFMono-Regular, Menlo, Mo
 
 $headings-font-family:       "Cormorant";
 
-// Links
-
+// Link format
 $link-color:                  $secondary;
 $link-decoration:             underline;
 $link-hover-color:            $secondary-light;
 $link-hover-decoration:       none;
 
 // Tables
-
 $table-border-color:          $primary;
 $table-group-separator-color: lighten($primary, 40%);
 $table-caption-color:         $body-secondary;
 
 // Code blocks
-$code-block-bg:              $spc-bg-1; // 2b2b2b
+$code-block-bg:              $mm-bg-1; // 2b2b2b
 $code-block-border:          $body-bg;
 
 // Inline code
@@ -64,7 +61,7 @@ $navbar-fg:                   $secondary;
 // Footer text
 $footer-fg:                   $primary;
 
-// table variable overrides
+// Table variable overrides
 $table-group-separator-color: lighten($primary, 25%);
 $table-group-separator-color-lighter: lighten($primary, 50%);
 
@@ -110,7 +107,6 @@ pre code {
 }
 
 // Social icons
-
 // footer
 .nav-footer-center i {
   color: $secondary !important;
@@ -130,19 +126,14 @@ pre code {
 }
 
 // Contact
-
 // social links
 .link-dark.me-1 i {
   color: $secondary !important;
 }
 
-//// custom substack embed
-//#custom-substack-embed p.success {
-//  color: #FFFBF2 !important;
-//}
+
 
 // Buttons
-
 // post links
 .btn-secondary {
   color: $secondary;
@@ -167,7 +158,6 @@ pre code {
 }
 
 // Categories
-
 // posts
 .quarto-category {
   background-color: $body-bg;
@@ -190,7 +180,6 @@ pre code {
 }
 
 // Navbar
-
 // header
 .navbar {
   background: transparent;
@@ -225,7 +214,6 @@ pre code {
 }
 
 // Footer
-
 // links on left side
 .nav-footer a {
     color: $secondary;
@@ -244,10 +232,10 @@ pre code {
 
 // Listing cards
 .card {
-  background: $spc-bg-1 !important;
+  background: $mm-bg-1 !important;
   border: none;
   border-radius: 4px;
-  box-shadow: 1px 1px 10px $spc-bg-00 !important;
+  box-shadow: 1px 1px 10px $mm-bg-00 !important;
 }
 
 .card-img {
@@ -255,7 +243,6 @@ pre code {
 }
 
 // Title block
-
 // style background image on posts
 .featured-image {
   // https://stackoverflow.com/a/24084708
@@ -266,7 +253,7 @@ pre code {
   box-shadow: inset 0 0 0 1000px rgba(0,38,66,0.75);
 }
 
-// make nav bar be centered in mobile
+// Center nav bar on mobile devices
 .fixed-top {
   position: absolute;
 }
@@ -275,8 +262,7 @@ pre code {
   position: absolute;
 }
 
-// links in description
-
+// Links in description
 .description a {
   text-decoration: underline !important;
   &:hover {
@@ -284,7 +270,7 @@ pre code {
   }
 }
 
-// Throughout the site
+// Global settings (site-wide)
 
 // title
 .title {
@@ -293,7 +279,7 @@ pre code {
   line-height: 1.1em;
 }
 
-// subtitle + Learn More About Me
+// subtitle + About me ...
 .subtitle {
   font-size: 1.2em;
   // links within subtitles

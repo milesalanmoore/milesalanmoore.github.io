@@ -5,18 +5,18 @@
 // Rules: https://github.com/quarto-dev/quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-rules.scss
 
 // Colors: Quarto variables
-$primary:                    $spc-primary-light;
-$secondary:                  $spc-secondary;
+$primary:                    $mm-primary-light;
+$secondary:                  $mm-secondary;
 // Colors: custom variables
-$primary-dark:               $spc-primary;
-$secondary-light:            $spc-secondary-light;
-$accent:                     $spc-accent; 
-$accent-light:               $spc-accent-light;
-$accent-dark:                $spc-accent-dark;
+$primary-dark:               $mm-primary;
+$secondary-light:            $mm-secondary-light;
+$accent:                     $mm-accent; 
+$accent-light:               $mm-accent-light;
+$accent-dark:                $mm-accent-dark;
 
 // Body
 $body-color:                 $primary-dark;
-$body-bg:                    $spc-bg-0;
+$body-bg:                    $mm-bg-0;
 $body-secondary:             #6C757D;
 
 // Fonts
