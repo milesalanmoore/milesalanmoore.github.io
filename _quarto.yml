@@ -1,0 +1,38 @@
+project:
+  type: website
+
+website:
+  title: "miles alan moore"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+    tools:
+      - icon: github
+        href: https://github.com/milesalanmoore
+        text: My Github Profile
+        target: "_blank"
+      - icon: linkedin
+        href: https://www.linkedin.com/in/milesalanmoore
+      
+format:
+  html:
+    respect-user-color-scheme: true
+    theme:
+      light:
+        - cosmo
+        - assets/theme-light.scss
+        - assets/miles/colors-light.scss
+        - assets/miles/fonts.scss
+      dark: 
+        - cosmo
+        - assets/theme-dark.scss
+        - assets/miles/colors-dark.scss
+      
+    css: styles.css
+    toc: true
+
+
+
