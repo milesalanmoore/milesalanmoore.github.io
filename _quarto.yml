@@ -21,7 +21,7 @@ website:
       
 format:
   html:
-    respect-user-color-scheme: true
+    respect-user-color-scheme: false
     theme:
       light:
         - cosmo

@@ -13,8 +13,6 @@ format:
       gutter-width: 1.5rem
 ---
 
-
-
 I am a **computational scientist** and PhD student at the University of Colorado Boulder, developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. My work focuses on plant phenology—the temporal dynamics of key plant life cycle events—in response to variable and often unreliable exogenous information. By integrating **Bayesian generative modeling**, **machine learning**, and **high-performance computing**, I aim to build theoretically-grounded, data-driven models that inform resource management and decision-making in dynamic systems, including agricultural and mountain landscapes. I work across **R**, **Python**, **Stan**, and **Julia**, with expertise in applied computational statistics, geospatial analysis, and remote sensing.
 
 I am passionate about building **generalizable computational tools** that bridge scientific discovery and real-world application.
