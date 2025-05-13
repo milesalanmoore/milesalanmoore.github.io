@@ -12,7 +12,7 @@
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  text-align: justify;
+  text-align: center;
 }
 
 /* main chunk: title, subtitle, and about message */
@@ -65,7 +65,7 @@
 
     /* center subtitle */
     .subtitle {
-      text-align: justify !important;
+      text-align: center !important;
     }
 
     /* introduction */
