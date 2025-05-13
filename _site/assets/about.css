@@ -24,14 +24,12 @@
 .about-contents {
   padding: 0 0 0 2em !important;
   text-align: justify !important;
-  border-left: solid 1px;
-
+  border-left: 1px solid black;
 }
 
 /* social links: individual links */
 .about-entity .about-link {
   padding: 0.25em 0.25em !important;
-  border: none !important;  
 }
 
 /* About Me ->  */
@@ -50,6 +48,12 @@
 
 /* mobile query up for screens up to ~992px wide */
 @media screen and (max-width: 991.98px) {
+  .about-image {
+    order: 1 !important;
+    padding: 0 2em 0 2em !important;
+    margin-top: 0 !important; 
+    }
+
     /* center text */
     .entity-contents {
       order: 2 !important;
