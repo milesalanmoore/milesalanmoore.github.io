@@ -3,13 +3,6 @@ date: "2025-05-13T19:53:00+00:00"
 title: "License"
 ---
 
-All rights reserved for any and all images, data figures, photos, graphic designs, and other original creative works unless explicitly stated otherwise.
-
-<center>
-<i class="fa-sharp-duotone fa-solid fa-copyright fa-xl"></i>
-
-</center>  
-
 All blog posts are released under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 <center>
