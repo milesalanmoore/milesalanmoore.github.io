@@ -22,7 +22,7 @@ website:
     left: >-
      &#169; 2025 Miles Alan Moore &#8729; Made with [Quarto](https://quarto.org)
     center: |
-      <a class="link-dark me-1" href="https://bsky.app/profile/milesalanmoore.com" title="Bluesky" target="_blank" rel="noopener">{{< fa brands bluesky >}}</a>
+      <a class="link-dark me-1" href="https://bsky.app/profile/milesalanmoore.bsky.social" title="Bluesky" target="_blank" rel="noopener">{{< fa brands bluesky >}}</a>
       <a class="link-dark me-1" href="https://linkedin.com/in/milesalanmoore" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
       <a class="link-dark me-1" href="https://github.com/milesalanmoore" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
       <a class="link-dark me-1" href="https://orcid.org/0009-0003-0173-7602" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
