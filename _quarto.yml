@@ -4,20 +4,18 @@ project:
 website:
   title: "miles a. moore"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: About
+      - href: news/index.qmd
+        text: News
     tools:
-      - icon: github
-        href: https://github.com/milesalanmoore
-        text: My Github Profile
-        target: "_blank"
-      - icon: linkedin
-        href: https://www.linkedin.com/in/milesalanmoore
-      # - icon: "{{< ai orcid >}}"
-      #   href: https://orcid.org/0009-0003-0173-7602
+      # - icon: github
+      #   href: https://github.com/milesalanmoore
+        # text: My Github Profile
+        # target: "_blank"
   page-footer:  
     left: >-
      &#169; 2025 Miles Alan Moore &#8729; Made with [Quarto](https://quarto.org)

@@ -1,0 +1,7 @@
+---
+title: "Awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
+date: "20250513"
+image: thumbnail.png
+---
+
+I am very grateful and excited to have been selected as one of 30 incoming Department of Energy Computational Science Graduate Fellows (DOE CSGF)! See the full press release on the DOE's website, [here](https://www.energy.gov/science/articles/us-department-energy-selects-35th-class-computational-science-graduate-fellows).

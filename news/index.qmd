@@ -1,0 +1,26 @@
+---
+title: "News" 
+description: |
+    A page for news about my research and whereabouts.
+listing: 
+  contents: 
+  - "**/index.qmd"
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, date, image]
+  image-align: right
+  # image-height: 10em
+
+format: 
+  html: 
+    page-layout: full
+title-block-banner: false
+
+header-includes: >
+  <link rel="stylesheet" href="../assets/news.css">
+resources:
+  - ../assets/news.css
+---
