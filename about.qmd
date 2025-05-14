@@ -2,7 +2,7 @@
 title: "About"
 about:
   template: trestles
-  image: assets/images/bio-photo.jpg
+  image: assets/images/bio-photo-1.jpg
   image-width: 28em
   id: hero-heading
 page-layout: article
