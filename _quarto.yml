@@ -20,8 +20,21 @@ website:
       #   href: https://orcid.org/0009-0003-0173-7602
   page-footer:  
     left: >-
-     &#169; 2025 Miles Alan Moore &#8729; Made with [Quarto](https://quarto.org) in [VS Code](https://code.visualstudio.com/).
-      
+     &#169; 2025 Miles Alan Moore &#8729; Made with [Quarto](https://quarto.org)
+    center: |
+      <a class="link-dark me-1" href="https://bsky.app/profile/milesalanmoore.com" title="Bluesky" target="_blank" rel="noopener">{{< fa brands bluesky >}}</a>
+      <a class="link-dark me-1" href="https://linkedin.com/in/milesalanmoore" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
+      <a class="link-dark me-1" href="https://github.com/milesalanmoore" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+      <a class="link-dark me-1" href="https://orcid.org/0009-0003-0173-7602" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
+
+    right: 
+      # - text: "Contact"
+      #   aria-label: "Contact Form"
+        # href: "contact.qmd"
+      - text: "License"
+        aria-label: "License Details"
+        href: license.qmd
+
 format:
   html:
     respect-user-color-scheme: false
