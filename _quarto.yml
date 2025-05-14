@@ -3,6 +3,7 @@ project:
 
 website:
   title: "miles a. moore"
+  favicon: "assets/miles/favicon2.svg"
   navbar:
     right:
       - href: index.qmd
