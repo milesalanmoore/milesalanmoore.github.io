@@ -1,0 +1,31 @@
+---
+title: "Research"
+page-layout: full
+toc-location: right
+---
+
+My research spans ecology, evolution, and ecophysiology. I study the role that time and uncertainity play in shaping plant responses to the environment. In particular, I focus on *plant phenology*, the timing of annually reoccuring life-history events like growth, maturation, reproduction, and dispersal. Although I have specific expertise in alpine, arctic tundra, and agricultural systems, I view plant phenology as a unifying concept in ecology and evolution which integrates processes across biological scales. Plant phenology is an inherently individual and physiological process that can directly impact fitness, demography, and population persistence. Variation in phenological plasticity among species generates novel temporal community assemblies under variable environmental conditions. Taken together, these processes may scale to impact land surface phenology with critical implications for energy, agriculture, and ecosystem health.
+
+## Publications  
+**Moore, M. A.**., Emery, N. C., and Elmendorf, S. C. (*In prep*). Divergent regional trends in alpine tundra productivity linked to changes in snow-free season length.  
+
+Clark, Eliza I., **Moore, M. A.**, Khoury, C. K., Hulke, B. S., Kane, N. C., Elmendorf, S. C. (*In Review*). Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower.  
+
+## Presentations
+**Moore, M. A.**, Hoy, E. E., Griffith, P. C., Schaefer, K. M., & Bourgeau-Chavez, L. L. (2023). From Field to Air: Integrating Field Data in Support of the ABoVE Airborne Campaign. 2023, B31B-08. *American Geophysical Union* Fall Meeting. San Francisco, CA. https://ui.adsabs.harvard.edu/abs/2023AGUFM.B31B..08M  
+
+## Datasets  
+**Moore, M.A.**, K. Schaefer, L.K. Clayton, E.E. Hoy, M. Auclair, K. Bakian-Dogaheh, M.J. Battaglia, K. Bennett, W.R. Bolton, L.L. Bourgeau-Chavez, A.E. Bredder, D. Chen, R.H. Chen, A.C. Chen, J. Chen, D. Chiasson, R. Chitra-tarak, A. Collins, L. Cornette, J. Dann, E. Devoie, M. Dominico, T.A. Douglas, S. Gagnon, S.E. Grelick, P. Griffith, J. He, G. Iwahana, E. Jafarov, L.K. Jenkins, E.S. Kasischke, S. Kim, P.B. Kirchner, B. Lecavalier, J. Ledman, S. Liben, L. Liu, T.V. Loboda, S. Ludwig, M.J. Macander, N. Matsui, R.J. Michaelides, M. Moghaddam, S. Natali, S.K. Panda, A.D. Parsekian, M. Pearce, W. Quinton, A.V. Rocha, H. Rodenhizer, P. Roy-Léveillée, N. Saravanan, Z. Sauve, S.R. Schaefer, E.A.G. Schuur, O. Sonnentag, T.D. Sullivan, A. Tabatabaeenejad, L. Thomas, B. Thorne, K. Turner, K. Wang, C.J. Wilson, H.A. Zebker, T. Zhang, Y. Zhao, and S. Zwieback. (2025). ABoVE: Soil Moisture and Active Layer Thickness in Alaska, USA and Canada, 2005-2022. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/2369  
+
+White, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Losleben, M., & **Moore, M. A.** (2025). Homogenized, gap-filled, daily air temperature data for Saddle, 1986—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/49a2171ec028c4ddef298752bc9ebe8d      
+
+White, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Williams, M., Losleben, M., & **Moore, M. A.** (2025). Infilled daily precipitation data for Saddle, 1981—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/8caa444276521b797e4a16485dc0e137  
+
+Kittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & **Moore, M. A.** (202a). Infilled daily air temperature data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/0b4f8747ea72258e46681bb511c262f3    
+
+Kittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & **Moore, M. A.** (2025). Infilled daily air temperature data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/b05689181c21ac40d35b6c1c01e2f8a    
+
+Kittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & **Moore, M. A.** (2025). Infilled daily precipitation data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/5f896d7d1eb19649ee2ff9fca7166160    
+
+Kittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & **Moore, M. A.** (2025). Infilled daily precipitation data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/02b125f7d0dc87a6d40e6ca7001471ce  
+

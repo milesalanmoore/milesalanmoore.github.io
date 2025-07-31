@@ -12,6 +12,8 @@ website:
         text: About
       - href: news/index.qmd
         text: News
+      - href: research/index.qmd
+        text: Research
     tools:
       # - icon: github
       #   href: https://github.com/milesalanmoore
@@ -36,7 +38,7 @@ website:
 
 format:
   html:
-    respect-user-color-scheme: false
+    respect-user-color-scheme: true
     theme:
       light:
         - cosmo

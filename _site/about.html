@@ -41,9 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-96611f5ead23dc5c364f5d138c635c27.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-74d7b69f4fffa4eddfbb9d5b224076a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-63a35de01378a9bae83d300e02d0ca54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-74d7b69f4fffa4eddfbb9d5b224076a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f6283122c131c2daaac3340a5ed447f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-89a89f1802c968b83fedf05381b18794.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f6283122c131c2daaac3340a5ed447f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
@@ -224,7 +224,8 @@ ul.task-list li input[type="checkbox"] {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -237,6 +238,14 @@ ul.task-list li input[type="checkbox"] {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -271,6 +280,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./news/index.html"> 
 <span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research/index.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -307,13 +320,14 @@ ul.task-list li input[type="checkbox"] {
   <div class="about-contents"><div id="hero-heading">
 <p>I am a PhD student &amp; incoming Department of Energy Computational Science Graduate Fellow at the University of Colorado Boulder developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. My work focuses on plant phenology—the temporal dynamics of key plant life cycle events—in response to variable and often unreliable exogenous information. By integrating <strong>Bayesian generative modeling</strong>, <strong>machine learning</strong>, and <strong>high-performance computing</strong>, I aim to build theoretically-grounded, data-driven models that inform resource management and decision-making in dynamic systems, including agricultural and mountain landscapes. I work across <strong>R</strong>, <strong>Python</strong>, <strong>Stan</strong>, and <strong>Julia</strong>, with expertise in applied computational statistics, geospatial analysis, and remote sensing.</p>
 <p>I am passionate about building <strong>generalizable computational tools</strong> that bridge scientific discovery and real-world application.</p>
-<p>Outside of research, I enjoy rock climbing, running, cycling, fly-fishing, reading, and most of all, spending time with my wife.</p>
+<p>Outside of research, I enjoy rock climbing, running, cycling, fly-fishing, reading, film photography, and most of all, spending time with my wife.</p>
 <section id="education" class="level1">
 <h1>Education</h1>
 <p><strong>Ph.D.&nbsp;Ecology and Evolutionary Biology</strong><br>
 University of Colorado Boulder | Boulder, CO<br>
 08.2024 - 05.2029 (expected)</p>
 <p><strong>B.A. Ecology and Evolutionary Biology</strong><br>
+Certificate in GIS &amp; Computational Science<br>
 University of Colorado Boulder | Boulder, CO<br>
 <em>summa cum laude</em>, With distinction, GPA: 4.0<br>
 01.2022 - 12.2023</p>
