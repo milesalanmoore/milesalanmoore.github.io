@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://milesalanmoore.github.io/news/2025-05-13_DOECSGF/index.html</loc>
-    <lastmod>2025-05-26T15:15:19.291Z</lastmod>
+    <loc>https://milesalanmoore.github.io/news/index.html</loc>
+    <lastmod>2025-07-31T23:10:17.630Z</lastmod>
   </url>
   <url>
     <loc>https://milesalanmoore.github.io/license.html</loc>
-    <lastmod>2025-05-26T15:15:19.291Z</lastmod>
-  </url>
-  <url>
-    <loc>https://milesalanmoore.github.io/about.html</loc>
-    <lastmod>2025-05-26T15:15:19.272Z</lastmod>
+    <lastmod>2025-07-31T23:10:17.629Z</lastmod>
   </url>
   <url>
     <loc>https://milesalanmoore.github.io/index.html</loc>
-    <lastmod>2025-05-26T15:15:19.291Z</lastmod>
+    <lastmod>2025-07-31T23:10:17.629Z</lastmod>
   </url>
   <url>
-    <loc>https://milesalanmoore.github.io/news/index.html</loc>
-    <lastmod>2025-05-26T15:15:19.292Z</lastmod>
+    <loc>https://milesalanmoore.github.io/about.html</loc>
+    <lastmod>2025-07-31T23:10:17.610Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/research/index.html</loc>
+    <lastmod>2025-07-31T23:10:17.630Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/news/2025-05-13_DOECSGF/index.html</loc>
+    <lastmod>2025-07-31T23:10:17.630Z</lastmod>
   </url>
 </urlset>

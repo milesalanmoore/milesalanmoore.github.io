@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "news/2025-05-13_DOECSGF/index.html",
-    "href": "news/2025-05-13_DOECSGF/index.html",
-    "title": "Awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)",
+    "objectID": "news/index.html",
+    "href": "news/index.html",
+    "title": "News",
     "section": "",
-    "text": "I am very grateful and excited to have been selected as one of 30 incoming Department of Energy Computational Science Graduate Fellows (DOE CSGF)! See the full press release on the DOE’s website, here."
+    "text": "Awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)\n\n\n\n\n\nMay 13, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "license.html",
@@ -14,13 +14,6 @@
     "text": "All blog posts are released under a Creative Commons Attribution-ShareAlike 4.0 International License."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I am a PhD student & incoming Department of Energy Computational Science Graduate Fellow at the University of Colorado Boulder developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. My work focuses on plant phenology—the temporal dynamics of key plant life cycle events—in response to variable and often unreliable exogenous information. By integrating Bayesian generative modeling, machine learning, and high-performance computing, I aim to build theoretically-grounded, data-driven models that inform resource management and decision-making in dynamic systems, including agricultural and mountain landscapes. I work across R, Python, Stan, and Julia, with expertise in applied computational statistics, geospatial analysis, and remote sensing.\nI am passionate about building generalizable computational tools that bridge scientific discovery and real-world application.\nOutside of research, I enjoy rock climbing, running, cycling, fly-fishing, reading, film photography, and most of all, spending time with my wife.\n\nEducation\nPh.D. Ecology and Evolutionary Biology\nUniversity of Colorado Boulder | Boulder, CO\n08.2024 - 05.2029 (expected)\nB.A. Ecology and Evolutionary Biology\nCertificate in GIS & Computational Science\nUniversity of Colorado Boulder | Boulder, CO\nsumma cum laude, With distinction, GPA: 4.0\n01.2022 - 12.2023\nAssociate of Science\nFront Range Community College | Westminster, CO\n08.2019 – 12.2021\n\n\nExperience\n05.2025 – 08.2025\nGraduate Research Assistant, Cooperative Institute for Research in Environmental Sciences, Boulder, CO\n12.2023 – 08.2024\nProfessional Scientist I, Institute of Arctic and Alpine Research, Boulder, CO\n05.2023 – 12.2023\nRemote Sensing Intern, National Aeronautics and Space Administration, Greenbelt, MD\n08.2021 – 12.2023\nData Management Assistant, Institute of Arctic and Alpine Research, Boulder, CO\n05.2021 – 08.2021\nField Research Assistant, Niwot Ridge Long Term Ecological Research (LTER) site, Boulder, CO\n\n\nTeaching\n08.2024 – 12.2024\nTeaching Assistant, University of Colorado Boulder\nEBIO 4410 / 5410 Biological Statistics"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Miles A. Moore",
@@ -28,10 +21,45 @@
     "text": "I am a computational scientist and PhD student at the University of Colorado Boulder developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. By integrating Bayesian generative modeling, machine learning, and high-performance computing, I aim to build theoretically-grounded, data-driven models that inform resource management and decision-making in dynamic systems, including agricultural and mountain landscapes.\nabout me →"
   },
   {
-    "objectID": "news/index.html",
-    "href": "news/index.html",
-    "title": "News",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)\n\n\n\n\n\nMay 13, 2025\n\n\n\n\n\nNo matching items"
+    "text": "I am a PhD student & incoming Department of Energy Computational Science Graduate Fellow at the University of Colorado Boulder developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. My work focuses on plant phenology—the temporal dynamics of key plant life cycle events—in response to variable and often unreliable exogenous information. By integrating Bayesian generative modeling, machine learning, and high-performance computing, I aim to build theoretically-grounded, data-driven models that inform resource management and decision-making in dynamic systems, including agricultural and mountain landscapes. I work across R, Python, Stan, and Julia, with expertise in applied computational statistics, geospatial analysis, and remote sensing.\nI am passionate about building generalizable computational tools that bridge scientific discovery and real-world application.\nOutside of research, I enjoy rock climbing, running, cycling, fly-fishing, reading, film photography, and most of all, spending time with my wife.\n\nEducation\nPh.D. Ecology and Evolutionary Biology\nUniversity of Colorado Boulder | Boulder, CO\n08.2024 - 05.2029 (expected)\nB.A. Ecology and Evolutionary Biology\nCertificate in GIS & Computational Science\nUniversity of Colorado Boulder | Boulder, CO\nsumma cum laude, With distinction, GPA: 4.0\n01.2022 - 12.2023\nAssociate of Science\nFront Range Community College | Westminster, CO\n08.2019 – 12.2021\n\n\nExperience\n05.2025 – 08.2025\nGraduate Research Assistant, Cooperative Institute for Research in Environmental Sciences, Boulder, CO\n12.2023 – 08.2024\nProfessional Scientist I, Institute of Arctic and Alpine Research, Boulder, CO\n05.2023 – 12.2023\nRemote Sensing Intern, National Aeronautics and Space Administration, Greenbelt, MD\n08.2021 – 12.2023\nData Management Assistant, Institute of Arctic and Alpine Research, Boulder, CO\n05.2021 – 08.2021\nField Research Assistant, Niwot Ridge Long Term Ecological Research (LTER) site, Boulder, CO\n\n\nTeaching\n08.2024 – 12.2024\nTeaching Assistant, University of Colorado Boulder\nEBIO 4410 / 5410 Biological Statistics"
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research spans ecology, evolution, and ecophysiology. I study the role that time and uncertainity play in shaping plant responses to the environment. In particular, I focus on plant phenology, the timing of annually reoccuring life-history events like growth, maturation, reproduction, and dispersal. Although I have specific expertise in alpine, arctic tundra, and agricultural systems, I view plant phenology as a unifying concept in ecology and evolution which integrates processes across biological scales. Plant phenology is an inherently individual and physiological process that can directly impact fitness, demography, and population persistence. Variation in phenological plasticity among species generates novel temporal community assemblies under variable environmental conditions. Taken together, these processes may scale to impact land surface phenology with critical implications for energy, agriculture, and ecosystem health."
+  },
+  {
+    "objectID": "research/index.html#publications",
+    "href": "research/index.html#publications",
+    "title": "Research",
+    "section": "Publications",
+    "text": "Publications\nMoore, M. A.., Emery, N. C., and Elmendorf, S. C. (In prep). Divergent regional trends in alpine tundra productivity linked to changes in snow-free season length.\nClark, Eliza I., Moore, M. A., Khoury, C. K., Hulke, B. S., Kane, N. C., Elmendorf, S. C. (In Review). Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower."
+  },
+  {
+    "objectID": "research/index.html#presentations",
+    "href": "research/index.html#presentations",
+    "title": "Research",
+    "section": "Presentations",
+    "text": "Presentations\nMoore, M. A., Hoy, E. E., Griffith, P. C., Schaefer, K. M., & Bourgeau-Chavez, L. L. (2023). From Field to Air: Integrating Field Data in Support of the ABoVE Airborne Campaign. 2023, B31B-08. American Geophysical Union Fall Meeting. San Francisco, CA. https://ui.adsabs.harvard.edu/abs/2023AGUFM.B31B..08M"
+  },
+  {
+    "objectID": "research/index.html#datasets",
+    "href": "research/index.html#datasets",
+    "title": "Research",
+    "section": "Datasets",
+    "text": "Datasets\nMoore, M.A., K. Schaefer, L.K. Clayton, E.E. Hoy, M. Auclair, K. Bakian-Dogaheh, M.J. Battaglia, K. Bennett, W.R. Bolton, L.L. Bourgeau-Chavez, A.E. Bredder, D. Chen, R.H. Chen, A.C. Chen, J. Chen, D. Chiasson, R. Chitra-tarak, A. Collins, L. Cornette, J. Dann, E. Devoie, M. Dominico, T.A. Douglas, S. Gagnon, S.E. Grelick, P. Griffith, J. He, G. Iwahana, E. Jafarov, L.K. Jenkins, E.S. Kasischke, S. Kim, P.B. Kirchner, B. Lecavalier, J. Ledman, S. Liben, L. Liu, T.V. Loboda, S. Ludwig, M.J. Macander, N. Matsui, R.J. Michaelides, M. Moghaddam, S. Natali, S.K. Panda, A.D. Parsekian, M. Pearce, W. Quinton, A.V. Rocha, H. Rodenhizer, P. Roy-Léveillée, N. Saravanan, Z. Sauve, S.R. Schaefer, E.A.G. Schuur, O. Sonnentag, T.D. Sullivan, A. Tabatabaeenejad, L. Thomas, B. Thorne, K. Turner, K. Wang, C.J. Wilson, H.A. Zebker, T. Zhang, Y. Zhao, and S. Zwieback. (2025). ABoVE: Soil Moisture and Active Layer Thickness in Alaska, USA and Canada, 2005-2022. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/2369\nWhite, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Losleben, M., & Moore, M. A. (2025). Homogenized, gap-filled, daily air temperature data for Saddle, 1986—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/49a2171ec028c4ddef298752bc9ebe8d\nWhite, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for Saddle, 1981—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/8caa444276521b797e4a16485dc0e137\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (202a). Infilled daily air temperature data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/0b4f8747ea72258e46681bb511c262f3\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily air temperature data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/b05689181c21ac40d35b6c1c01e2f8a\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/5f896d7d1eb19649ee2ff9fca7166160\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/02b125f7d0dc87a6d40e6ca7001471ce"
+  },
+  {
+    "objectID": "news/2025-05-13_DOECSGF/index.html",
+    "href": "news/2025-05-13_DOECSGF/index.html",
+    "title": "Awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)",
+    "section": "",
+    "text": "I am very grateful and excited to have been selected as one of 30 incoming Department of Energy Computational Science Graduate Fellows (DOE CSGF)! See the full press release on the DOE’s website, here."
   }
 ]
