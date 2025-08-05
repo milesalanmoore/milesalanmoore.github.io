@@ -40,16 +40,15 @@ format:
   html:
     respect-user-color-scheme: true
     theme:
+      dark: 
+        - cosmo
+        - assets/theme-dark.scss
+        - assets/miles/colors-dark.scss
       light:
         - cosmo
         - assets/theme-light.scss
         - assets/miles/colors-light.scss
         # - assets/miles/fonts.scss
-      dark: 
-        - cosmo
-        - assets/theme-dark.scss
-        - assets/miles/colors-dark.scss
-      
     css: styles.css
     toc: true
 
