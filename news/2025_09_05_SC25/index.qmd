@@ -1,0 +1,8 @@
+---
+title: "Conference: Supercomputing 2025 in St. Louis"
+date: "20250905"
+image: thumbnail.png
+---
+
+I am excited to share that I will be attending [Supercomputing 2025 (SC25)](https://sc25.supercomputing.org/) this November in St. Louis, Missouri. SC is the leading international conference for high performance computing, networking, storage, and analysis. I am particularly interested in how large-scale computation enables generative Bayesian modeling, causal inference, and machine learning for environmental data. I'm looking forward to the tutorials, talks, and workshops!
+
