@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://milesalanmoore.github.io/index.html</loc>
-    <lastmod>2025-08-14T22:57:35.490Z</lastmod>
-  </url>
-  <url>
-    <loc>https://milesalanmoore.github.io/news/2025-05-13_DOECSGF/index.html</loc>
-    <lastmod>2025-08-14T22:57:35.490Z</lastmod>
+    <loc>https://milesalanmoore.github.io/license.html</loc>
+    <lastmod>2025-09-05T17:03:11.471Z</lastmod>
   </url>
   <url>
     <loc>https://milesalanmoore.github.io/about.html</loc>
-    <lastmod>2025-08-14T22:57:35.471Z</lastmod>
+    <lastmod>2025-09-05T17:03:11.452Z</lastmod>
   </url>
   <url>
-    <loc>https://milesalanmoore.github.io/license.html</loc>
-    <lastmod>2025-08-14T22:57:35.490Z</lastmod>
+    <loc>https://milesalanmoore.github.io/news/2025_09_05_SC25/index.html</loc>
+    <lastmod>2025-09-05T17:03:11.472Z</lastmod>
   </url>
   <url>
-    <loc>https://milesalanmoore.github.io/research/index.html</loc>
-    <lastmod>2025-08-14T22:57:35.490Z</lastmod>
+    <loc>https://milesalanmoore.github.io/news/2025-05-13_DOECSGF/index.html</loc>
+    <lastmod>2025-09-05T17:03:11.471Z</lastmod>
   </url>
   <url>
     <loc>https://milesalanmoore.github.io/news/index.html</loc>
-    <lastmod>2025-08-14T22:57:35.490Z</lastmod>
+    <lastmod>2025-09-05T17:03:11.472Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/research/index.html</loc>
+    <lastmod>2025-09-05T17:03:11.472Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/index.html</loc>
+    <lastmod>2025-09-05T17:03:11.471Z</lastmod>
   </url>
 </urlset>
