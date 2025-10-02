@@ -7,7 +7,7 @@ toc-location: right
 My research spans ecology, evolution, and ecophysiology. I study the role that time and uncertainity play in shaping plant responses to the environment. In particular, I focus on *plant phenology*, the timing of annually reoccuring life-history events like growth, maturation, reproduction, and dispersal. Although I have specific expertise in alpine, arctic tundra, and agricultural systems, I view plant phenology as a unifying concept in ecology and evolution which integrates processes across biological scales. Plant phenology is an inherently individual and physiological process that can directly impact fitness, demography, and population persistence. Variation in phenological plasticity among species generates novel temporal community assemblies under variable environmental conditions. Taken together, these processes may scale to impact land surface phenology with critical implications for water, energy, agriculture, and ecosystem health.
 
 ## Publications  
-**Moore, M. A.**., Emery, N. C., and Elmendorf, S. C. (*In prep*). Divergent regional trends in alpine tundra productivity linked to changes in snow-free season length.  
+**Moore, M. A.**., Emery, N. C., and Elmendorf, S. C. (*Submitted*). Divergent regional trends in alpine tundra productivity linked to changes in snow-free season length.  
 
 Clark, Eliza I., **Moore, M. A.**, Khoury, C. K., Hulke, B. S., Kane, N. C., Elmendorf, S. C. (*In Review*). Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower.  
 
