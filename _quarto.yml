@@ -29,9 +29,9 @@ website:
       <a class="link-dark me-1" href="https://orcid.org/0009-0003-0173-7602" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
 
     right: 
-      # - text: "Contact"
-      #   aria-label: "Contact Form"
-        # href: "contact.qmd"
+      - text: "AI"
+        aria-label: "AI"
+        href: "ai/index.qmd"
       - text: "License"
         aria-label: "License Details"
         href: license.qmd
