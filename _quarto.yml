@@ -27,6 +27,7 @@ website:
       <a class="link-dark me-1" href="https://linkedin.com/in/milesalanmoore" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
       <a class="link-dark me-1" href="https://github.com/milesalanmoore" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
       <a class="link-dark me-1" href="https://orcid.org/0009-0003-0173-7602" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
+      <a class="link-dark me-1" href="https://scholar.google.com/citations?user=SaaaeRYAAAAJ&hl=en" title="orcid" target="_blank" rel="noopener">{{< fa brands google-scholar >}}</a>
 
     right: 
       - text: "AI"
