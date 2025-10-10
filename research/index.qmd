@@ -9,7 +9,7 @@ My research spans ecology, evolution, and ecophysiology. I study the role that t
 Plant phenology is an inherently individual and physiological process that can directly impact fitness, demography, and population persistence. At higher levels of organization, variation in phenological plasticity among species generates novel temporal community assemblies under variable environmental conditions. Taken together, these processes may scale to impact land surface and ecosystem phenology with critical implications for water, energy, agriculture, and ecosystem health.
 
 ## Publications  
-**Moore, Miles A.**., Emery, N. C., and Elmendorf, S. C. (*In Review*). Divergent regional trends in alpine tundra productivity linked to changes in snow-free season length.  
+**Moore, Miles A.**., Emery, N. C., and Elmendorf, S. C. (*In Review*). Divergent regional trends in alpine tundra productivity linked to changes in snow-free season length. [Preprint](https://doi.org/10.22541/essoar.176005847.72387941/v1)
 
 Clark, Eliza I., **Moore, M. A.**, Khoury, C. K., Hulke, B. S., Kane, N. C., Elmendorf, S. C. (*In Review*). Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower.  
 
