@@ -13,6 +13,8 @@ Plant phenology is an inherently individual and physiological process that can d
 
 Clark, Eliza I., **Moore, M. A.**, Khoury, C. K., Hulke, B. S., Kane, N. C., Elmendorf, S. C. (*In Review*). Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower.  
 
+**Moore, Miles. A.**, Hoy, E. E., Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., Auclair, M., Bakian-Dogaheh, K., Battaglia, M., Bennett, K., Bolton, W. R., Bredder, A., Chapman, B., Chen, A. C., Chen, D., Chen, R. H., Chen, J., Chiasson, D., Chitra-Tarak, R., Collins, A., ... Zhang, T., Zhao, Y., & Zwieback, S. (*Submitted*). Soil moisture and active layer thickness across Alaska, USA and Northwestern Canada.
+
 ## Presentations
 **Moore, Miles A.**, Hoy, E. E., Griffith, P. C., Schaefer, K. M., & Bourgeau-Chavez, L. L. (2023). From Field to Air: Integrating Field Data in Support of the ABoVE Airborne Campaign. 2023, B31B-08. *American Geophysical Union* Fall Meeting. San Francisco, CA. https://ui.adsabs.harvard.edu/abs/2023AGUFM.B31B..08M  
 
