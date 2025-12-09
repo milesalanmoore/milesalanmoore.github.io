@@ -1,5 +1,5 @@
 ---
-title: "Awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
+title: "Miles is awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
 date: "20250513"
 image: thumbnail.png
 ---
