@@ -11,7 +11,7 @@ Plant phenology is an inherently individual and physiological process that can d
 ## Publications  
 **Moore, M.A.**, Emery, N. C., and Elmendorf, S. C. (*In Review*). Divergent regional trends in alpine tundra productivity linked to changes in snow-free season length. [Preprint](https://doi.org/10.22541/essoar.176005847.72387941/v1)
 
-Clark, Eliza I., **Moore, M. A.**, Khoury, C. K., Hulke, B. S., Kane, N. C., Elmendorf, S. C. (*In Press*). Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower. *New Phytologist*.
+Clark, E.I., **Moore, M.A.**, Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C. (2025), Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower. New Phytol. [DOI](https://doi.org/10.1111/nph.70790)
 
 **Moore, M.A.**, Hoy, E. E., Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., Auclair, M., Bakian-Dogaheh, K., Battaglia, M., Bennett, K., Bolton, W. R., Bredder, A., Chapman, B., Chen, A. C., Chen, D., Chen, R. H., Chen, J., Chiasson, D., Chitra-Tarak, R., Collins, A., ... Zhang, T., Zhao, Y., & Zwieback, S. (*Submitted*). Soil moisture and active layer thickness across Alaska, USA and Northwestern Canada.
 
