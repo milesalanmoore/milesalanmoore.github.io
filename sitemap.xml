@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://milesalanmoore.github.io/research/index.html</loc>
-    <lastmod>2025-12-10T15:20:52.789Z</lastmod>
-  </url>
-  <url>
-    <loc>https://milesalanmoore.github.io/news/2025_09_05_SC25/index.html</loc>
-    <lastmod>2025-12-10T15:20:52.789Z</lastmod>
-  </url>
-  <url>
-    <loc>https://milesalanmoore.github.io/news/2025-05-13_DOECSGF/index.html</loc>
-    <lastmod>2025-12-10T15:20:52.785Z</lastmod>
-  </url>
-  <url>
-    <loc>https://milesalanmoore.github.io/license.html</loc>
-    <lastmod>2025-12-10T15:20:52.785Z</lastmod>
-  </url>
-  <url>
-    <loc>https://milesalanmoore.github.io/ai/index.html</loc>
-    <lastmod>2025-12-10T15:20:52.767Z</lastmod>
-  </url>
-  <url>
-    <loc>https://milesalanmoore.github.io/index.html</loc>
-    <lastmod>2025-12-10T15:20:52.785Z</lastmod>
-  </url>
-  <url>
-    <loc>https://milesalanmoore.github.io/news/index.html</loc>
-    <lastmod>2025-12-10T15:20:52.789Z</lastmod>
-  </url>
-  <url>
-    <loc>https://milesalanmoore.github.io/news/2025-12-04_NPR/index.html</loc>
-    <lastmod>2025-12-10T15:20:52.786Z</lastmod>
+    <loc>https://milesalanmoore.github.io/research/articles/sunflower-optimal/index.html</loc>
+    <lastmod>2025-12-11T22:08:53.890Z</lastmod>
   </url>
   <url>
     <loc>https://milesalanmoore.github.io/about.html</loc>
-    <lastmod>2025-12-10T15:20:52.767Z</lastmod>
+    <lastmod>2025-12-11T22:08:53.857Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/news/2025-12-04_NPR/index.html</loc>
+    <lastmod>2025-12-11T22:08:53.880Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/news/2025-05-13_DOECSGF/index.html</loc>
+    <lastmod>2025-12-11T22:08:53.879Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/license.html</loc>
+    <lastmod>2025-12-11T22:08:53.879Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/ai/index.html</loc>
+    <lastmod>2025-12-11T22:08:53.857Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/index.html</loc>
+    <lastmod>2025-12-11T22:08:53.879Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/news/index.html</loc>
+    <lastmod>2025-12-11T22:08:53.884Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/news/2025-12-09_Clarketal2025NP/index.html</loc>
+    <lastmod>2025-12-11T22:08:53.883Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/news/2025_09_05_SC25/index.html</loc>
+    <lastmod>2025-12-11T22:08:53.884Z</lastmod>
+  </url>
+  <url>
+    <loc>https://milesalanmoore.github.io/research/index.html</loc>
+    <lastmod>2025-12-11T22:08:53.890Z</lastmod>
   </url>
 </urlset>
