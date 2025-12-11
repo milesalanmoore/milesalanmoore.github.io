@@ -4,7 +4,7 @@ page-layout: full
 toc-location: right
 format:
     html:
-        css: research.scss
+        css: /research/research.scss
 
 ---
 
