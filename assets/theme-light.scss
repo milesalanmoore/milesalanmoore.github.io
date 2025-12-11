@@ -290,6 +290,24 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   }
 }
 
+// Pub card info
+.pub-links .btn-outline-info {
+  border-color: $primary-dark;
+  color: $primary-dark;
+  font-weight: 600;
+}
+
+.pub-links .btn-outline-info:hover {
+  background-color: $primary-dark;
+  border-color: $primary-dark;
+  color: white;
+}
+
+.pub-authors {
+  color: $primary-dark;
+  margin-bottom: 0.5rem;
+}
+
 // Mobile
 
 @media screen and (max-width: 991.98px) {

@@ -23,4 +23,4 @@ header-includes: >
   <link rel="stylesheet" href="../assets/news.css">
 resources:
   - ../assets/news.css
----
+--- 

@@ -3,8 +3,16 @@ title: "Niwot Ridge LTER, Emery Lab, and Miles' work featured on NPR"
 date: "20251204"
 image: thumbnail.png
 ---
+::: {style="margin-bottom: 2rem; text-align: center;"}
+<a class="link-dark me-1" href="https://www.kunc.org/kunc/2025-12-04/alpine-plants" title="Like to article" target="_blank" rel="noopener">{{< fa link >}}</a> [Link to NPR-KUNC article](https://www.kunc.org/kunc/2025-12-04/alpine-plants) || 
+<a class="link-dark me-1" href="https://emery-lab.org" title="Emery Lab" target="_blank" rel="noopener">{{< fa link >}}</a> [Emery Lab](https://emery-lab.org) || 
+<a class="link-dark me-1" href="https://nwt.lternet.edu/" title="Niwot Ridge LTER" target="_blank" rel="noopener">{{< fa link >}}</a> [Niwot Ridge LTER](https://nwt.lternet.edu/)
+:::
 
-![](thumbnail.png){width=80%}
+
+::: {.featured-image}
+![](thumbnail.png){width=100%}
+:::
 
 Last week, I joined my advisor, Nancy Emery, along with my labmate Katie Bardsley,
 and NPR journalist Isabella Escobedo on a trip up to our field experiment at the

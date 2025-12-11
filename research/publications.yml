@@ -1,0 +1,31 @@
+- title: "Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower"
+  authors: "Clark, E.I., **Moore, M.A.**, Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C."
+  year: 2025
+  journal: "New Phytologist"
+  slug: "sunflower-optimal"
+  links:
+    - text: "DOI"
+      url: "https://doi.org/10.1111/nph.70790"
+      icon: "link"
+      type: "primary"
+    - text: "Full-text"
+      url: "https://onlinelibrary.wiley.com/share/author/4EAASTMRPFVR9PUSPKAE?target=10.1111/nph.70790"
+      icon: "file-pdf"
+      type: "primary"
+
+- title: "Divergent regional trends in alpine tundra productivity linked to changes in snow-free season length and summer warming"
+  authors: "**Moore, M.A.**, Emery, N. C., and Elmendorf, S. C."
+  year: "In Review"
+  journal: ""
+  links:
+    - text: "Preprint"
+      url: "https://doi.org/10.22541/essoar.176005847.72387941/v1"
+      icon: "pencil"
+      type: "primary"
+
+- title: "Soil moisture and active layer thickness across Alaska, USA and Northwestern Canada"
+  authors: "**Moore, M.A.**, Hoy, E. E., Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., et al."
+  year: "In Review"
+  journal: ""
+  links:
+

@@ -50,6 +50,7 @@ format:
         - assets/theme-light.scss
         - assets/miles/colors-light.scss
         # - assets/miles/fonts.scss
+    fontawesome: true
     css: styles.css
     toc: true
 

@@ -292,6 +292,24 @@ pre code {
   }
 }
 
+// Pub card info
+.pub-links .btn-outline-info {
+  border-color: $primary-dark;
+  color: $primary-dark;
+  font-weight: 900;
+}
+
+.pub-links .btn-outline-info:hover {
+  background-color: $secondary-light;
+  border-color: $secondary-light;
+  color: black;
+}
+
+.pub-authors {
+  color: $primary-dark;
+  margin-bottom: 0.5rem;
+}
+
 // details/summaries
 details > summary {
   color: $body-secondary;
