@@ -21,11 +21,23 @@ resources:
 ---
 ::: {#hero-heading}
 
-I am a PhD student & incoming Department of Energy Computational Science Graduate Fellow at the University of Colorado Boulder developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. My work focuses on plant phenology—the temporal dynamics of key plant life cycle events—in response to variable and often unreliable exogenous information. By integrating **Bayesian generative modeling**, **machine learning**, and **high-performance computing**, I aim to build theoretically-grounded, data-driven models that inform resource management and decision-making in dynamic systems, including agricultural and mountain landscapes. I work across **R**, **Python**, **Stan**, and **Julia**, with expertise in applied computational statistics, geospatial analysis, and remote sensing.
+I am a PhD student & Department of Energy Computational Science Graduate Fellow 
+at the University of Colorado Boulder. My work focuses on phenology—the temporal 
+dynamics of key organismal life cycle events (i.e. growth, reproduction, 
+maturation)—in response to variable environmental information. Specifically,
+I am interested in how the "information content" of common phenological cues 
+has changed and how this non-stationarity in cue systems is impacting organisms.
+My research is particularly motivated by phenological changes in high-mountain 
+and agricultural ecosystems due to their importance for ecological reslience and
+human food & water security.
 
-I am passionate about building **generalizable computational tools** that bridge scientific discovery and real-world application.
+My dissertation bridges **field experiments**, **theoretical approaches**, and 
+advanced **computational statistics** to address these questions in plant 
+communities.
 
-Outside of research, I enjoy rock climbing, running, cycling, fly-fishing, reading, film photography, and most of all, spending time with my wife.
+Outside of research, I enjoy rock climbing, running, cycling, fly-fishing, 
+reading, snowboarding, film photography, and most of all, spending time with my 
+wife.
 
 # Education
 **Ph.D. Ecology and Evolutionary Biology**  
@@ -43,7 +55,7 @@ Front Range Community College | Westminster, CO
 08.2019 – 12.2021
 
 
-# Experience 
+# Research Experience 
 09.2025 – Present  
 Department of Energy Computational Science Graduate Fellow, *Krell Institute* 
 

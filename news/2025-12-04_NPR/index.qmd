@@ -4,9 +4,9 @@ date: "20251204"
 image: thumbnail.png
 ---
 ::: {style="margin-bottom: 2rem; text-align: center;"}
-<a class="link-dark me-1" href="https://www.kunc.org/kunc/2025-12-04/alpine-plants" title="Like to article" target="_blank" rel="noopener">{{< fa link >}}</a> [Link to NPR-KUNC article](https://www.kunc.org/kunc/2025-12-04/alpine-plants) || 
-<a class="link-dark me-1" href="https://emery-lab.org" title="Emery Lab" target="_blank" rel="noopener">{{< fa link >}}</a> [Emery Lab](https://emery-lab.org) || 
-<a class="link-dark me-1" href="https://nwt.lternet.edu/" title="Niwot Ridge LTER" target="_blank" rel="noopener">{{< fa link >}}</a> [Niwot Ridge LTER](https://nwt.lternet.edu/)
+<div class="pub-links">
+<p><a href="https://www.kunc.org/kunc/2025-12-04/alpine-plants" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-link" aria-label="link"></i> Link to NPR/KUNC Article</a> <a href="https://emery-lab.org" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-link" aria-label="link"></i> Emery Lab</a> <a href="https://nwt.lternet.edu/" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-link" aria-label="link"></i> Niwot Ridge LTER</a></p>
+</div>
 :::
 
 
@@ -28,12 +28,14 @@ $\times$ 0.25 m subplots in 80 plots across four carefully chosen sites, a third
 
 My labmate labmate Katie and I are tracking the phenology, demography, and 
 fitness of more than a 1000 individually marked plants of the species
-*Bistorta bistortoides* and *Bistorta vivipara*.These two closely related 
+*Bistorta bistortoides* and *Bistorta vivipara*. These two closely related 
 species have very different life histories and understanding their sensitivites
 to environmental change will help scientists build a predictive framework for 
-vegetation change in high elevation ecosystems. Vegetation composition and 
-phenology are important controls on water and energy cycles in alpine ecosystems 
-which provide resources for humans and agriculture for billions of people worldwide.
+vegetation change in high elevation ecosystems (i.e. when and why do we expect a
+species to shift it's vegetative or reproductive phenology in response to the
+environment). Vegetation composition and phenology are important controls on 
+water and energy cycles in alpine ecosystems which provide resources for humans 
+and agriculture for billions of people worldwide.
 
 Check out Isabella's article at [kunc.org here](https://www.kunc.org/kunc/2025-12-04/alpine-plants). 
 Thumbnail image Copyright Isabella Escobedo / KUNC.
