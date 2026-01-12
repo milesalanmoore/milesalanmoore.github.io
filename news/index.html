@@ -287,7 +287,8 @@ window.Quarto = {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -300,6 +301,14 @@ window.Quarto = {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -388,7 +397,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1765238400000" data-listing-file-modified-sort="1766346872037" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1765238400000" data-listing-file-modified-sort="1768241170113" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
 <div class="thumbnail"><a href="../news/2025-12-09_Clarketal2025NP/index.html" class="no-external">
 
 <img loading="lazy" src="../news/2025-12-09_Clarketal2025NP/thumbnail.png" class="thumbnail-image">
@@ -407,7 +416,7 @@ Dec 9, 2025
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1764806400000" data-listing-file-modified-sort="1766346872033" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="264">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1764806400000" data-listing-file-modified-sort="1768241170110" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="264">
 <div class="thumbnail"><a href="../news/2025-12-04_NPR/index.html" class="no-external">
 
 <img loading="lazy" src="../news/2025-12-04_NPR/thumbnail.png" class="thumbnail-image">
@@ -426,7 +435,7 @@ Dec 4, 2025
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1757030400000" data-listing-file-modified-sort="1766346872038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="62">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1757030400000" data-listing-file-modified-sort="1768241170114" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="62">
 <div class="thumbnail"><a href="../news/2025_09_05_SC25/index.html" class="no-external">
 
 <img loading="lazy" src="../news/2025_09_05_SC25/thumbnail.png" class="thumbnail-image">
@@ -445,7 +454,7 @@ Sep 5, 2025
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1747094400000" data-listing-file-modified-sort="1766346872033" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1747094400000" data-listing-file-modified-sort="1768241170109" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
 <div class="thumbnail"><a href="../news/2025-05-13_DOECSGF/index.html" class="no-external">
 
 <img loading="lazy" src="../news/2025-05-13_DOECSGF/thumbnail.png" class="thumbnail-image">

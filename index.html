@@ -225,7 +225,8 @@ ul.task-list li input[type="checkbox"] {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -238,6 +239,14 @@ ul.task-list li input[type="checkbox"] {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -300,12 +309,12 @@ ul.task-list li input[type="checkbox"] {
 <p><br><br></p>
 <div class="quarto-about-trestles column-page">
   <div class="about-entity">
-    <img src="assets/images/posterior_sim.png" alt="A visualization of a 10-dimensionsal isotropic normal distribution projected to 2-D with principal component analysis and color with a terrain color pallette via a 2d kernel density estimator. Higher density regions are white lower densitys move through an earthy grey-brown into a green-grey." class="about-image
+    <img src="assets/images/posterior_sim.png" alt="A visualization of a 10-dimensionsal isotropic normal distribution projected to 2-D with principal component analysis and color with a terrain color pallette via a 2d kernel density estimator. Higher density regions are white lower densitys move through an earthy grey-brown into a green-grey, suggesting a high-altitude mountain and a subalpine-nival ecotone." class="about-image
   rounded " style="width: 28em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Miles A. Moore</h1>
-<p class="subtitle lead">Computational Biologist</p>
+<p class="subtitle lead">Biologist | Statistician</p>
 </div>
 <div class="quarto-title-meta column-page">
   </div>
