@@ -39,7 +39,7 @@ website:
 
 format:
   html:
-    respect-user-color-scheme: false
+    respect-user-color-scheme: true
     theme:
       light:
         - cosmo
