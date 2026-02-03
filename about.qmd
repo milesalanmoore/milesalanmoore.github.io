@@ -23,20 +23,20 @@ resources:
 
 I am a PhD student & Department of Energy Computational Science Graduate Fellow 
 at the University of Colorado Boulder. A **biostatistician**,
-**quantitiative ecologist**, and **evolutionary biologist**, 
+**quantitiative ecologist**, and **eco-evolutionary biologist**, 
 my work focuses on phenology—the temporal 
 dynamics of key organismal life cycle events (i.e. growth, reproduction, 
 maturation)—in response to variable environmental information. Specifically,
 I am interested in how the "information content" of common phenological cues 
 has changed and how this non-stationarity in cue systems is impacting organisms'
-ecology and evolution.
-My research is particularly motivated by phenological changes in high-mountain 
-and agricultural ecosystems due to their importance for ecological reslience and
-human food & water security.
+ecology and evolution. My research is particularly motivated by phenological changes 
+in high-mountain and agricultural ecosystems due to their importance for 
+ecological reslience and human food & water security.
 
-My dissertation bridges **field experiments**, **theoretical approaches**, and 
-advanced **computational statistics** to address these questions in plant 
-communities.
+I have extensive expertise in *hierarchical models* of **causality** in the 
+life-sciences. For my research, I develop novel models based on **state-space** 
+and **latent-variable** frameworks, including
+time-to-event ("survival") and **hidden markov models.**
 
 Outside of research, I enjoy rock climbing, running, cycling, fly-fishing, 
 reading, snowboarding, film photography, and most of all, spending time with my 
