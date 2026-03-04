@@ -1,17 +1,17 @@
 [
   {
+    "objectID": "news/2025-09-05_SC25/index.html",
+    "href": "news/2025-09-05_SC25/index.html",
+    "title": "Conference: Supercomputing 2025 in St. Louis",
+    "section": "",
+    "text": "I am excited to share that I will be attending Supercomputing 2025 (SC25) this November in St. Louis, Missouri. SC is the leading international conference for high performance computing, networking, storage, and analysis. I am particularly interested in how large-scale computation enables generative Bayesian modeling, causal inference, and machine learning for environmental data. I’m looking forward to the tutorials, talks, and workshops!"
+  },
+  {
     "objectID": "news/2025-12-09_Clarketal2025NP/index.html",
     "href": "news/2025-12-09_Clarketal2025NP/index.html",
     "title": "New co-authored manuscript in New Phytologist",
     "section": "",
     "text": "Details  DOI  Full-text\n\n\nMy colleagues and I have a new manuscript out! Published in New Phytologist, we used 46 years of digitized multi-environment trial data for hundreds of genotypes of agricultural sunflower to exmaine the relationship between flower timing, crop yield (reproductive performance), and climate.\nDr. Eliza Clark led this publication along with Dr. Sarah Elmendorf. Please checkout their work and consider reading this manuscript.\n Figure 5: Model predictions of optimal number of days to flowering across a range of planting days, average site degree days, and yearly anomalies. Predicted optimal days to flowering is indicated by the color of each cell. The black square outline on each panel shows a site with an average of about 900 growing degree days planted on the same day in four scenarios: (A) a colder than average year, (B) average year, (C) warmer year, (D) and an average mid-century year (2040-2069) as projected from a climate change model. The number in the top left of each panel shows the predicted optimal days to flowering for a site within the black outlined cell indicated on each panel.\n\nThumbnail image is a screenshot from the submitted version of the manuscript."
-  },
-  {
-    "objectID": "news/2025-12-15-Fa25Classes/index.html",
-    "href": "news/2025-12-15-Fa25Classes/index.html",
-    "title": "Fall 2025 Classes: Numerical Linear Algebra and HPC",
-    "section": "",
-    "text": "This semester, I took 2 classes:\n\nNumerical Linear Algebra: This rigorous proof-based numerical methods class covered various decompositions and matrix factorizations (EVD, SVD, QR, Cholesky, and many more!). We proved and demonstrated how useful orthogonal matrices are in statistical modeling, and introduced conditioning and algorithmic stability of various algorithms to compute these factorizations.\nHigh-Performance Computing: This was a very hands-on course that taught the fundamentals of high-performance computing and algorithmic optimization. In particular, we were challenged to apply vectorization, multithreading (OpenMP), multiprocessing (MPI), and GPU acceleration (CUDA) to finite-element and finite-difference solutions to partial differential equations (including non-linear and transient dynamic equations). This course was taught entirely in C++."
   },
   {
     "objectID": "news/2025-12-04_NPR/index.html",
@@ -25,7 +25,7 @@
     "href": "news/index.html",
     "title": "News",
     "section": "",
-    "text": "Spring 2026 Classes: Numerical Linear Algebra and HPC\n\n\n\n\n\nJan 13, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nFall 2025 Classes: Numerical Linear Algebra and HPC\n\n\n\n\n\nDec 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nNew co-authored manuscript in New Phytologist\n\n\n\n\n\nDec 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nNiwot Ridge LTER, Emery Lab, and Miles’ work featured on NPR\n\n\n\n\n\nDec 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nConference: Supercomputing 2025 in St. Louis\n\n\n\n\n\nSep 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMiles is awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)\n\n\n\n\n\nMay 13, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Spring 2026 Classes: Computational Bayesian Statistics and Deep Learning\n\n\n\n\n\nJan 13, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nFall 2025 Classes: Numerical Linear Algebra and HPC\n\n\n\n\n\nDec 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nNew co-authored manuscript in New Phytologist\n\n\n\n\n\nDec 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nNiwot Ridge LTER, Emery Lab, and Miles’ work featured on NPR\n\n\n\n\n\nDec 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nConference: Supercomputing 2025 in St. Louis\n\n\n\n\n\nSep 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMiles is awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)\n\n\n\n\n\nMay 13, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -112,17 +112,17 @@
     "text": "I am very grateful and excited to have been selected as one of 30 incoming Department of Energy Computational Science Graduate Fellows (DOE CSGF)! See the full press release on the DOE’s website, here."
   },
   {
-    "objectID": "news/2026-01-13_Sp25Classes/index.html",
-    "href": "news/2026-01-13_Sp25Classes/index.html",
-    "title": "Spring 2026 Classes: Numerical Linear Algebra and HPC",
+    "objectID": "news/2025-12-15-Fa25Classes/index.html",
+    "href": "news/2025-12-15-Fa25Classes/index.html",
+    "title": "Fall 2025 Classes: Numerical Linear Algebra and HPC",
     "section": "",
-    "text": "This semester, I am in two classes:\n\nComputational Bayesian Statistics: This course, a graduate-level class in the Applied Mathematics Department at CU Boulder, covers Bayesian statistics. In particular, we build from simple single parameter conjugate-prior Bayesian models and analytic posterior solutions through Importance Sampling, Hamiltonian Monte Carlo, and Cholesky Factorizations to full hierarchical models!\nFundamentals of Neural Networks & Deep Learning: This graduate course in the Computer Science Department rigorously teaches the foundational models, techniques, and optimization methods that underpin our most advanced artificial intelligence models today. We learned to apply backpropogation and find parameter gradients in deep convolutional neural networks by hand (yikes!) before finally being releived of that tedium and introduced to the PyTorch library for Deep Learning! From there, we are developing a deep theoretical understanding of Transformer architectures, the advanced technology underlying foundational AI models from OpenAI, Anthropic, and Google."
+    "text": "This semester, I took 2 classes:\n\nNumerical Linear Algebra: This rigorous proof-based numerical methods class covered various decompositions and matrix factorizations (EVD, SVD, QR, Cholesky, and many more!). We proved and demonstrated how useful orthogonal matrices are in statistical modeling, and introduced conditioning and algorithmic stability of various algorithms to compute these factorizations.\nHigh-Performance Computing: This was a very hands-on course that taught the fundamentals of high-performance computing and algorithmic optimization. In particular, we were challenged to apply vectorization, multithreading (OpenMP), multiprocessing (MPI), and GPU acceleration (CUDA) to finite-element and finite-difference solutions to partial differential equations (including non-linear and transient dynamic equations). This course was taught entirely in C++."
   },
   {
-    "objectID": "news/2025_09_05_SC25/index.html",
-    "href": "news/2025_09_05_SC25/index.html",
-    "title": "Conference: Supercomputing 2025 in St. Louis",
+    "objectID": "news/2026-01-13_Sp26Classes/index.html",
+    "href": "news/2026-01-13_Sp26Classes/index.html",
+    "title": "Spring 2026 Classes: Computational Bayesian Statistics and Deep Learning",
     "section": "",
-    "text": "I am excited to share that I will be attending Supercomputing 2025 (SC25) this November in St. Louis, Missouri. SC is the leading international conference for high performance computing, networking, storage, and analysis. I am particularly interested in how large-scale computation enables generative Bayesian modeling, causal inference, and machine learning for environmental data. I’m looking forward to the tutorials, talks, and workshops!"
+    "text": "This semester, I am in two classes:\n\nComputational Bayesian Statistics: This course, a graduate-level class in the Applied Mathematics Department at CU Boulder, covers Bayesian statistics. In particular, we build from simple single parameter conjugate-prior Bayesian models and analytic posterior solutions through Importance Sampling, Hamiltonian Monte Carlo, and Cholesky Factorizations to full hierarchical models!\nFundamentals of Neural Networks & Deep Learning: This graduate course in the Computer Science Department rigorously teaches the foundational models, techniques, and optimization methods that underpin our most advanced artificial intelligence models today. We learned to apply backpropogation and find parameter gradients in deep convolutional neural networks by hand (yikes!) before finally being releived of that tedium and introduced to the PyTorch library for Deep Learning! From there, we are developing a deep theoretical understanding of Transformer architectures, the advanced technology underlying foundational AI models from OpenAI, Anthropic, and Google."
   }
 ]
