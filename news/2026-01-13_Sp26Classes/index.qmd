@@ -1,5 +1,5 @@
 ---
-title: "Spring 2026 Classes: Numerical Linear Algebra and HPC"
+title: "Spring 2026 Classes: Computational Bayesian Statistics and Deep Learning"
 date: "20260113"
 ---
 
