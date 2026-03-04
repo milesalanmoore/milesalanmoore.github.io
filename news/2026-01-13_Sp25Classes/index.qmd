@@ -1,0 +1,11 @@
+---
+title: "Spring 2026 Classes: Numerical Linear Algebra and HPC"
+date: "20260113"
+---
+
+This semester, I am in two classes: 
+
+- **Computational Bayesian Statistics**: This course, a graduate-level class in the Applied Mathematics Department at CU Boulder, covers Bayesian statistics. In particular, we build from simple single parameter conjugate-prior Bayesian models and analytic posterior solutions through Importance Sampling, Hamiltonian Monte Carlo, and Cholesky Factorizations to full hierarchical models!
+
+- **Fundamentals of Neural Networks & Deep Learning**: This graduate course in the Computer Science Department rigorously teaches the foundational models, techniques, and optimization methods that underpin our most advanced artificial intelligence models today. We learned to apply backpropogation and find parameter gradients in deep convolutional neural networks by hand (yikes!) before finally being releived of that tedium and introduced to the `PyTorch` library for Deep Learning! From there, we are developing a deep theoretical understanding of Transformer architectures, the advanced technology underlying foundational AI models from OpenAI, Anthropic, and Google.
+
