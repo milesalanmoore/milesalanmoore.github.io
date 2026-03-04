@@ -14,8 +14,6 @@ website:
         text: News
       - href: research/index.qmd
         text: Research
-      - href: consulting/index.qmd
-        text: Consulting
     tools:
       # - icon: github
       #   href: https://github.com/milesalanmoore
