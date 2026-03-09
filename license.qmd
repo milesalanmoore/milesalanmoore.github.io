@@ -3,7 +3,9 @@ date: "2025-05-13T19:53:00+00:00"
 title: "License"
 ---
 
-All blog posts are released under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+I reserve all rights to any images on this website unless explicitly stated otherwise. They are not to be distributed, sold, modified, or otherwise reused without explicit permission.
+
+All blog posts (coming soon!) are released under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 <center>
 {{< fa brands creative-commons size=2xl >}} {{< fa brands creative-commons-by size=2xl >}} {{< fa brands creative-commons-sa size=2xl >}}
