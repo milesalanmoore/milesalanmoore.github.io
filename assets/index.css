@@ -1,29 +1,53 @@
-
+/* ── Full-viewport hero layout ── */
 .quarto-about-jolla {
-  padding-top: 4vh !important;
+  min-height: 100svh;     /* svh = "small viewport height", fixes iOS bar issue */
+  max-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem !important;
+  box-sizing: border-box;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.12);
-  pointer-events: none;
+/* Prevent the about section from growing past the viewport */
+.about-entity {
+  width: 100%;
+  max-width: 900px;
 }
 
+/* ── Hero card ── */
+#hero-heading {
+  background: rgba(255, 255, 255, 0.55);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  max-width: 850px;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-sizing: border-box;
+  margin: -3.5rem auto 0;
+}
+
+/* ── Background stays fixed & fully covered ── */
 body {
+  background-attachment: fixed;   /* prevents scroll-bleed on desktop */
   background-position: center 30%;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
 }
 
-/* Title (Name) */
+/* ── Title ── */
 .title {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem); /* scales gracefully */
   font-weight: 700;
   line-height: 1.1em !important;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
-/* Subtitle & Blurb*/
+/* ── Subtitle ── */
 .subtitle {
   font-family: "Cormorant";
   font-size: 1rem;
@@ -33,77 +57,36 @@ body {
   text-align: center;
 }
 
-/* main chunk: title, subtitle, and about message */
-.entity-contents {
-  text-align: justify !important;
-  padding: 0;
-}
-
-/* about me message */
-.about-contents {
-  padding: 0 0 0 2em !important;
-  text-align: justify !important;
-}
-
-/* Learn More About Me */
+/* ── About links ── */
 .about-links.subtitle {
   font-size: 1em !important;
   font-family: "Red Hat Text";
   justify-content: flex-end !important;
+  display: flex;
 }
 
-/* image */
-.about-image {
-  order: 0 !important;
-  margin-top: -2em;
-  padding: 0 2em 0em 0;
-}
+/* ── Mobile ── */
+@media screen and (max-width: 767px) {
+  .quarto-about-jolla {
+    max-height: none;
+    overflow: visible;
+    justify-content: flex-start;
+    padding-top: 5rem !important;
+  }
 
-#hero-heading {
-  background: rgba(255, 255, 255, 0.55);  /* transparent white */
-  padding: 1rem;
-  border-radius: 12px;
-  max-width: 850px;
-  backdrop-filter: blur(8px);
-}
+  #hero-heading {
+    padding: 1.25rem 1rem;
+  }
 
-/* mobile query up for screens up to ~992px wide */
-@media screen and (max-width: 991.98px) {
+  body {
+    background-attachment: scroll; /* fixed causes issues on iOS Safari */
+  }
 
-    .about-entity{
-      flex-direction: column;
-    }
+  .title {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
 
-    /* move image to top & adjust viewport scaling */
-    .about-image {
-      order: 0 !important;
-      padding: 0 1em 0 1em !important;
-      width: 80vw !important;
-      height: 80vw !important;
-    }
-
-    .entity-contents {
-      order: 2 !important;
-      margin: -4em 0 0 0 !important;
-      padding: 0 0 0 0em !important;
-      text-align: justify !important;
-    }
-
-    /* center subtitle */
-    .subtitle {
-      text-align: center !important;
-    }
-
-    /* introduction */
-    .about-contents {
-      justify-content: justify !important;
-      padding: 0 0 0 0em !important;
-      text-align: justify !important;
-    }
-
-    /* center Learn More About Me */
-    .about-links.subtitle {
-      justify-content: justify !important;
-    }
-
+  .about-links.subtitle {
+    justify-content: center !important;
+  }
 }
