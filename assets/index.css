@@ -1,8 +1,26 @@
+
+.quarto-about-jolla {
+  padding-top: 4vh !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.12);
+  pointer-events: none;
+}
+
+body {
+  background-position: center 30%;
+}
+
 /* Title (Name) */
 .title {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.1em !important;
+  letter-spacing: 0.02em;
 }
 
 /* Subtitle & Blurb*/
@@ -18,7 +36,7 @@
 /* main chunk: title, subtitle, and about message */
 .entity-contents {
   text-align: justify !important;
-  padding: 0 2em 0 2em;
+  padding: 0;
 }
 
 /* about me message */
@@ -39,6 +57,15 @@
   order: 0 !important;
   margin-top: -2em;
   padding: 0 2em 0em 0;
+}
+
+#hero-heading {
+  background: rgba(255, 255, 255, 0.55);  /* transparent white */
+  padding: 1rem;
+  margin-top: 7rem;
+  border-radius: 12px;
+  max-width: 850px;
+  backdrop-filter: blur(8px);
 }
 
 /* mobile query up for screens up to ~992px wide */
