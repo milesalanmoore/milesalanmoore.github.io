@@ -46,7 +46,7 @@ html {
 }
 
 #hero-heading {
-  background: rgba(255, 255, 255, 0.55);
+  /* background: rgba(255, 255, 255, 0.55); */
   padding: 0.75rem 0.5rem;
   border-radius: 12px;
   max-width: 850px;
@@ -54,7 +54,7 @@ html {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-sizing: border-box;
-  margin: -3.5rem auto 0;
+  margin: auto;
   text-align: center;
 }
 
