@@ -1,7 +1,10 @@
+html {
+  min-height: 100%;
+}
+
 /* ── Full-viewport hero layout ── */
 .quarto-about-jolla {
-  min-height: 100svh;     /* svh = "small viewport height", fixes iOS bar issue */
-  max-height: 100svh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,37 +13,14 @@
   box-sizing: border-box;
 }
 
-/* Prevent the about section from growing past the viewport */
 .about-entity {
   width: 100%;
   max-width: 900px;
 }
 
-/* ── Hero card ── */
-#hero-heading {
-  background: rgba(255, 255, 255, 0.55);
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  max-width: 850px;
-  width: 100%;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-sizing: border-box;
-  margin: -3.5rem auto 0;
-}
-
-/* ── Background stays fixed & fully covered ── */
-body {
-  background-attachment: fixed;   /* prevents scroll-bleed on desktop */
-  background-position: center 30%;
-  background-size: cover;
-  min-height: 100vh;
-  margin: 0;
-}
-
 /* ── Title ── */
 .title {
-  font-size: clamp(2rem, 5vw, 3rem); /* scales gracefully */
+  font-size: clamp(2rem, 5vw, 3rem); 
   font-weight: 700;
   line-height: 1.1em !important;
   letter-spacing: 0.02em;
@@ -65,28 +45,32 @@ body {
   display: flex;
 }
 
-/* ── Mobile ── */
+#hero-heading {
+  background: rgba(255, 255, 255, 0.55);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  max-width: 850px;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-sizing: border-box;
+  margin: -3.5rem auto 0;
+}
+
 @media screen and (max-width: 767px) {
   .quarto-about-jolla {
-    max-height: none;
-    overflow: visible;
+    min-height: 100svh;
     justify-content: flex-start;
-    padding-top: 5rem !important;
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
   }
 
   #hero-heading {
     padding: 1.25rem 1rem;
   }
 
-  body {
-    background-attachment: scroll; /* fixed causes issues on iOS Safari */
-  }
-
+  /* Reduce title size so it doesn't push card off-image */
   .title {
-    font-size: clamp(1.75rem, 8vw, 2.5rem);
-  }
-
-  .about-links.subtitle {
-    justify-content: center !important;
+    font-size: clamp(2rem, 10vw, 3rem);
   }
 }
