@@ -1,4 +1,13 @@
 
+.research-banner {
+  height: 220px;
+  background-image: url("../assets/images/research-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
 .pub-card {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
