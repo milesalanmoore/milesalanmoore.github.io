@@ -10,6 +10,8 @@ website:
         text: Home
       - href: about.qmd
         text: About
+      - href: film/index.qmd
+        text: Film
       - href: news/index.qmd
         text: News
       - href: research/index.qmd
