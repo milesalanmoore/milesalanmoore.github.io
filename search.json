@@ -35,6 +35,41 @@
     "text": "I am a PhD student & Department of Energy Computational Science Graduate Fellow at the University of Colorado Boulder. A biostatistician, quantitiative ecologist, and eco-evolutionary biologist, my work focuses on phenology—the temporal dynamics of key organismal life cycle events (i.e. growth, reproduction, maturation)—in response to variable environmental information. Specifically, I am interested in how the “information content” of common phenological cues has changed and how this non-stationarity in cue systems is impacting organisms’ ecology and evolution. My research is particularly motivated by phenological changes in high-mountain and agricultural ecosystems due to their importance for ecological reslience and human food & water security.\nI have extensive expertise in hierarchical models of causality in the life-sciences. For my research, I develop novel models based on state-space and latent-variable frameworks, including time-to-event (“survival”) and hidden markov models.\nOutside of research, I enjoy rock climbing, running, cycling, fly-fishing, reading, snowboarding, film photography, and most of all, spending time with my wife.\nRead about my research →\n\nEducation\nPh.D. Ecology and Evolutionary Biology\nUniversity of Colorado Boulder | Boulder, CO\n08.2024 - 05.2029 (expected)\nB.A. Ecology and Evolutionary Biology\nCertificate in GIS & Computational Science\nUniversity of Colorado Boulder | Boulder, CO\nsumma cum laude, With distinction, GPA: 4.0\n01.2022 - 12.2023\nAssociate of Science\nFront Range Community College | Westminster, CO\n08.2019 – 12.2021\n\n\nResearch Experience\n09.2025 – Present\nDepartment of Energy Computational Science Graduate Fellow, Krell Institute\n05.2025 – 08.2025\nGraduate Research Assistant, Cooperative Institute for Research in Environmental Sciences, Boulder, CO\n12.2023 – 08.2024\nProfessional Scientist I, Institute of Arctic and Alpine Research, Boulder, CO\n05.2023 – 12.2023\nRemote Sensing Intern, National Aeronautics and Space Administration, Greenbelt, MD\n08.2021 – 12.2023\nData Management Assistant, Institute of Arctic and Alpine Research, Boulder, CO\n05.2021 – 08.2021\nField Research Assistant, Niwot Ridge Long Term Ecological Research (LTER) site, Boulder, CO\n\n\nTeaching\n08.2024 – 12.2024\nTeaching Assistant, University of Colorado Boulder\nEBIO 4410 / 5410 Biological Statistics"
   },
   {
+    "objectID": "research/articles/sunflower-optimal/index.html",
+    "href": "research/articles/sunflower-optimal/index.html",
+    "title": "Climate drives variation in optimal phenology",
+    "section": "",
+    "text": "Published paper ||  Full-text"
+  },
+  {
+    "objectID": "research/articles/sunflower-optimal/index.html#abstract",
+    "href": "research/articles/sunflower-optimal/index.html#abstract",
+    "title": "Climate drives variation in optimal phenology",
+    "section": "Abstract",
+    "text": "Abstract\n\nPhenological shifts are near ubiquitous responses to climate change in both wild and agricultural systems, but the fitness consequences of these shifts are unclear. We evaluate how flowering phenology influences fitness and how climate influences the relationship between flowering phenology and fitness.\nWe use a large dataset of performance trials of oilseed sunflower varieties (Helianthus annuus L.) conducted since 1978 across the Great Plains of North America. We estimate the flowering time that optimizes yield (fitness) in 341 environments to quantify how climate variation impacts the optimal flowering time.\nWe find that temperature is a key driver of optimal phenology, with earlier and faster flowering favored in hotter years and locations. Flowering time differences explain 9% of the variation in fitness between sunflower genotypes within trials. Flowering shifts a week away from the optimum incurred substantial penalties, with a median yield reduction of 23%.\nOur results indicate that the shifts to earlier phenology commonly observed under climate warming may be beneficial. In sunflower, maximizing agricultural productivity under future climates will likely require both careful selection of varieties to match new conditions as well as breeding new varieties that flower faster than material that is currently available commercially."
+  },
+  {
+    "objectID": "research/articles/sunflower-optimal/index.html#context",
+    "href": "research/articles/sunflower-optimal/index.html#context",
+    "title": "Climate drives variation in optimal phenology",
+    "section": "Context",
+    "text": "Context\nThis work builds on decades of agricultural trial data to understand how plant life-history traits and the environment interact. Our findings have important implicaitons for both evolutionary ecology and agricultural adaptation to environmental change."
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
+    "section": "",
+    "text": "I reserve all rights to any images on this website unless explicitly stated otherwise. They are not to be distributed, sold, modified, or otherwise reused without explicit permission.\nAll blog posts (coming soon!) are released under a Creative Commons Attribution-ShareAlike 4.0 International License."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Miles A. Moore",
+    "section": "",
+    "text": "I am a PhD student and DOE CSGF Fellow at the University of Colorado Boulder developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. By integrating Bayesian generative modeling, machine learning, and high-performance computing, I aim to build theoretically-grounded, data-driven models that advance our understanding of natural systems.\nabout me →"
+  },
+  {
     "objectID": "research/index.html",
     "href": "research/index.html",
     "title": "Research",
@@ -63,39 +98,11 @@
     "text": "Datasets\nMoore, M.A., K. Schaefer, L.K. Clayton, E.E. Hoy, M. Auclair, K. Bakian-Dogaheh, M.J. Battaglia, K. Bennett, W.R. Bolton, L.L. Bourgeau-Chavez, … Y. Zhao, and S. Zwieback. (2025). ABoVE: Soil Moisture and Active Layer Thickness in Alaska, USA and Canada, 2005-2022. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/2369\nWhite, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Losleben, M., & Moore, M. A. (2025). Homogenized, gap-filled, daily air temperature data for Saddle, 1986—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/49a2171ec028c4ddef298752bc9ebe8d\nWhite, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for Saddle, 1981—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/8caa444276521b797e4a16485dc0e137\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (202a). Infilled daily air temperature data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/0b4f8747ea72258e46681bb511c262f3\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily air temperature data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/b05689181c21ac40d35b6c1c01e2f8a\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/5f896d7d1eb19649ee2ff9fca7166160\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/02b125f7d0dc87a6d40e6ca7001471ce\nMoore, M.A., Orellana-Soto,M.E., Hartman,N.R. and Kane,N.C. (2024). Helianthus agrestis isolate USDA PI 673199 cultivar PI 468416 chloroplast, complete genome. NCBI Nucleotide. Accession NC_086875.1. Available from: https://www.ncbi.nlm.nih.gov/nuccore/NC_086875.1"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Miles A. Moore",
+    "objectID": "film/index.html",
+    "href": "film/index.html",
+    "title": "Film",
     "section": "",
-    "text": "I am a PhD student and DOE CSGF Fellow at the University of Colorado Boulder developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. By integrating Bayesian generative modeling, machine learning, and high-performance computing, I aim to build theoretically-grounded, data-driven models that advance our understanding of natural systems.\nabout me →"
-  },
-  {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "License",
-    "section": "",
-    "text": "I reserve all rights to any images on this website unless explicitly stated otherwise. They are not to be distributed, sold, modified, or otherwise reused without explicit permission.\nAll blog posts (coming soon!) are released under a Creative Commons Attribution-ShareAlike 4.0 International License."
-  },
-  {
-    "objectID": "research/articles/sunflower-optimal/index.html",
-    "href": "research/articles/sunflower-optimal/index.html",
-    "title": "Climate drives variation in optimal phenology",
-    "section": "",
-    "text": "Published paper ||  Full-text"
-  },
-  {
-    "objectID": "research/articles/sunflower-optimal/index.html#abstract",
-    "href": "research/articles/sunflower-optimal/index.html#abstract",
-    "title": "Climate drives variation in optimal phenology",
-    "section": "Abstract",
-    "text": "Abstract\n\nPhenological shifts are near ubiquitous responses to climate change in both wild and agricultural systems, but the fitness consequences of these shifts are unclear. We evaluate how flowering phenology influences fitness and how climate influences the relationship between flowering phenology and fitness.\nWe use a large dataset of performance trials of oilseed sunflower varieties (Helianthus annuus L.) conducted since 1978 across the Great Plains of North America. We estimate the flowering time that optimizes yield (fitness) in 341 environments to quantify how climate variation impacts the optimal flowering time.\nWe find that temperature is a key driver of optimal phenology, with earlier and faster flowering favored in hotter years and locations. Flowering time differences explain 9% of the variation in fitness between sunflower genotypes within trials. Flowering shifts a week away from the optimum incurred substantial penalties, with a median yield reduction of 23%.\nOur results indicate that the shifts to earlier phenology commonly observed under climate warming may be beneficial. In sunflower, maximizing agricultural productivity under future climates will likely require both careful selection of varieties to match new conditions as well as breeding new varieties that flower faster than material that is currently available commercially."
-  },
-  {
-    "objectID": "research/articles/sunflower-optimal/index.html#context",
-    "href": "research/articles/sunflower-optimal/index.html#context",
-    "title": "Climate drives variation in optimal phenology",
-    "section": "Context",
-    "text": "Context\nThis work builds on decades of agricultural trial data to understand how plant life-history traits and the environment interact. Our findings have important implicaitons for both evolutionary ecology and agricultural adaptation to environmental change."
+    "text": "Furka Pass\n\n\n\n\n\nCentral Alps Sunrise\n\n\n\n\n\nAlpfor Glacier"
   },
   {
     "objectID": "ai/index.html",
