@@ -1,0 +1,45 @@
+<div id="nav-email-container"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const u = "miles";
+    const d = "milesalanmoore.com";
+
+    const link = document.createElement("a");
+    link.href = `mailto:${u}@${d}`;
+    link.title = "Email me";
+    link.className = "nav-email-link";
+    link.innerHTML = `<span>📬</span><span>Contact</span>`;
+
+    // Insert into Quarto's navbar right section
+    const navbarRight = document.querySelector(".navbar-nav.ms-auto, #navbarCollapse .navbar-nav");
+    if (navbarRight) {
+      const li = document.createElement("li");
+      li.className = "nav-item";
+      li.appendChild(link);
+      navbarRight.appendChild(li);
+    }
+  });
+</script>
+
+<style>
+  .nav-email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.25em 0.7em;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    border-radius: 6px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    margin-left: 0.5em;
+  }
+  .nav-email-link:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-color: white;
+    color: inherit;
+    text-decoration: none;
+  }
+</style>

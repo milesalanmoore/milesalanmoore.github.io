@@ -55,6 +55,7 @@ format:
     fontawesome: true
     css: styles.css
     toc: true
+    include-after-body: _includes/email-button.html
 
 execute: 
   freeze: auto
