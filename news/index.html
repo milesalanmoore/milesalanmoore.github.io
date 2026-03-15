@@ -392,7 +392,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1768262400000" data-listing-file-modified-sort="1773161314024" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="145">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1768262400000" data-listing-file-modified-sort="1773604511458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="145">
 <div class="thumbnail"><a href="../news/2026-01-13_Sp26Classes/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -411,7 +411,7 @@ Jan 13, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1765756800000" data-listing-file-modified-sort="1773161314024" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="110">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1765756800000" data-listing-file-modified-sort="1773604511458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="110">
 <div class="thumbnail"><a href="../news/2025-12-15-Fa25Classes/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -430,7 +430,7 @@ Dec 15, 2025
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1765238400000" data-listing-file-modified-sort="1773161314023" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1765238400000" data-listing-file-modified-sort="1773604511457" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
 <div class="thumbnail"><a href="../news/2025-12-09_Clarketal2025NP/index.html" class="no-external">
 
 <img loading="lazy" src="../news/2025-12-09_Clarketal2025NP/thumbnail.png" class="thumbnail-image">
@@ -449,7 +449,7 @@ Dec 9, 2025
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1764806400000" data-listing-file-modified-sort="1773161314020" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="264">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1764806400000" data-listing-file-modified-sort="1773604511455" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="264">
 <div class="thumbnail"><a href="../news/2025-12-04_NPR/index.html" class="no-external">
 
 <img loading="lazy" src="../news/2025-12-04_NPR/thumbnail.png" class="thumbnail-image">
@@ -468,7 +468,7 @@ Dec 4, 2025
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1757030400000" data-listing-file-modified-sort="1773161314020" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="62">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1757030400000" data-listing-file-modified-sort="1773604511454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="62">
 <div class="thumbnail"><a href="../news/2025-09-05_SC25/index.html" class="no-external">
 
 <img loading="lazy" src="../news/2025-09-05_SC25/thumbnail.png" class="thumbnail-image">
@@ -487,7 +487,7 @@ Sep 5, 2025
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1747094400000" data-listing-file-modified-sort="1773161314020" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1747094400000" data-listing-file-modified-sort="1773604511454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
 <div class="thumbnail"><a href="../news/2025-05-13_DOECSGF/index.html" class="no-external">
 
 <img loading="lazy" src="../news/2025-05-13_DOECSGF/thumbnail.png" class="thumbnail-image">
@@ -509,6 +509,51 @@ May 13, 2025
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
+<div id="nav-email-container"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const u = "miles";
+    const d = "milesalanmoore.com";
+
+    const link = document.createElement("a");
+    link.href = `mailto:${u}@${d}`;
+    link.title = "Email me";
+    link.className = "nav-email-link";
+    link.innerHTML = `<span>📬</span><span>Contact</span>`;
+
+    // Insert into Quarto's navbar right section
+    const navbarRight = document.querySelector(".navbar-nav.ms-auto, #navbarCollapse .navbar-nav");
+    if (navbarRight) {
+      const li = document.createElement("li");
+      li.className = "nav-item";
+      li.appendChild(link);
+      navbarRight.appendChild(li);
+    }
+  });
+</script>
+
+<style>
+  .nav-email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.25em 0.7em;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    border-radius: 6px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    margin-left: 0.5em;
+  }
+  .nav-email-link:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-color: white;
+    color: inherit;
+    text-decoration: none;
+  }
+</style>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
