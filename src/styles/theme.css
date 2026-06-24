@@ -1,0 +1,64 @@
+/* ============================================================
+   🎨  THEME — "FIELD NOTES" (cherry blossom)
+   ------------------------------------------------------------
+   This is the ONE place to change the site's color scheme.
+   Every component reads from these variables, so swapping a
+   value here re-skins the entire site. Petal colors, the
+   blossom-tree stroke, and the avatar gradient live here too.
+   ============================================================ */
+:root {
+  /* ---- Paper / surfaces ---------------------------------- */
+  --paper:        #f2ede6;   /* main page background (warm paper) */
+  --paper-2:      #ede8e0;   /* alternating section background    */
+  --paper-card:   #f7f3ec;   /* cards / raised surfaces           */
+  --paper-light:  #f5f0ea;   /* light text sitting on dark ink    */
+
+  /* ---- Ink / text ---------------------------------------- */
+  --ink:          #1a1108;   /* darkest — nav bar, big headings   */
+  --ink-soft:     #3a2c22;   /* strong body text                  */
+  --text:         #4a3c30;   /* default body text                 */
+  --text-muted:   #6a5c52;   /* secondary text, links             */
+  --text-faint:   #9a8c82;   /* captions, footnotes               */
+  --label:        #b0a090;   /* tiny uppercase labels             */
+  --nav-muted:    #a89884;   /* inactive nav links on dark bar    */
+
+  /* ---- Accents ------------------------------------------- */
+  --sage:         #788b6e;   /* eyebrow labels, section kickers   */
+  --clay:         #7a4a38;   /* badges, primary interactive       */
+  --clay-h:       #5e3729;   /* hover state for clay              */
+
+  /* ---- Petals (falling cherry blossoms) ------------------ */
+  --petal-1:      #e4b8c4;
+  --petal-2:      #f0c4d0;
+  --petal-3:      #dda8b8;
+  --petal-4:      #ecc0cc;
+
+  /* ---- Signature graphics -------------------------------- */
+  --tree-stroke:  #3d2418;                                  /* blossom-tree line color   */
+  --avatar-grad:  linear-gradient(138deg, #cbbfb3 0%, #b8a898 100%); /* monogram badge   */
+
+  /* ---- Borders / lines ----------------------------------- */
+  --border:       rgba(50, 38, 28, 0.08);
+  --border-2:     rgba(50, 38, 28, 0.14);
+  --rule:         #1a1108;   /* the bold name-rule under the hero */
+
+  /* ---- Shadows ------------------------------------------- */
+  --shadow-sm: 0 1px 4px rgba(40, 28, 18, 0.06);
+  --shadow-md: 0 2px 28px rgba(40, 28, 18, 0.08), 0 1px 4px rgba(40, 28, 18, 0.05);
+  --shadow-lg: 0 18px 48px rgba(40, 28, 18, 0.12);
+
+  /* ============================================================
+     SEMANTIC ALIASES — components reference these; they map
+     onto the palette above. Usually no need to touch.
+     ============================================================ */
+  --color-bg:          var(--paper);
+  --color-surface:     var(--paper-card);
+  --color-surface-2:   var(--paper-2);
+  --color-text:        var(--ink-soft);
+  --color-text-muted:  var(--text-muted);
+  --color-text-faint:  var(--text-faint);
+  --color-border:      var(--border);
+  --color-border-h:    var(--border-2);
+  --color-primary:     var(--clay);
+  --color-primary-h:   var(--clay-h);
+}

@@ -1,0 +1,211 @@
+---
+import BaseLayout from "../components/layout/BaseLayout.astro";
+import Nav from "../components/layout/Nav.astro";
+import Footer from "../components/layout/Footer.astro";
+import Button from "../components/ui/Button.astro";
+import { socials, email, cvPath } from "../data/socials";
+
+const interests = [
+  "Bayesian & simulation-based inference",
+  "Plant phenology",
+  "Alpine tundra ecosystems",
+  "Agricultural systems",
+  "Climate–phenology relationships",
+  "Hierarchical & multilevel models",
+  "High-performance computing",
+  "Uncertainty-aware ecological forecasting",
+];
+---
+
+<BaseLayout
+  title="About — Miles A. Moore"
+  description="PhD student in Ecology & Evolutionary Biology at CU Boulder and DOE CSGF Fellow. Bayesian methods for phenology and climate."
+>
+  <Nav />
+  <main id="main-content">
+
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <p class="page-label">DOE CSGF Fellow · PhD Student</p>
+        <h1 class="page-heading">About</h1>
+      </div>
+    </section>
+
+    <!-- Bio -->
+    <section class="section">
+      <div class="container about-grid">
+        <aside class="about-aside">
+          <div class="about-photo">
+            <img
+              src="/assets/images/bio-photo-1.jpg"
+              alt="Miles A. Moore"
+              width="260"
+              height="320"
+              loading="eager"
+            />
+          </div>
+          <div class="about-actions">
+            <Button href={cvPath} variant="primary" icon="file-pdf" external size="sm">
+              Download CV
+            </Button>
+            <Button href={`mailto:${email}`} variant="outline" icon="envelope" size="sm">
+              Email
+            </Button>
+          </div>
+
+          <div class="about-links">
+            {
+              socials.map((s) => (
+                <a href={s.href} target="_blank" rel="noopener noreferrer" class="about-link">
+                  <i class={s.icon} aria-hidden="true" />
+                  <span>{s.label}</span>
+                </a>
+              ))
+            }
+          </div>
+        </aside>
+
+        <div class="about-main">
+          <div class="eyebrow">Biography</div>
+          <p>
+            I am a PhD student in Ecology and Evolutionary Biology at the University of
+            Colorado Boulder and a Department of Energy Computational Science Graduate
+            Fellow (DOE CSGF). I work at the intersection of quantitative ecology,
+            biostatistics, and eco-evolutionary biology.
+          </p>
+          <p>
+            My current work develops statistical and simulation-based methods for
+            phenology, with emphasis on uncertainty-aware inference, hierarchical models,
+            and scalable computation for ecological datasets through integration of Bayesian
+            generative modeling, machine learning, and high-performance computing.
+          </p>
+          <p>
+            Outside of research, I enjoy rock climbing, running, cycling, fly-fishing,
+            reading, snowboarding, film photography, and most of all, spending time with
+            my wife.
+          </p>
+
+          <div class="interests">
+            <div class="eyebrow">Research Interests</div>
+            <ul class="interest-list">
+              {interests.map((it) => <li>{it}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .about-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: sticky;
+    top: 88px;
+  }
+
+  .about-photo {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: var(--paper-2);
+  }
+
+  .about-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .about-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .about-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35rem;
+  }
+
+  .about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    padding: 0.3rem 0;
+  }
+
+  .about-link i { width: 1.1rem; text-align: center; color: var(--text-faint); }
+  .about-link:hover { color: var(--clay); }
+  .about-link:hover i { color: var(--clay); }
+
+  .about-main .eyebrow { margin-bottom: 1rem; }
+
+  .about-main p {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+    max-width: 64ch;
+  }
+
+  .interests {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-2);
+  }
+
+  .interests .eyebrow { margin-bottom: 1rem; }
+
+  .interest-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem 1.5rem;
+  }
+
+  .interest-list li {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    padding-left: 1.1rem;
+    position: relative;
+  }
+
+  .interest-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--sage);
+  }
+
+  @media (max-width: 820px) {
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .about-aside { position: static; max-width: 320px; }
+  }
+
+  @media (max-width: 480px) {
+    .interest-list { grid-template-columns: 1fr; }
+  }
+</style>

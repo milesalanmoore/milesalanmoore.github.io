@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../components/layout/BaseLayout.astro";
+import Nav from "../components/layout/Nav.astro";
+import Footer from "../components/layout/Footer.astro";
+---
+
+<BaseLayout
+  title="License — Miles A. Moore"
+  description="License information for content and images on this site."
+>
+  <Nav />
+  <main id="main-content">
+
+    <section class="page-header">
+      <div class="container">
+        <p class="page-label">Legal</p>
+        <h1 class="page-heading">License</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container license-body">
+        <div class="prose">
+
+          <h2>Images</h2>
+          <p>
+            All photographs and images on this site are <strong>All Rights Reserved</strong>.
+            They may not be reproduced, distributed, or used without explicit written
+            permission from Miles A. Moore.
+          </p>
+
+          <h2>Blog Posts &amp; News</h2>
+          <p>
+            Blog posts and news items are released under the
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">
+              Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)
+            </a>.
+          </p>
+          <p>
+            You are free to share and adapt this material for any purpose, provided you
+            give appropriate credit, link to the license, and indicate if changes were made.
+            If you remix, transform, or build upon the material, you must distribute your
+            contributions under the same license.
+          </p>
+
+          <h2>Code</h2>
+          <p>
+            Unless otherwise noted, code snippets are released under the
+            <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a>.
+          </p>
+
+          <h2>Research</h2>
+          <p>
+            Academic publications are subject to the terms of their respective journals
+            and publishers. Please consult individual publications for reuse rights.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .license-body {
+    max-width: 680px;
+  }
+</style>

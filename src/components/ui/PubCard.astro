@@ -1,0 +1,197 @@
+---
+import type { Publication } from "../../data/publications";
+
+interface Props {
+  pub: Publication;
+}
+
+const { pub } = Astro.props;
+
+function formatAuthors(raw: string): string {
+  return raw.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+}
+
+const yearLabel = typeof pub.year === "number" ? String(pub.year) : pub.year;
+---
+
+<article class="pub-card">
+  <header class="pub-header">
+    <div class="pub-meta">
+      <span class="pub-journal">{pub.journal}</span>
+      <span class="pub-year-badge">{yearLabel}</span>
+    </div>
+
+    {
+      pub.slug ? (
+        <a href={`/research/${pub.slug}/`} class="pub-title">
+          {pub.title}
+        </a>
+      ) : (
+        <h3 class="pub-title pub-title-static">{pub.title}</h3>
+      )
+    }
+  </header>
+
+  <p class="pub-authors" set:html={formatAuthors(pub.authors)} />
+
+  {
+    pub.tags && pub.tags.length > 0 && (
+      <div class="pub-tags">
+        {pub.tags.map((t) => (
+          <span class="tag">{t}</span>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    ((pub.links && pub.links.length > 0) || pub.slug) && (
+      <div class="pub-links">
+        {pub.links?.map((link) => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class:list={["pub-link", link.type === "primary" && "pub-link-primary"]}
+          >
+            {link.icon && <i class={`fa-solid fa-${link.icon}`} aria-hidden="true" />}
+            {link.text}
+          </a>
+        ))}
+        {pub.slug && (
+          <a href={`/research/${pub.slug}/`} class="pub-link">
+            <i class="fa-solid fa-circle-info" aria-hidden="true" />
+            Details
+          </a>
+        )}
+      </div>
+    )
+  }
+</article>
+
+<style>
+  .pub-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--sage);
+    border-radius: var(--radius-sm);
+    padding: 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    transition: var(--transition-hover);
+  }
+
+  .pub-card:hover {
+    box-shadow: var(--shadow-sm);
+    border-left-color: var(--clay);
+  }
+
+  .pub-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .pub-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .pub-journal {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--sage);
+  }
+
+  .pub-year-badge {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    background: rgba(88, 72, 62, 0.07);
+    border-radius: var(--radius-xs);
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .pub-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    display: block;
+  }
+
+  a.pub-title:hover { color: var(--clay); }
+
+  .pub-title-static {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .pub-authors {
+    font-size: 0.84rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .pub-authors :global(strong) {
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+
+  .pub-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.15rem;
+  }
+
+  .pub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.74rem;
+    font-weight: 500;
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--border-2);
+    background: transparent;
+    color: var(--text-muted);
+  }
+
+  .pub-link:hover {
+    background: rgba(88, 72, 62, 0.06);
+    color: var(--ink-soft);
+  }
+
+  .pub-link-primary {
+    background: var(--clay);
+    color: var(--paper-light);
+    border-color: var(--clay);
+  }
+
+  .pub-link-primary:hover {
+    background: var(--clay-h);
+    border-color: var(--clay-h);
+    color: #fff;
+  }
+</style>

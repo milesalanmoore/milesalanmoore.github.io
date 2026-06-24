@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../../components/layout/BaseLayout.astro";
+import Nav from "../../components/layout/Nav.astro";
+import Footer from "../../components/layout/Footer.astro";
+import NewsCard from "../../components/ui/NewsCard.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("news", ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout
+  title="News — Miles A. Moore"
+  description="Updates on research, conferences, fellowships, and coursework."
+>
+  <Nav />
+  <main id="main-content">
+
+    <section class="page-header">
+      <div class="container">
+        <p class="page-label">News</p>
+        <h1 class="page-heading">Updates</h1>
+        <p class="page-sub">Research milestones, conferences, fellowships, and more.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="news-grid">
+          {posts.map((post) => <NewsCard post={post} />)}
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 1.25rem;
+  }
+</style>

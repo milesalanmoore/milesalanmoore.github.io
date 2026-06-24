@@ -1,0 +1,210 @@
+---
+import BaseLayout from "../components/layout/BaseLayout.astro";
+import Nav from "../components/layout/Nav.astro";
+import Footer from "../components/layout/Footer.astro";
+import Button from "../components/ui/Button.astro";
+import { cvPath } from "../data/socials";
+
+const education = [
+  {
+    date: "Aug 2024 – May 2029 (expected)",
+    title: "PhD, Ecology and Evolutionary Biology",
+    sub: "University of Colorado Boulder",
+  },
+  {
+    date: "Jan 2022 – Dec 2023",
+    title: "B.A., Ecology and Evolutionary Biology",
+    sub: "University of Colorado Boulder · Certificate in GIS & Computational Science",
+    honor: "Summa cum laude · With distinction · GPA 4.0",
+  },
+  {
+    date: "Aug 2019 – Dec 2021",
+    title: "A.S.",
+    sub: "Front Range Community College",
+  },
+];
+
+const experience = [
+  {
+    date: "Sep 2025 – Present",
+    title: "Department of Energy Computational Science Graduate Fellow",
+    sub: "Krell Institute",
+  },
+  {
+    date: "May 2025 – Aug 2025",
+    title: "Graduate Research Assistant",
+    sub: "Cooperative Institute for Research in Environmental Sciences (CIRES), CU Boulder",
+  },
+  {
+    date: "Dec 2023 – Aug 2024",
+    title: "Professional Scientist I",
+    sub: "Institute of Arctic and Alpine Research (INSTAAR), CU Boulder",
+  },
+  {
+    date: "May 2023 – Dec 2023",
+    title: "Remote Sensing Intern",
+    sub: "NASA Goddard Space Flight Center, Greenbelt, MD",
+  },
+  {
+    date: "Aug 2021 – Dec 2023",
+    title: "Data Management Assistant",
+    sub: "Institute of Arctic and Alpine Research (INSTAAR), CU Boulder",
+  },
+  {
+    date: "May 2021 – Aug 2021",
+    title: "Field Research Assistant",
+    sub: "Niwot Ridge Long-Term Ecological Research Site",
+  },
+];
+
+const teaching = [
+  {
+    date: "Aug 2024 – Dec 2024",
+    title: "Teaching Assistant",
+    sub: "EBIO 4410/5410 — Biological Statistics · University of Colorado Boulder",
+  },
+];
+
+const presentations = [
+  {
+    date: "Dec 2023 · San Francisco, CA",
+    title: "From Field to Air: Integrating Field Data in Support of the ABoVE Airborne Campaign",
+    sub: "AGU Fall Meeting 2023 (Poster)",
+  },
+];
+---
+
+<BaseLayout
+  title="CV — Miles A. Moore"
+  description="Curriculum vitae of Miles A. Moore: education, research experience, teaching, and presentations."
+>
+  <Nav />
+  <main id="main-content">
+
+    <section class="page-header">
+      <div class="container cv-header">
+        <div>
+          <p class="page-label">Curriculum Vitae</p>
+          <h1 class="page-heading">CV</h1>
+        </div>
+        <Button href={cvPath} variant="primary" icon="file-pdf" external>
+          Download PDF
+        </Button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cv-body">
+
+        <div class="cv-block">
+          <h2 class="section-title">Education</h2>
+          <div class="timeline">
+            {
+              education.map((e) => (
+                <div class="timeline-item">
+                  <div class="timeline-date">{e.date}</div>
+                  <div class="timeline-title">
+                    {e.title}
+                    {e.honor && <span class="honor-badge">{e.honor}</span>}
+                  </div>
+                  <div class="timeline-sub">{e.sub}</div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="cv-block">
+          <h2 class="section-title">Research Experience</h2>
+          <div class="timeline">
+            {
+              experience.map((e) => (
+                <div class="timeline-item">
+                  <div class="timeline-date">{e.date}</div>
+                  <div class="timeline-title">{e.title}</div>
+                  <div class="timeline-sub">{e.sub}</div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="cv-block">
+          <h2 class="section-title">Teaching</h2>
+          <div class="timeline">
+            {
+              teaching.map((e) => (
+                <div class="timeline-item">
+                  <div class="timeline-date">{e.date}</div>
+                  <div class="timeline-title">{e.title}</div>
+                  <div class="timeline-sub">{e.sub}</div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="cv-block">
+          <h2 class="section-title">Presentations</h2>
+          <div class="timeline">
+            {
+              presentations.map((e) => (
+                <div class="timeline-item">
+                  <div class="timeline-date">{e.date}</div>
+                  <div class="timeline-title">{e.title}</div>
+                  <div class="timeline-sub">{e.sub}</div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <p class="cv-note">
+          A full publication list is available on the <a href="/research/">Research</a> page.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .cv-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cv-body {
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .honor-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--clay);
+    background: rgba(122, 74, 56, 0.1);
+    border-radius: var(--radius-xs);
+    padding: 0.1rem 0.5rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    letter-spacing: 0.02em;
+  }
+
+  .cv-note {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-2);
+  }
+  .cv-note a { color: var(--clay); }
+</style>

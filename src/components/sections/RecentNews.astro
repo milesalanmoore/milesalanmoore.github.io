@@ -1,0 +1,115 @@
+---
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("news", ({ data }) => !data.draft);
+const recent = allPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4);
+
+function fmt(d: Date) {
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+}
+---
+
+{
+  recent.length > 0 && (
+    <section class="recent-news">
+      <div class="container recent-grid">
+        <div class="recent-intro">
+          <div class="eyebrow">News</div>
+          <a href="/news/" class="recent-cta">
+            All updates &rarr;
+          </a>
+        </div>
+        <ul class="recent-list" role="list">
+          {recent.map((post) => (
+            <li class="recent-item">
+              <a href={`/news/${post.slug}/`} class="recent-link">
+                <time class="recent-date" datetime={post.data.date.toISOString()}>
+                  {fmt(post.data.date)}
+                </time>
+                <span class="recent-title">{post.data.title}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .recent-news {
+    background: var(--paper);
+    padding-block: clamp(2.5rem, 5vw, 3.25rem);
+    position: relative;
+    z-index: 2;
+  }
+
+  .recent-grid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 3.25rem;
+    align-items: start;
+  }
+
+  .recent-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .recent-cta {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--clay);
+  }
+  .recent-cta:hover { color: var(--clay-h); }
+
+  .recent-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recent-item {
+    border-top: 1px solid var(--border);
+  }
+  .recent-item:last-child { border-bottom: 1px solid var(--border); }
+
+  .recent-link {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 1.25rem;
+    align-items: baseline;
+    padding: 0.9rem 0;
+    transition: var(--transition-hover);
+  }
+
+  .recent-link:hover { padding-left: 0.4rem; }
+
+  .recent-date {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .recent-title {
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.45;
+    color: var(--ink-soft);
+  }
+
+  .recent-link:hover .recent-title { color: var(--clay); }
+
+  @media (max-width: 900px) {
+    .recent-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+
+  @media (max-width: 560px) {
+    .recent-link { grid-template-columns: 1fr; gap: 0.2rem; }
+  }
+</style>

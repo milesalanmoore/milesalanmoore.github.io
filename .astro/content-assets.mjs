@@ -1,0 +1,7 @@
+
+import __ASTRO_IMAGE_IMPORT_KO5At from "./2025-05-13_DOECSGF/thumbnail.png?astroContentImageFlag=&importer=src%2Fcontent%2Fnews%2F2025-05-13-doe-csgf.mdx";
+import __ASTRO_IMAGE_IMPORT_1daWLk from "./2025-09-05_SC25/thumbnail.png?astroContentImageFlag=&importer=src%2Fcontent%2Fnews%2F2025-09-05-sc25.mdx";
+import __ASTRO_IMAGE_IMPORT_Z1RjIU6 from "./2025-12-04_NPR/thumbnail.png?astroContentImageFlag=&importer=src%2Fcontent%2Fnews%2F2025-12-04-npr.mdx";
+import __ASTRO_IMAGE_IMPORT_Z1gqAX7 from "./2025-12-09_Clarketal2025NP/thumbnail.png?astroContentImageFlag=&importer=src%2Fcontent%2Fnews%2F2025-12-09-clark-np.mdx";
+export default new Map([["./2025-05-13_DOECSGF/thumbnail.png?astroContentImageFlag=&importer=src%2Fcontent%2Fnews%2F2025-05-13-doe-csgf.mdx", __ASTRO_IMAGE_IMPORT_KO5At], ["./2025-09-05_SC25/thumbnail.png?astroContentImageFlag=&importer=src%2Fcontent%2Fnews%2F2025-09-05-sc25.mdx", __ASTRO_IMAGE_IMPORT_1daWLk], ["./2025-12-04_NPR/thumbnail.png?astroContentImageFlag=&importer=src%2Fcontent%2Fnews%2F2025-12-04-npr.mdx", __ASTRO_IMAGE_IMPORT_Z1RjIU6], ["./2025-12-09_Clarketal2025NP/thumbnail.png?astroContentImageFlag=&importer=src%2Fcontent%2Fnews%2F2025-12-09-clark-np.mdx", __ASTRO_IMAGE_IMPORT_Z1gqAX7]]);
+		
