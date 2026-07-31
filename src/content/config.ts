@@ -26,7 +26,7 @@ const newsCollection = defineCollection({
 });
 
 /**
- * Prose pages — About, AI policy, License, Colophon.
+ * Prose pages — About, AI policy, License.
  *
  * Drop a new .md file in src/content/pages/ and it becomes a page at
  * /<filename>/ automatically, rendered by src/pages/[slug].astro.
