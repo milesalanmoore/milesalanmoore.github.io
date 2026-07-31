@@ -9,12 +9,10 @@ export const hero = {
   // Rendered as one muted line under the name, joined with "·".
   roles: ["Computational Ecologist", "DOE CSGF Fellow", "PhD Student, CU Boulder"],
   bio: "I build and apply statistical and simulation-based models for studying biological systems under uncertainty. By combining Bayesian inference, machine learning, and high-performance computing, I investigate ecological processes across scales.",
-  aside:
-    "Away from the terminal, I am usually at a show, in the snow, or arguing about drum tone.",
 };
 
 export const researchIntro =
-  "My work sits at the intersection of ecology, statistics, and computation. I develop methods that handle the complexity and uncertainty inherent in natural systems.";
+  "My work sits at the intersection of ecology, statistics, and computation. I am developing methods that handle the complexity and uncertainty inherent in natural systems.";
 
 export const researchAreas = [
   {
@@ -25,7 +23,7 @@ export const researchAreas = [
   },
   {
     title: "ML for Ecological Inference",
-    blurb: "Neural networks and kernel methods paired with mechanistic models.",
+    blurb: "Neural networks + kernel methods paired with mechanistic models.",
     tools: "Python · PyTorch",
   },
   {
@@ -35,32 +33,31 @@ export const researchAreas = [
   },
   {
     title: "Uncertainty Quantification",
-    blurb:
-      "Probabilistic solutions for complex systems — ODEs and transcendentals.",
+    blurb: "Probabilistic solutions for complex systems (ODEs, Transcendentals).",
     tools: "",
   },
 ];
 
 export const skills = [
   {
-    category: "Languages",
+    category: "Common Languages",
     items: ["Python", "R", "Julia", "Stan", "Bash"],
   },
   {
-    category: "Methods",
+    category: "Recent Methods",
     items: [
-      "Bayesian inference",
-      "Gaussian processes",
-      "Neural networks",
-      "Differential equations",
-      "Predictive machine learning",
+      "Bayesian Inference",
+      "Gaussian Processes",
+      "Neural Networks",
+      "Ordinary Differential Equations",
+      "Predictive Machine Learning",
     ],
   },
   {
-    category: "Platforms",
+    category: "Computing Platforms",
     items: [
-      "HPC / SLURM",
-      "OpenMP / MPI",
+      "High-Performance Computing / SLURM",
+      "OpenMP / MPI (Parallel Computing)",
       "Docker",
       "Git / GitHub",
       "Quarto / R Markdown",

@@ -29,7 +29,6 @@ const fmtDate = (d: Date) =>
     <h1>{hero.name}</h1>
     <p class="hero-roles">{hero.roles.join(" · ")}</p>
     <p class="hero-bio">{hero.bio}</p>
-    <p class="hero-aside">{hero.aside}</p>
 
     <div class="btn-row hero-actions">
       <a class="btn btn-accent" href="/research/">Research &amp; publications</a>
@@ -181,13 +180,6 @@ const fmtDate = (d: Date) =>
     font-size: 1.02rem;
     line-height: 1.85;
     color: var(--ink-2);
-    max-width: 54ch;
-    margin: 0 auto 1rem;
-  }
-
-  .hero-aside {
-    font-size: 0.92rem;
-    color: var(--faint);
     max-width: 54ch;
     margin: 0 auto 2rem;
   }
