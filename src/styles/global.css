@@ -1,312 +1,576 @@
-@import "tailwindcss";
-@import "./theme.css";
-@import "./prose.css";
-
 /* ============================================================
-   SHARED TOKENS (non-color)
+   Design tokens.
+
+   The whole site is driven from the variables below — change
+   --accent here and every link, rule, and button follows.
    ============================================================ */
+
 :root {
-  --content-width: 1180px;
-  --radius:        8px;
-  --radius-sm:     4px;
-  --radius-xs:     2px;
+  /* Surfaces */
+  --paper: #fdfcf9;
+  --paper-2: #f7f5f0;
 
-  /* DM Sans drives the whole "Field Notes" look. */
-  --font-display: "DM Sans", system-ui, -apple-system, sans-serif;
-  --font-body:    "DM Sans", system-ui, -apple-system, sans-serif;
-  --font-mono:    "JetBrains Mono", "Fira Code", monospace;
+  /* Ink */
+  --ink: #2b2925;
+  --ink-2: #3a3733;
+  --muted: #5b574f;
+  --faint: #8a857a;
 
-  --transition-base:  background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  --transition-hover: all 0.18s ease;
+  /* Rules */
+  --rule: #e7e3db;
+  --rule-2: #ece8e0;
+
+  /* Accent — terracotta */
+  --accent: #b5563c;
+  --accent-deep: #94422c;
+  --accent-wash: #f9efec;
+
+  /* Type */
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Measure — the single column everything sits in */
+  --measure: 680px;
+  --measure-wide: 760px;
+  --gutter: 24px;
 }
 
 /* ============================================================
-   RESET & BASE
+   Reset
    ============================================================ */
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-body);
-  font-weight: 300;
-  font-size: 1rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.7;
-  color: var(--text);
-  background-color: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
-img, video, svg {
+img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
+ul,
+ol {
+  list-style-position: outside;
+  padding-left: 1.15rem;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+/* ============================================================
+   Links
+   ============================================================ */
+
 a {
-  color: var(--text-muted);
+  color: var(--accent);
   text-decoration: none;
-  transition: var(--transition-hover);
+  transition: color 0.15s ease;
 }
 
 a:hover {
-  color: var(--clay);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
-/* ============================================================
-   TYPOGRAPHY
-   ============================================================ */
-h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  text-wrap: balance;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
-h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); }
-h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
-h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
-h4 { font-size: 1.05rem; }
-
-p { margin-bottom: 1rem; text-wrap: pretty; }
-p:last-child { margin-bottom: 0; }
-
-code, kbd, pre {
-  font-family: var(--font-mono);
-  font-size: 0.875em;
-}
-
-/* ============================================================
-   LAYOUT UTILITIES
-   ============================================================ */
-.container {
-  width: 100%;
-  max-width: var(--content-width);
-  margin-inline: auto;
-  padding-inline: clamp(1.25rem, 5vw, 4rem);
-}
-
-.section {
-  padding-block: clamp(2.5rem, 6vw, 4rem);
-}
-
-/* Eyebrow / kicker label — small uppercase sage text */
-.eyebrow {
-  font-family: var(--font-display);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--sage);
-}
-
-/* Section title used inside content pages */
-.section-title {
-  font-family: var(--font-display);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--sage);
-  margin-bottom: 1.5rem;
-}
-
-/* Horizontal rule used between page sections */
-.rule {
-  border: none;
-  height: 1px;
-  background: var(--border-2);
-  margin: 0;
-}
-
-/* The bold editorial name-rule (under hero headings) */
-.name-rule {
-  height: 2px;
-  background: var(--rule);
-  border: none;
-}
-
-/* ============================================================
-   TAG / BADGE PILLS
-   ============================================================ */
-.tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0.2rem 0.65rem;
-  border-radius: var(--radius-xs);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  background: rgba(88, 72, 62, 0.07);
-  color: var(--text-muted);
-  white-space: nowrap;
-}
-
-/* ============================================================
-   TIMELINE (about / cv pages)
-   ============================================================ */
-.timeline {
-  position: relative;
-  padding-left: 1.75rem;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.5rem;
-  bottom: 0.5rem;
-  width: 1px;
-  background: linear-gradient(to bottom, var(--sage), var(--border-2), transparent);
-}
-
-.timeline-item {
-  position: relative;
-  padding-bottom: 2rem;
-}
-
-.timeline-item:last-child { padding-bottom: 0; }
-
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -1.75rem;
-  top: 0.4rem;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--sage);
-  border: 2px solid var(--paper);
-  box-shadow: 0 0 0 1px var(--border-2);
-}
-
-.timeline-date {
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--text-faint);
-  letter-spacing: 0.03em;
-  margin-bottom: 0.25rem;
-}
-
-.timeline-title {
-  font-family: var(--font-display);
-  font-size: 1.02rem;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 0.2rem;
-  letter-spacing: -0.01em;
-}
-
-.timeline-sub {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-/* ============================================================
-   INTERIOR PAGE HEADER (about / research / news / etc.)
-   ============================================================ */
-.page-header {
-  background: var(--paper-2);
-  padding-block: clamp(2.5rem, 6vw, 4rem) clamp(2rem, 4vw, 3rem);
-  border-bottom: 2px solid var(--rule);
-}
-
-.page-label {
-  font-family: var(--font-display);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--sage);
-  margin-bottom: 0.65rem;
-}
-
-.page-heading {
-  font-family: var(--font-display);
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  color: var(--ink);
-  line-height: 0.98;
-  margin: 0;
-}
-
-.page-sub {
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--text-muted);
-  max-width: 60ch;
-  line-height: 1.7;
-  margin: 0.9rem 0 0;
-}
-
-/* ============================================================
-   SKIP LINK (a11y)
-   ============================================================ */
 .skip-link {
   position: absolute;
-  top: -100%;
-  left: 1rem;
+  left: -9999px;
+  top: 0;
   background: var(--ink);
-  color: var(--paper-light);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-xs);
-  z-index: 1000;
+  color: var(--paper);
+  padding: 0.6rem 1rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ============================================================
+   Headings
+   ============================================================ */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--serif);
   font-weight: 500;
-  font-size: 0.875rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 
-.skip-link:focus { top: 0.5rem; }
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+
+/* Small uppercase section label */
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--faint);
+}
 
 /* ============================================================
-   🌸 PETAL ANIMATIONS
-   Falling cherry-blossom petals (see PetalField.astro).
-   Uses vh so the drift always spans the viewport.
+   Layout primitives
    ============================================================ */
-@keyframes petal-drift-right {
-  0%   { transform: translateX(0)     translateY(-5vh)  rotate(0deg);   opacity: 0; }
-  8%   {                                                                 opacity: 0.68; }
-  92%  {                                                                 opacity: 0.42; }
-  100% { transform: translateX(70px)  translateY(105vh) rotate(555deg); opacity: 0; }
-}
-@keyframes petal-drift-left {
-  0%   { transform: translateX(0)     translateY(-5vh)  rotate(18deg);   opacity: 0; }
-  8%   {                                                                  opacity: 0.64; }
-  92%  {                                                                  opacity: 0.38; }
-  100% { transform: translateX(-54px) translateY(105vh) rotate(-440deg); opacity: 0; }
-}
-@keyframes petal-drift-sway {
-  0%   { transform: translateX(0)     translateY(-5vh)  rotate(5deg);   opacity: 0; }
-  8%   {                                                                 opacity: 0.60; }
-  25%  { transform: translateX(28px)  translateY(20vh)  rotate(108deg); }
-  50%  { transform: translateX(-14px) translateY(45vh)  rotate(238deg); }
-  75%  { transform: translateX(38px)  translateY(70vh)  rotate(375deg); opacity: 0.40; }
-  92%  {                                                                 opacity: 0.36; }
-  100% { transform: translateX(10px)  translateY(105vh) rotate(505deg); opacity: 0; }
+
+.wrap {
+  width: 100%;
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
 }
 
-/* Respect reduced-motion: hide the petals entirely. */
+.wrap-wide {
+  max-width: var(--measure-wide);
+}
+
+main {
+  flex: 1 0 auto;
+  padding-bottom: 4rem;
+}
+
+/* Standard page header: eyebrow + title + optional lede */
+.page-head {
+  padding: 3.25rem 0 2rem;
+}
+
+.page-head h1 {
+  font-size: 2.1rem;
+  margin-top: 0.35rem;
+}
+
+.lede {
+  margin-top: 0.9rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 56ch;
+}
+
+/* Section with a hairline above it */
+.band {
+  border-top: 1px solid var(--rule);
+  padding: 2.5rem 0;
+}
+
+.band > h2 {
+  margin-bottom: 1.1rem;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.back-link:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ============================================================
+   Buttons — outlined pills, no fills, no shadows
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 100px;
+  padding: 0.5rem 1.15rem;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.btn:hover {
+  text-decoration: none;
+  border-color: var(--faint);
+}
+
+.btn-accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-accent:hover {
+  border-color: var(--accent-deep);
+  color: var(--accent-deep);
+}
+
+.btn-row {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   Prose — markdown-driven pages and news entries
+   ============================================================ */
+
+.prose {
+  color: var(--ink-2);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.prose > * + * {
+  margin-top: 1.15rem;
+}
+
+.prose h2 {
+  font-size: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.prose h3 {
+  font-size: 1.05rem;
+  margin-top: 1.9rem;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25rem;
+}
+
+.prose li + li {
+  margin-top: 0.35rem;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--rule);
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.25rem 0;
+}
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--paper-2);
+  padding: 0.12em 0.35em;
+  border-radius: 3px;
+}
+
+.prose img {
+  border-radius: 4px;
+  margin-block: 1.75rem;
+}
+
+.prose figcaption {
+  font-size: 0.82rem;
+  color: var(--faint);
+  margin-top: 0.5rem;
+}
+
+/* ============================================================
+   Entry list — the workhorse pattern.
+
+   One row per publication / dataset / news item / CV line:
+   a small meta line, a title, and a dim sub-line. Separated by
+   hairlines rather than boxed in cards.
+   ============================================================ */
+
+.entries {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry {
+  border-top: 1px solid var(--rule-2);
+  padding: 1.35rem 0;
+}
+
+.entry:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.85rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 0.4rem;
+}
+
+.entry-meta .accent {
+  color: var(--accent);
+}
+
+.entry-title {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+
+a.entry-title {
+  display: block;
+  color: var(--ink);
+}
+
+a.entry-title:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.entry-sub {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.entry-sub strong {
+  color: var(--ink-2);
+  font-weight: 600;
+}
+
+.entry-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  margin-top: 0.6rem;
+  font-size: 0.86rem;
+}
+
+/* Tag chips — quiet, lowercase, no fill */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+}
+
+.tag {
+  font-size: 0.72rem;
+  color: var(--faint);
+  border: 1px solid var(--rule);
+  border-radius: 100px;
+  padding: 0.05rem 0.6rem;
+}
+
+/* ============================================================
+   Columns — three-up skill / interest grids
+   ============================================================ */
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+}
+
+.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cols h4 {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--faint);
+  margin-bottom: 0.7rem;
+}
+
+.cols ul {
+  padding-left: 0;
+}
+
+.cols li {
+  font-size: 0.9rem;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin-bottom: 0.35rem;
+  list-style: none;
+}
+
+/* ============================================================
+   Nav + footer
+   ============================================================ */
+
+.nav {
+  border-bottom: 1px solid var(--rule);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding-block: 1.15rem;
+  font-size: 0.9rem;
+}
+
+.nav-name {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.nav-name:hover {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding-block: 2rem 3rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 1.75rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.site-footer a {
+  color: var(--muted);
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-fine {
+  margin-top: 1.25rem;
+  font-size: 0.78rem;
+  color: var(--faint);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .cols,
+  .cols-2 {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .page-head h1 {
+    font-size: 1.75rem;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .nav-links {
+    gap: 1.1rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .petal-field { display: none !important; }
-  html { scroll-behavior: auto; }
-}
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 768px) {
-  .section { padding-block: 2.5rem; }
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }

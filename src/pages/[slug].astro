@@ -1,0 +1,84 @@
+---
+/**
+ * Renders every markdown file in src/content/pages/ as a top-level page.
+ * about.md -> /about/, ai.md -> /ai/, and so on.
+ */
+import { getCollection } from "astro:content";
+import Layout from "../components/Layout.astro";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content } = await page.render();
+const { title, eyebrow, lede, description, photo, photoAlt } = page.data;
+---
+
+<Layout title={title} description={description}>
+  <div class:list={["wrap", "page-head", photo && "wrap-wide"]}>
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h1>{title}</h1>
+    {lede && <p class="lede">{lede}</p>}
+  </div>
+
+  <div class:list={["wrap", photo && "wrap-wide with-photo"]}>
+    {
+      photo && (
+        <figure class="portrait">
+          <img src={photo} alt={photoAlt ?? title} width="240" height="300" />
+        </figure>
+      )
+    }
+    <div class="prose">
+      <Content />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .with-photo {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .portrait {
+    position: sticky;
+    top: 2rem;
+  }
+
+  .portrait img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 3px;
+    object-fit: cover;
+    object-position: 53% 20%;
+  }
+
+  /* The "Research interests" list on About reads better as two columns. */
+  .with-photo .prose :global(ul) {
+    columns: 2;
+    column-gap: 2rem;
+    padding-left: 1.1rem;
+  }
+
+  @media (max-width: 720px) {
+    .with-photo {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+    .portrait {
+      position: static;
+      max-width: 220px;
+    }
+    .with-photo .prose :global(ul) {
+      columns: 1;
+    }
+  }
+</style>
