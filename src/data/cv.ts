@@ -73,7 +73,13 @@ export const teaching: CVEntry[] = [
 
 export const presentations: CVEntry[] = [
   {
-    date: "Dec 2023 · San Francisco, CA",
+    date: "July 2026 · Washington D.C., USA",
+    title:
+      "High-performance computing enabled generative models of flowering time in cultivated sunflower",
+    sub: "Dept. of Energy CSGF: Annual Program Review 2026 (Poster)",
+  },
+  {
+    date: "Dec 2023 · San Francisco, CA, USA",
     title:
       "From Field to Air: Integrating Field Data in Support of the ABoVE Airborne Campaign",
     sub: "AGU Fall Meeting 2023 (Poster)",
