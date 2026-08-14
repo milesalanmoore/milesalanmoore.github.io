@@ -1,403 +1,238 @@
 ---
-import BaseLayout from "../components/layout/BaseLayout.astro";
-import Nav from "../components/layout/Nav.astro";
-import Footer from "../components/layout/Footer.astro";
-import BlossomTree from "../components/graphics/BlossomTree.astro";
-import RecentNews from "../components/sections/RecentNews.astro";
+import { getCollection } from "astro:content";
+import Layout from "../components/Layout.astro";
 import { hero, researchIntro, researchAreas, skills } from "../data/home";
-import { socials } from "../data/socials";
+import { publications, pubMeta, boldAuthors } from "../data/publications";
+import { socials, email, cvPath } from "../data/socials";
+
+const featured = publications.filter((p) => p.featured).slice(0, 3);
+
+const news = (await getCollection("news", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const fmtDate = (d: Date) =>
+  d.toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
 ---
 
-<BaseLayout
-  title="Miles A. Moore — Computational Ecologist"
-  description="PhD student at CU Boulder & DOE CSGF Fellow. Bayesian and simulation-based methods for ecological forecasting in alpine and agricultural systems."
->
-  <Nav />
-  <main id="main-content">
+<Layout title="Miles A. Moore">
+  <!-- Hero: portrait, name, role line, short bio -->
+  <section class="wrap hero">
+    <img
+      class="hero-photo"
+      src={hero.photo}
+      alt={hero.name}
+      width="128"
+      height="128"
+      loading="eager"
+    />
+    <h1>{hero.name}</h1>
+    <p class="hero-roles">{hero.roles.join(" · ")}</p>
+    <p class="hero-bio">{hero.bio}</p>
 
-    <!-- ============== HERO ============== -->
-    <section class="hero">
-      <div class="hero-namebar container">
-        <div class="hero-namerow">
-          <h1 class="hero-name">{hero.name}</h1>
-          <div class="hero-monogram-col">
-            <img
-              class="hero-headshot"
-              src="assets/images/bio-photo.jpg"
-              alt="Portrait of Miles A. Moore"
-              width="100"
-              height="100"
-            />
-            <span class="hero-role">{hero.role}</span>
+    <div class="btn-row hero-actions">
+      <a class="btn btn-accent" href="/research/">Research &amp; publications</a>
+      <a class="btn" href={cvPath}>Curriculum vitae</a>
+      <a class="btn" href={`mailto:${email}`}>Get in touch</a>
+    </div>
+  </section>
+
+  <!-- Research areas -->
+  <section class="wrap band">
+    <h2>Research</h2>
+    <p class="lede">{researchIntro}</p>
+    <div class="entries areas">
+      {
+        researchAreas.map((area) => (
+          <div class="entry">
+            <h3 class="entry-title">{area.title}</h3>
+            <p class="entry-sub">{area.blurb}</p>
+            {area.tools && <p class="tools">{area.tools}</p>}
           </div>
-        </div>
-        <div class="name-rule"></div>
-      </div>
+        ))
+      }
+    </div>
+  </section>
 
-      <div class="hero-grid container">
-        <!-- Left: bio + tabular social links -->
-        <div class="hero-bio">
-          <div class="hero-badges">
-            {
-              hero.badges.map((b, i) => (
-                <span class:list={["hero-badge", { "is-clay": i === 0 }]}>{b}</span>
-              ))
-            }
-          </div>
-          <p class="hero-blurb">{hero.bio}</p>
-
-          <div class="hero-socials">
-            {
-              socials.map((s) => (
-                <div class="hero-social-row">
-                  <span class="hero-social-label">{s.label}</span>
-                  <a href={s.href} target="_blank" rel="noopener noreferrer" class="hero-social-link">
-                    {s.handle}
-                  </a>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-
-        <!-- Right: cherry blossom tree -->
-        <div class="hero-tree">
-          <BlossomTree />
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== RESEARCH ============== -->
-    <section class="research">
-      <div class="container research-grid">
-        <div class="research-intro">
-          <div class="eyebrow research-kicker">Research</div>
-          <p>{researchIntro}</p>
-          <a href="/research/" class="research-cta">View publications &rarr;</a>
-        </div>
-        <div class="research-cards">
-          {
-            researchAreas.map((area) => (
-              <div class="research-card">
-                <div class="research-card-title">{area.title}</div>
-                <p class="research-card-blurb">{area.blurb}</p>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== SKILLS ============== -->
-    <section class="skills">
-      <div class="container skills-grid">
-        {
-          skills.map((group) => (
-            <div class="skill-col">
-              <div class="eyebrow skill-kicker">{group.category}</div>
-              <div class="skill-items">
-                {group.items.map((item) => (
-                  <span class="skill-item">{item}</span>
-                ))}
-              </div>
+  <!-- Selected publications -->
+  <section class="wrap band">
+    <h2>Selected work</h2>
+    <div class="entries">
+      {
+        featured.map((pub) => (
+          <article class="entry">
+            <div class="entry-meta">
+              {pubMeta(pub).map((m) => (
+                <span>{m}</span>
+              ))}
             </div>
-          ))
-        }
-      </div>
-    </section>
+            {pub.slug ? (
+              <a class="entry-title" href={`/research/${pub.slug}/`}>
+                {pub.title}
+              </a>
+            ) : (
+              <h3 class="entry-title">{pub.title}</h3>
+            )}
+            <p class="entry-sub" set:html={boldAuthors(pub.authors)} />
+          </article>
+        ))
+      }
+    </div>
+    <p class="more"><a href="/research/">All publications &amp; datasets →</a></p>
+  </section>
 
-    <hr class="rule" />
+  <!-- Recent news -->
+  <section class="wrap band">
+    <h2>Recent</h2>
+    <div class="entries">
+      {
+        news.map((post) => (
+          <article class="entry">
+            <div class="entry-meta">
+              <span>{fmtDate(post.data.date)}</span>
+            </div>
+            <a class="entry-title" href={`/news/${post.slug}/`}>
+              {post.data.title}
+            </a>
+            {post.data.description && (
+              <p class="entry-sub">{post.data.description}</p>
+            )}
+          </article>
+        ))
+      }
+    </div>
+    <p class="more"><a href="/news/">All news →</a></p>
+  </section>
 
-    <!-- ============== RECENT NEWS ============== -->
-    <RecentNews />
+  <!-- Toolkit -->
+  <section class="wrap band">
+    <h2>Toolkit</h2>
+    <div class="cols">
+      {
+        skills.map((group) => (
+          <div>
+            <h4>{group.category}</h4>
+            <ul>
+              {group.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
 
-  </main>
-  <Footer />
-</BaseLayout>
+  <!-- Elsewhere -->
+  <section class="wrap band">
+    <h2>Elsewhere</h2>
+    <div class="entries">
+      {
+        socials.map((s) => (
+          <a
+            class="link-row"
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="link-label">{s.label}</span>
+            <span class="link-handle">{s.handle}</span>
+          </a>
+        ))
+      }
+      <a class="link-row" href={`mailto:${email}`}>
+        <span class="link-label">Email</span>
+        <span class="link-handle">{email}</span>
+      </a>
+    </div>
+  </section>
+</Layout>
 
 <style>
-  /* ---------- HERO ---------- */
   .hero {
-    position: relative;
-    background: var(--paper);
-    overflow: hidden;
+    padding-top: 3.5rem;
+    padding-bottom: 3rem;
+    text-align: center;
   }
 
-  .hero-namebar {
-    padding-top: clamp(2.5rem, 6vw, 3.5rem);
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-namerow {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 1.5rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .hero-name {
-    font-size: clamp(2.6rem, 8vw, 5.4rem);
-    font-weight: 600;
-    letter-spacing: -0.04em;
-    line-height: 0.94;
-    color: var(--ink);
-    margin: 0;
-  }
-
-  .hero-monogram-col {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.5rem;
-    padding-bottom: 0.4rem;
-    flex-shrink: 0;
-  }
-
-  .hero-monogram {
-    width: 50px;
-    height: 50px;
+  .hero-photo {
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
-    background: var(--avatar-grad);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.7rem;
-    font-weight: 500;
-    color: var(--paper-light);
-    letter-spacing: 0.09em;
-  }
-
-  .hero-headshot-frame {
-    width: 64px;
-    height: 64px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 2px solid rgba(122, 74, 56, 0.18);
-    box-shadow: 0 2px 10px rgba(46, 35, 29, 0.12);
-  }
-
-  .hero-headshot {
-    width: 64px;
-    height: 64px;
-    display: block;
     object-fit: cover;
-    object-position: 50% 10%;
-    border-radius: 50%;
-    border: 2px solid rgba(122, 74, 56, 0.18);
-    box-shadow: 0 2px 10px rgba(46, 35, 29, 0.12);
+    /* Frames the face in the headshot's off-center composition. */
+    object-position: 53% 22%;
+    margin: 0 auto 1.75rem;
   }
 
-  .hero-role {
-    font-size: 0.7rem;
-    font-weight: 400;
-    color: var(--sage);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    text-align: right;
+  .hero h1 {
+    font-size: 2.15rem;
+    margin-bottom: 0.55rem;
   }
 
-  /* Two-column body */
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
+  .hero-roles {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
   }
 
   .hero-bio {
-    padding: 2.4rem 2.5rem 3.5rem 0;
-    position: relative;
-    z-index: 2;
+    font-size: 1.02rem;
+    line-height: 1.85;
+    color: var(--ink-2);
+    max-width: 54ch;
+    margin: 0 auto 2rem;
   }
 
-  .hero-badges {
+  .hero-actions {
+    justify-content: center;
+  }
+
+  /* Research areas sit tighter than publication entries */
+  .areas .entry {
+    padding: 1.15rem 0;
+  }
+
+  .tools {
+    font-size: 0.82rem;
+    color: var(--accent);
+    margin-top: 0.3rem;
+    letter-spacing: 0.01em;
+  }
+
+  .more {
+    margin-top: 1.35rem;
+    font-size: 0.9rem;
+  }
+
+  /* Elsewhere: label / handle rows */
+  .link-row {
     display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 1.6rem;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--rule-2);
+    color: var(--ink-2);
+    font-size: 0.92rem;
   }
 
-  .hero-badge {
-    font-size: 0.74rem;
-    font-weight: 400;
-    color: var(--text-muted);
-    background: rgba(88, 72, 62, 0.08);
-    padding: 4px 11px;
-    border-radius: var(--radius-xs);
+  .link-row:first-child {
+    border-top: 0;
   }
 
-  .hero-badge.is-clay {
-    color: var(--clay);
-    background: rgba(122, 74, 56, 0.1);
+  .link-row:hover {
+    text-decoration: none;
   }
 
-  .hero-blurb {
-    font-size: 0.95rem;
-    font-weight: 300;
-    line-height: 1.78;
-    color: var(--text);
-    max-width: 460px;
-    margin: 0 0 2.2rem;
-  }
-
-  .hero-socials {
-    display: flex;
-    flex-direction: column;
-    gap: 0.55rem;
-  }
-
-  .hero-social-row {
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-  }
-
-  .hero-social-label {
-    font-size: 0.62rem;
-    font-weight: 500;
-    color: var(--label);
-    letter-spacing: 0.12em;
+  .link-label {
+    color: var(--faint);
+    font-size: 0.76rem;
     text-transform: uppercase;
-    min-width: 58px;
+    letter-spacing: 0.05em;
+    padding-top: 0.15rem;
   }
 
-  .hero-social-link {
-    font-size: 0.82rem;
-    font-weight: 400;
-    color: var(--text-muted);
-  }
-
-  .hero-social-link:hover { color: var(--clay); }
-
-  /* Tree column */
-  .hero-tree {
-    position: relative;
-    min-height: 360px;
-  }
-
-  .hero-tree :global(.blossom-tree) {
-    position: absolute;
-    right: -12px;
-    bottom: 0;
-    width: min(490px, 46vw);
-  }
-
-  /* ---------- RESEARCH ---------- */
-  .research {
-    background: var(--paper-2);
-    padding-block: clamp(2.75rem, 6vw, 3.5rem);
-    position: relative;
-    z-index: 2;
-  }
-
-  .research-grid {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 3.25rem;
-    align-items: start;
-  }
-
-  .research-kicker { margin-bottom: 1rem; }
-
-  .research-intro p {
-    font-size: 0.84rem;
-    font-weight: 300;
-    line-height: 1.74;
-    color: var(--text-muted);
-    margin: 0 0 1.1rem;
-  }
-
-  .research-cta {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--clay);
-  }
-
-  .research-cta:hover { color: var(--clay-h); }
-
-  .research-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.65rem;
-  }
-
-  .research-card {
-    background: var(--paper);
-    border-radius: var(--radius-sm);
-    padding: 1.4rem 1.15rem 1.15rem;
-    transition: var(--transition-hover);
-  }
-
-  .research-card:hover {
-    box-shadow: var(--shadow-sm);
-    transform: translateY(-2px);
-  }
-
-  .research-card-title {
-    font-size: 0.86rem;
-    font-weight: 500;
-    line-height: 1.32;
-    color: var(--ink);
-    margin-bottom: 0.5rem;
-  }
-
-  .research-card-blurb {
-    font-size: 0.8rem;
-    font-weight: 400;
-    line-height: 1.64;
-    color: var(--text-muted);
-    margin: 0;
-  }
-
-  /* ---------- SKILLS ---------- */
-  .skills {
-    background: var(--paper);
-    padding-block: clamp(2.5rem, 5vw, 3rem);
-    position: relative;
-    z-index: 2;
-  }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2.75rem;
-  }
-
-  .skill-kicker { margin-bottom: 1.15rem; }
-
-  .skill-items {
-    display: flex;
-    flex-direction: column;
-    gap: 0.55rem;
-  }
-
-  .skill-item {
-    font-size: 0.82rem;
-    font-weight: 400;
-    color: var(--ink-soft);
-  }
-
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 900px) {
-    .research-grid { grid-template-columns: 1fr; gap: 1.75rem; }
-  }
-
-  @media (max-width: 768px) {
-    .hero-grid { grid-template-columns: 1fr; }
-    .hero-bio { padding-right: 0; padding-bottom: 2rem; }
-    .hero-tree {
-      min-height: 0;
-      height: 230px;
-      order: -1;
-      opacity: 0.9;
-    }
-    .hero-tree :global(.blossom-tree) { width: 300px; right: -20px; }
-    .research-cards { grid-template-columns: 1fr; }
-    .skills-grid { grid-template-columns: 1fr; gap: 1.75rem; }
-  }
-
-  @media (max-width: 420px) {
-    .hero-monogram-col { display: none; }
+  .link-row:hover .link-handle {
+    color: var(--accent);
   }
 </style>

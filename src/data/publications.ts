@@ -17,6 +17,22 @@ export type Publication = {
   featured?: boolean;
 };
 
+/**
+ * The small uppercase meta line above a publication title.
+ * Deduplicates so an unpublished entry reads "In Review", not
+ * "In Review · In Review".
+ */
+export function pubMeta(p: Publication): string[] {
+  return [p.journal, String(p.year)].filter(
+    (v, i, all) => all.indexOf(v) === i
+  );
+}
+
+/** Renders **Author** in an author string as bold. */
+export function boldAuthors(raw: string): string {
+  return raw.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+}
+
 export const publications: Publication[] = [
     {
     title:
@@ -24,8 +40,11 @@ export const publications: Publication[] = [
     authors: "**Moore, M.A.**, Emery, N.C., and Elmendorf, S.C.",
     year: "2026",
     journal: "Environmental Research: Ecology",
+    slug: "alpine-greening-browning",
     featured: true,
     tags: ["alpine tundra", "NDVI", "remote sensing", "experiment", "rocky mountains"],
+    abstract:
+      "Despite widespread reports of tundra 'greening,' it remained unclear whether greening is occurring in the mid-latitude alpine tundra of the southwestern United States, where vegetation productivity strongly influences headwater ecohydrology and ecosystem function. Combining 39 years of Landsat data (1984–2023), a four-year factorial snow-and-temperature manipulation experiment, and two decades of field measurements at the Niwot Ridge LTER in Colorado, we found that—contrary to Arctic and European alpine systems—NDVI declined 2.8% across the Southern Rocky Mountain alpine on average. This regional average masked pronounced spatial heterogeneity: 20.2% of the region browned while 17.6% greened. Experimentally, warming reduced NDVI while snow addition had a slight positive effect, with the two treatments acting additively. Regionally, summer warming raised the probability of both greening and browning, and the length of the snow-free season determined the direction: browning tracked lengthening growing seasons while greening occurred where growing seasons stayed stable. These findings demonstrate that alpine productivity responses to climate change are not globally uniform, and that regional context mediates the effect of warming.",
     links: [
       {
         text: "DOI",
@@ -38,7 +57,7 @@ export const publications: Publication[] = [
         url: "https://doi.org/10.1088/2752-664X/ae6d04",
         icon: "file-pdf",
         type: "primary",
-      }
+      },
     ],
   },
   {

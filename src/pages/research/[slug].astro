@@ -1,221 +1,86 @@
 ---
-import BaseLayout from "../../components/layout/BaseLayout.astro";
-import Nav from "../../components/layout/Nav.astro";
-import Footer from "../../components/layout/Footer.astro";
-import Button from "../../components/ui/Button.astro";
-import { publications } from "../../data/publications";
+/** A detail page for each publication that has a `slug` in publications.ts. */
+import Layout from "../../components/Layout.astro";
+import { publications, pubMeta, boldAuthors } from "../../data/publications";
 
 export function getStaticPaths() {
   return publications
     .filter((p) => p.slug)
-    .map((p) => ({
-      params: { slug: p.slug },
-      props: { pub: p },
-    }));
+    .map((p) => ({ params: { slug: p.slug }, props: { pub: p } }));
 }
 
 const { pub } = Astro.props;
-
-function formatAuthors(raw: string): string {
-  return raw.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
-}
 ---
 
-<BaseLayout
-  title={`${pub.title} — Miles A. Moore`}
+<Layout
+  title={pub.title}
   description={pub.abstract ?? `${pub.title}. ${pub.journal}, ${pub.year}.`}
 >
-  <Nav />
-  <main id="main-content">
+  <div class="wrap page-head">
+    <a class="back-link" href="/research/">← All publications</a>
+    <div class="entry-meta">
+      {pubMeta(pub).map((m) => <span>{m}</span>)}
+    </div>
+    <h1 class="pub-title">{pub.title}</h1>
+    <p class="authors" set:html={boldAuthors(pub.authors)} />
 
-    <!-- Article header -->
-    <section class="page-header">
-      <div class="container">
-        <a href="/research/" class="back-link">
-          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-          All publications
-        </a>
-        <div class="article-meta">
-          <span class="article-journal">{pub.journal}</span>
-          <span class="article-year">{pub.year}</span>
+    {
+      pub.links && pub.links.length > 0 && (
+        <div class="btn-row links">
+          {pub.links.map((link, i) => (
+            <a
+              class:list={["btn", i === 0 && "btn-accent"]}
+              href={link.url}
+              target={link.url.startsWith("/") ? undefined : "_blank"}
+              rel={link.url.startsWith("/") ? undefined : "noopener noreferrer"}
+            >
+              {link.text}
+            </a>
+          ))}
         </div>
-        <h1 class="article-title">{pub.title}</h1>
-        <p class="article-authors" set:html={formatAuthors(pub.authors)} />
+      )
+    }
+  </div>
 
-        {
-          pub.links && pub.links.length > 0 && (
-            <div class="article-links">
-              {pub.links.map((link) => (
-                <Button
-                  href={link.url}
-                  variant={link.type === "primary" ? "primary" : "ghost"}
-                  icon={link.icon}
-                  external
-                  size="sm"
-                >
-                  {link.text}
-                </Button>
-              ))}
-            </div>
-          )
-        }
-      </div>
-    </section>
+  {
+    pub.abstract && (
+      <section class="wrap band">
+        <h2>Abstract</h2>
+        <div class="prose">
+          <p>{pub.abstract}</p>
+        </div>
+      </section>
+    )
+  }
 
-    <!-- Article body -->
-    <section class="section">
-      <div class="container article-body">
-
-        {
-          pub.abstract && (
-            <div class="article-abstract">
-              <h2 class="section-title">Abstract</h2>
-              <p>{pub.abstract}</p>
-            </div>
-          )
-        }
-
-        {
-          pub.slug === "sunflower-optimal" && (
-            <div class="article-figures">
-              <h2 class="section-title">Key Figure</h2>
-              <figure>
-                <img
-                  src="/assets/research/sunflower-optimal.png"
-                  alt="Model predictions of optimal days to flowering for sunflower"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <strong>Figure 5</strong>: Model predictions of optimal number of days to
-                  flowering across a range of planting days, average site degree days, and
-                  yearly anomalies. Predicted optimal days to flowering is indicated by the
-                  color of each cell.
-                </figcaption>
-              </figure>
-            </div>
-          )
-        }
-
-        {
-          pub.tags && pub.tags.length > 0 && (
-            <div class="article-tags">
-              <h3 class="section-title">Topics</h3>
-              <div class="tags-row">
-                {pub.tags.map((t) => (
-                  <span class="tag">{t}</span>
-                ))}
-              </div>
-            </div>
-          )
-        }
-
-      </div>
-    </section>
-
-  </main>
-  <Footer />
-</BaseLayout>
+  {
+    pub.tags && pub.tags.length > 0 && (
+      <section class="wrap band">
+        <h2>Topics</h2>
+        <div class="tags">
+          {[...new Set(pub.tags)].map((tag) => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+      </section>
+    )
+  }
+</Layout>
 
 <style>
-  .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.78rem;
-    font-weight: 500;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
+  .pub-title {
+    font-size: 1.85rem;
+    margin-top: 0.4rem;
+    line-height: 1.3;
   }
 
-  .back-link:hover { color: var(--clay); gap: 0.55rem; }
-
-  .article-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
+  .authors {
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--muted);
   }
 
-  .article-journal {
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--sage);
-  }
-
-  .article-year {
-    font-size: 0.7rem;
-    font-weight: 500;
-    color: var(--text-muted);
-    padding: 0.1rem 0.45rem;
-    background: rgba(88, 72, 62, 0.07);
-    border-radius: var(--radius-xs);
-  }
-
-  .article-title {
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    line-height: 1.18;
-    margin-bottom: 0.85rem;
-  }
-
-  .article-authors {
-    font-size: 0.92rem;
-    font-weight: 300;
-    color: var(--text-muted);
-    margin-bottom: 1.25rem;
-    line-height: 1.6;
-  }
-
-  .article-authors :global(strong) {
-    font-weight: 600;
-    color: var(--ink-soft);
-  }
-
-  .article-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .article-body {
-    max-width: 760px;
-  }
-
-  .article-abstract { margin-bottom: 2.5rem; }
-
-  .article-abstract p {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.85;
-    color: var(--text);
-  }
-
-  .article-figures { margin-bottom: 2.5rem; }
-
-  figure { margin: 0; }
-
-  figure img {
-    width: 100%;
-    border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-md);
-    margin-bottom: 0.75rem;
-  }
-
-  figcaption {
-    font-size: 0.84rem;
-    font-weight: 300;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-
-  .tags-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
+  .links {
+    margin-top: 1.5rem;
   }
 </style>
