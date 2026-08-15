@@ -1,3 +1,7 @@
 /.quarto/
 .DS_Store
 node_modules/
+
+# Build output — GitHub Actions builds and deploys this from source
+dist/
+.astro/

@@ -175,9 +175,10 @@ main {
   padding-bottom: 4rem;
 }
 
-/* Standard page header: eyebrow + title + optional lede */
+/* Standard page header: eyebrow + title + optional lede.
+   Block-only padding here — the inline padding is the .wrap gutter. */
 .page-head {
-  padding: 3.25rem 0 2rem;
+  padding-block: 3.25rem 2rem;
 }
 
 .page-head h1 {
@@ -196,7 +197,7 @@ main {
 /* Section with a hairline above it */
 .band {
   border-top: 1px solid var(--rule);
-  padding: 2.5rem 0;
+  padding-block: 2.5rem;
 }
 
 .band > h2 {
@@ -404,6 +405,35 @@ a.entry-title:hover {
   font-size: 0.86rem;
 }
 
+/* Card variant — used for publications. Same entry contents, but
+   boxed in a hairline that picks up the accent instead of a rule. */
+.entries-cards {
+  gap: 0.9rem;
+}
+
+.entries-cards .entry {
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--rule));
+  border-left-width: 3px;
+  border-left-color: var(--accent);
+  border-radius: 6px;
+  padding: 1.25rem 1.35rem;
+  background: var(--paper);
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.entries-cards .entry:first-child {
+  border-top-width: 1px;
+  padding-top: 1.25rem;
+}
+
+.entries-cards .entry:hover {
+  background: var(--accent-wash);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--rule));
+  border-left-color: var(--accent-deep);
+}
+
 /* Tag chips — quiet, lowercase, no fill */
 .tags {
   display: flex;
@@ -544,6 +574,10 @@ a.entry-title:hover {
    ============================================================ */
 
 @media (max-width: 640px) {
+  :root {
+    --gutter: 20px;
+  }
+
   .cols,
   .cols-2 {
     grid-template-columns: 1fr;
@@ -562,6 +596,13 @@ a.entry-title:hover {
 
   .nav-links {
     gap: 1.1rem;
+  }
+}
+
+/* Narrow phones — keep a buffer without eating the line length */
+@media (max-width: 400px) {
+  :root {
+    --gutter: 16px;
   }
 }
 
