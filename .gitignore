@@ -5,3 +5,23 @@ node_modules/
 # Build output — GitHub Actions builds and deploys this from source
 dist/
 .astro/
+
+# Legacy pre-Astro site output, kept on disk but no longer tracked.
+# The live site is built from src/ + public/; nothing here is read.
+/index.html
+/about.html
+/license.html
+/Minimal-design-theme.html
+/Gemfile.lock
+/about/
+/ai/
+/film/
+/license/
+/news/
+/research/index.html
+/research/articles/
+/assets/images/
+/assets/site.css
+/assets/site.js
+/assets/miles/favicon2.svg
+/assets/Miles Moore Academic Homepage.html
