@@ -20,18 +20,80 @@
   --rule: #e7e3db;
   --rule-2: #ece8e0;
 
-  /* Accent — terracotta */
+  /* Accent — teal.
+
+     Candidate palettes below. Swap the three live values for any block
+     to re-theme the whole site — every link, rule, button, and inline
+     drawing follows from these three tokens. */
+  --accent: #2f6b66;
+  --accent-deep: #235450;
+  --accent-wash: #e9f1f0;
+
+  /* Terracotta — the original
   --accent: #b5563c;
   --accent-deep: #94422c;
-  --accent-wash: #f9efec;
+  --accent-wash: #f9efec; */
+
+  /* Brick — darker, less orange
+  --accent: #9e3b2f;
+  --accent-deep: #7f2e25;
+  --accent-wash: #f7ebe9; */
+
+  /* Ochre — mustard/earth
+  --accent: #9a7526;
+  --accent-deep: #7d5e1c;
+  --accent-wash: #f7f2e6; */
+
+  /* Moss — muted green
+  --accent: #4f7047;
+  --accent-deep: #3d5937;
+  --accent-wash: #edf2ea; */
+
+  /* Slate — dusty blue
+  --accent: #3f6480;
+  --accent-deep: #315066;
+  --accent-wash: #eaeff3; */
+
+  /* Indigo — cooler, bookish
+  --accent: #45508f;
+  --accent-deep: #353f75;
+  --accent-wash: #ecedf6; */
+
+  /* Plum — muted wine
+  --accent: #7a3f5f;
+  --accent-deep: #62304b;
+  --accent-wash: #f4ecf1; */
+
+  /* Teal — deep blue-green (current)
+  --accent: #2f6b66;
+  --accent-deep: #235450;
+  --accent-wash: #e9f1f0; */
 
   /* Type */
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --sans: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  /* Measure — the single column everything sits in */
-  --measure: 680px;
-  --measure-wide: 760px;
+  /* Earthy companions to the accent. Used only by the theme
+     bubbles, so the page still reads as a one-accent design. */
+  --moss: #5c7052;
+  --moss-wash: #eef1ea;
+  --slate: #4d6470;
+  --slate-wash: #eaeef0;
+
+  /* Measure — the column everything sits in.
+
+     One width for the whole site: nav, footer, and every page share an
+     edge, which is what keeps a wide layout from reading as two layouts.
+     --measure-wide is kept as an alias so the pages that ask for it still
+     line up rather than stepping out 120px on their own.
+
+     --reading is the separate cap on running text. Widening the page is
+     what gives the galleries and bubbles room; it is not an invitation to
+     set body copy 110 characters long, so prose stops at --reading and
+     sits at the left edge of the column. */
+  --measure: 1040px;
+  --measure-wide: 1040px;
+  --reading: 72ch;
   --gutter: 24px;
 }
 
@@ -191,7 +253,7 @@ main {
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.8;
-  max-width: 56ch;
+  max-width: 62ch;
 }
 
 /* Section with a hairline above it */
@@ -267,6 +329,7 @@ main {
   color: var(--ink-2);
   font-size: 1rem;
   line-height: 1.85;
+  max-width: var(--reading);
 }
 
 .prose > * + * {
@@ -390,6 +453,7 @@ a.entry-title:hover {
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.65;
+  max-width: 82ch;
 }
 
 .entry-sub strong {
@@ -570,6 +634,503 @@ a.entry-title:hover {
 }
 
 /* ============================================================
+   Screen-reader-only
+
+   Used by the hero rotator: the cycling line is decorative, so
+   the real list of phrases is kept here for assistive tech.
+   ============================================================ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================================
+   Hero rotator — the "I do ___" line
+
+   The slot is inline-block with a min-width that JS sets to the
+   measured width of the current phrase, so the line stays centred
+   and glides rather than snapping as phrases swap. Without JS the
+   first phrase simply sits there, which is a fine resting state.
+   ============================================================ */
+
+.rotator {
+  display: inline-block;
+  text-align: left;
+  vertical-align: bottom;
+  color: var(--accent);
+  transition: min-width 0.3s ease;
+  will-change: opacity, transform;
+}
+
+.rotator.is-out {
+  animation: rotator-out 0.28s ease forwards;
+}
+
+.rotator.is-in {
+  animation: rotator-in 0.4s ease;
+}
+
+@keyframes rotator-out {
+  to {
+    opacity: 0;
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes rotator-in {
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+}
+
+/* ============================================================
+   Credential bar — three quiet columns under the hero
+   ============================================================ */
+
+.credbar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 2.25rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding-block: 1.6rem;
+}
+
+/* Mark beside the text, not above it: stacking left the short titles
+   sitting under a lot of empty air. The marks are centred in a shared
+   fixed-width column so the three titles all start on the same x. */
+.cred {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.cred-text {
+  min-width: 0;
+}
+
+/* The marks are whole lockups in several colours, so they are greyed by a
+   filter and come back to colour on hover — the same at-rest/on-hover logic
+   the tool band uses, applied to artwork that cannot be reduced to one hue.
+   --mark-h is set per credential: even cropped to their compact forms the
+   three differ in proportion, and tuning each is what keeps the row from
+   looking lopsided. */
+.cred-mark {
+  flex: 0 0 auto;
+  width: 48px;
+  height: var(--mark-h, 40px);
+  object-fit: contain;
+  object-position: center;
+  filter: grayscale(1);
+  opacity: 0.65;
+  transition:
+    filter 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.cred:hover .cred-mark,
+.cred:focus-within .cred-mark {
+  filter: none;
+  opacity: 1;
+}
+
+.cred-title {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.cred-org {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+/* ============================================================
+   Expertise list — the numbered "what I get hired to do" rows
+
+   Three columns per row: a ghost numeral, the offer, and its
+   diagram. The numerals are set in the serif at display size and
+   held well back in the accent, so they read as ornament marking
+   position rather than as content competing with the titles.
+   ============================================================ */
+
+.expertise .lede {
+  margin-bottom: 0.5rem;
+}
+
+.exp-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.25rem;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 3.75rem minmax(0, 1fr) 132px;
+  grid-template-areas: "num text fig";
+  align-items: start;
+  column-gap: 1.75rem;
+  padding-block: 1.8rem;
+  border-top: 1px solid var(--rule-2);
+}
+
+.exp-item:first-child {
+  border-top: 0;
+  padding-top: 0.6rem;
+}
+
+.exp-num {
+  grid-area: num;
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+  opacity: 0.3;
+  /* Optical alignment: the numeral's cap sits above the title's
+     x-height, so it is nudged down to share a baseline with it. */
+  margin-top: -0.35rem;
+  transition: opacity 0.35s ease;
+}
+
+.exp-item:hover .exp-num {
+  opacity: 0.6;
+}
+
+.exp-text {
+  grid-area: text;
+}
+
+.exp-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.45rem;
+}
+
+.exp-blurb {
+  color: var(--ink-2);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 58ch;
+}
+
+/* The diagrams inherit ink through currentColor and read the accent
+   straight from the tokens, so the only thing set here is their size
+   and how far back they sit at rest. */
+.exp-fig {
+  grid-area: fig;
+  color: var(--muted);
+  opacity: 0.8;
+  transition: opacity 0.35s ease;
+}
+
+.exp-item:hover .exp-fig {
+  opacity: 1;
+}
+
+.exp-fig svg {
+  display: block;
+  width: 132px;
+  height: auto;
+}
+
+/* ============================================================
+   Tool band — the slow horizontal marquee
+
+   The track holds the item list twice over and travels exactly
+   -50%, so the second copy lands where the first started and the
+   loop is seamless. Spacing is margin on the item rather than gap
+   on the track: gap would give n-1 gaps for n items and half the
+   track would no longer be exactly one copy.
+   ============================================================ */
+
+.bandlabel {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.toolband {
+  overflow: hidden;
+  padding-block: 1.15rem;
+  /* A tint that dissolves into the page top and bottom, so the strip
+     reads as a soft field rather than a stripe with rules drawn across
+     the layout. Faded to a zero-alpha paper rather than `transparent`
+     so nothing interpolates through grey on the way out. */
+  background: linear-gradient(
+    180deg,
+    rgba(247, 245, 240, 0) 0%,
+    var(--paper-2) 38%,
+    var(--paper-2) 62%,
+    rgba(247, 245, 240, 0) 100%
+  );
+  /* Fades at both ends so the strip dissolves instead of being cut. */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+
+.toolband-track {
+  display: flex;
+  align-items: baseline;
+  width: max-content;
+  animation: bandslide 44s linear infinite;
+}
+
+.toolband:hover .toolband-track,
+.toolband:focus-within .toolband-track {
+  animation-play-state: paused;
+}
+
+@keyframes bandslide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.toolband-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-inline-end: clamp(1.75rem, 4vw, 3.25rem);
+  white-space: nowrap;
+}
+
+.toolband-item b {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink-2);
+}
+
+/* The mark itself. Every file is a one-colour path set to `currentColor`,
+   so colouring the wrapper colours the logo — ink at rest, and the brand's
+   own colour while the band is hovered, which is also when it holds still
+   long enough to look at. Only the mark takes the colour; the name beside
+   it stays ink, or the whole row would change temperature at once. */
+.toolband-mark {
+  display: block;
+  color: var(--ink-2);
+  transition: color 0.35s ease;
+}
+
+.toolband-mark svg {
+  display: block;
+  height: 24px;
+  width: auto;
+  /* Wordmark-shaped marks are capped by width instead, so a wide one
+     cannot run away with the strip. */
+  max-width: 96px;
+}
+
+.toolband:hover .toolband-mark {
+  color: var(--brand, var(--ink-2));
+}
+
+/* Artwork marks — JAX's mosaic and the OpenMP wordmark. Their colours are what
+   makes them legible: JAX's lattice reads only because its tiles differ in tone,
+   so flattening it to one hue loses the lattice and leaves an outline. They keep
+   their own colours and are desaturated at rest instead, which holds the tonal
+   structure while sitting at the same weight as the ink marks beside them.
+   Brightness and contrast do that weight-matching — plain grayscale() alone
+   comes out lighter than the ink. */
+.toolband-mark--art {
+  filter: grayscale(1) brightness(0.66) contrast(1.25);
+  transition: filter 0.35s ease;
+}
+
+.toolband-mark--art svg,
+.toolband-mark--art img {
+  display: block;
+  height: 24px;
+  width: auto;
+  max-width: 96px;
+}
+
+.toolband:hover .toolband-mark--art {
+  filter: none;
+}
+
+/* Raster marks — SLURM publishes no vector. Rather than draw the PNG,
+   which could not then be tinted, it is used as a mask over a currentColor
+   fill: the shape comes from the file's alpha and the colour from the same
+   rule above, so a raster mark behaves exactly like a vector one. */
+.toolband-mark--mask {
+  height: 24px;
+  aspect-ratio: var(--ratio);
+  background-color: currentColor;
+  -webkit-mask: var(--mask) center / contain no-repeat;
+  mask: var(--mask) center / contain no-repeat;
+  transition:
+    color 0.35s ease,
+    background-color 0.35s ease;
+}
+
+/* ============================================================
+   Theme bubbles — research themes as a soft-cornered grid
+
+   A grid rather than a ragged cluster: every theme gets a cell of
+   the same width and equal weight, so the block reads as one panel.
+   Three tones, cycled by the markup, keep it from flattening into a
+   table.
+   ============================================================ */
+
+.bubbles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  font-size: 0.86rem;
+  font-weight: 500;
+  line-height: 1.35;
+  background: var(--accent-wash);
+  color: var(--accent-deep);
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.bubble--moss {
+  background: var(--moss-wash);
+  color: var(--moss);
+}
+
+.bubble--slate {
+  background: var(--slate-wash);
+  color: var(--slate);
+}
+
+.bubble:hover {
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   Rail — horizontally scrolling gallery of tool cards
+
+   A scroll-snap row rather than a grid: the overflow is the point,
+   it tells you there is more to the right. The container itself is
+   focusable and labelled, which is how a keyboard user scrolls a
+   region whose children are not interactive.
+   ============================================================ */
+
+.rail {
+  display: flex;
+  gap: 0.9rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  /* Cancels the .wrap gutter so cards can start and end flush with
+     the text above while still scrolling edge to edge. */
+  margin-inline: calc(var(--gutter) * -1);
+  padding: 0.35rem var(--gutter) 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
+}
+
+.rail::-webkit-scrollbar {
+  height: 6px;
+}
+
+.rail::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 100px;
+}
+
+.rail-card {
+  flex: 0 0 232px;
+  scroll-snap-align: start;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.1rem 1.15rem 1.25rem;
+  background: var(--paper);
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.rail-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--rule));
+  background: var(--accent-wash);
+}
+
+/* The mark on a rail card. One-colour marks are tinted by an inline
+   `color` from the tool's brand hex; the multi-colour ones carry their own
+   fills and ignore it. Square-ish marks are capped by height and wordmarks
+   by width, so a 4:1 wordmark cannot tower over the row it sits in. */
+.rail-mark {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  margin-bottom: 0.9rem;
+}
+
+.rail-mark svg,
+.rail-mark img {
+  height: 28px;
+  width: auto;
+  max-width: 104px;
+  object-fit: contain;
+}
+
+.rail-kind {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--faint);
+}
+
+.rail-name {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin-top: 0.3rem;
+}
+
+.rail-blurb {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+
+.rail-hint {
+  font-size: 0.78rem;
+  color: var(--faint);
+  margin-top: 0.2rem;
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 
@@ -582,6 +1143,64 @@ a.entry-title:hover {
   .cols-2 {
     grid-template-columns: 1fr;
     gap: 1.75rem;
+  }
+
+  .credbar {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    padding-block: 1.35rem;
+  }
+
+  /* One column wide, the mark can sit a touch larger without crowding. */
+  .cred {
+    gap: 1rem;
+  }
+
+  .exp-item {
+    grid-template-columns: 2.75rem minmax(0, 1fr);
+    grid-template-areas:
+      "num text"
+      ".   fig";
+    column-gap: 1rem;
+    padding-block: 1.5rem;
+  }
+
+  .exp-num {
+    font-size: 2rem;
+    margin-top: -0.1rem;
+  }
+
+  .exp-fig {
+    margin-top: 1.1rem;
+  }
+
+  .exp-fig svg {
+    width: 116px;
+  }
+
+  .toolband-item b {
+    font-size: 0.84rem;
+  }
+
+  .toolband-mark svg {
+    height: 21px;
+  }
+
+  .toolband-mark--mask {
+    height: 21px;
+  }
+
+  .toolband-mark--art svg,
+  .toolband-mark--art img {
+    height: 21px;
+  }
+
+  .bubbles {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .rail-card {
+    flex-basis: 200px;
   }
 
   .page-head h1 {

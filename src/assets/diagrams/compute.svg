@@ -1,0 +1,29 @@
+<svg viewBox="0 0 120 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+  <!-- Interconnect, under the tiles -->
+  <g stroke="currentColor" stroke-width="1" opacity="0.3">
+    <line x1="18" y1="21" x2="102" y2="21"/>
+    <line x1="18" y1="49" x2="102" y2="49"/>
+    <line x1="18" y1="77" x2="102" y2="77"/>
+    <line x1="18" y1="21" x2="18" y2="77"/>
+    <line x1="46" y1="21" x2="46" y2="77"/>
+    <line x1="74" y1="21" x2="74" y2="77"/>
+    <line x1="102" y1="21" x2="102" y2="77"/>
+  </g>
+  <!-- Ranks. The lit ones carry the work. -->
+  <g stroke-width="1.3">
+    <rect x="8" y="12" width="20" height="18" rx="3" stroke="currentColor" fill="var(--paper)" opacity="0.65"/>
+    <rect x="36" y="12" width="20" height="18" rx="3" stroke="var(--accent)" fill="var(--accent-wash)"/>
+    <rect x="64" y="12" width="20" height="18" rx="3" stroke="currentColor" fill="var(--paper)" opacity="0.65"/>
+    <rect x="92" y="12" width="20" height="18" rx="3" stroke="var(--accent)" fill="var(--accent-wash)"/>
+
+    <rect x="8" y="40" width="20" height="18" rx="3" stroke="var(--accent)" fill="var(--accent-wash)"/>
+    <rect x="36" y="40" width="20" height="18" rx="3" stroke="currentColor" fill="var(--paper)" opacity="0.65"/>
+    <rect x="64" y="40" width="20" height="18" rx="3" stroke="var(--accent)" fill="var(--accent-wash)"/>
+    <rect x="92" y="40" width="20" height="18" rx="3" stroke="currentColor" fill="var(--paper)" opacity="0.65"/>
+
+    <rect x="8" y="68" width="20" height="18" rx="3" stroke="currentColor" fill="var(--paper)" opacity="0.65"/>
+    <rect x="36" y="68" width="20" height="18" rx="3" stroke="var(--accent)" fill="var(--accent-wash)"/>
+    <rect x="64" y="68" width="20" height="18" rx="3" stroke="currentColor" fill="var(--paper)" opacity="0.65"/>
+    <rect x="92" y="68" width="20" height="18" rx="3" stroke="var(--accent)" fill="var(--accent-wash)"/>
+  </g>
+</svg>

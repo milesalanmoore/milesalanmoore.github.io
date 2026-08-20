@@ -1,7 +1,16 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../components/Layout.astro";
-import { hero, researchIntro, researchAreas, skills } from "../data/home";
+import {
+  hero,
+  doing,
+  credentials,
+  expertise,
+  researchIntro,
+  researchAreas,
+  themes,
+  stack,
+} from "../data/home";
 import { publications, pubMeta, boldAuthors } from "../data/publications";
 import { socials, email, cvPath } from "../data/socials";
 
@@ -13,20 +22,93 @@ const news = (await getCollection("news", ({ data }) => !data.draft))
 
 const fmtDate = (d: Date) =>
   d.toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
+
+// Vector marks are inlined at build time rather than linked as <img>, which
+// is what lets CSS reach inside them: the one-colour files are set to
+// `currentColor`, so colouring the wrapper colours the logo. Raster marks
+// (OpenMP, NumPyro — neither publishes a vector) come through Astro's asset
+// pipeline instead and are drawn as ordinary images.
+const svgMarks = import.meta.glob<string>("../assets/logos/*.svg", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
+const pngMarks = import.meta.glob<ImageMetadata>("../assets/logos/*.png", {
+  eager: true,
+  import: "default",
+});
+
+const svgFor = (mark: string) => svgMarks[`../assets/logos/${mark}`];
+
+// The step diagrams are inlined for the same reason the one-colour logos
+// are: `currentColor` and the palette variables inside each file only
+// resolve if the SVG is part of the document, which is what lets the
+// drawings pick up the page's ink and accent instead of hard-coding
+// them.
+const stepFigures = import.meta.glob<string>("../assets/diagrams/*.svg", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
+const figureFor = (file: string) => stepFigures[`../assets/diagrams/${file}`];
+const pngFor = (mark: string) => pngMarks[`../assets/logos/${mark}`];
+
+// The institution marks in the credentials bar are whole lockups, not the
+// single shapes the tool band deals in, so they are drawn as plain images
+// and greyed by a filter rather than recoloured. That wants a URL for both
+// file kinds, which is what `?url` gets us for the vectors too.
+const logoUrls = import.meta.glob<string>("../assets/logos/*.{svg,png}", {
+  query: "?url",
+  import: "default",
+  eager: true,
+});
+const logoUrl = (file: string) => logoUrls[`../assets/logos/${file}`];
+
+// How a mark is painted in the band. A tool with a `brand` is one shape and is
+// recoloured outright: a vector inherits `currentColor`, and a raster is drawn
+// as a mask over a currentColor fill, since a PNG cannot be tinted as an image.
+// A tool without a `brand` is artwork — its own colours are what make it
+// legible — so it keeps them and is desaturated at rest instead.
+const bandMark = (t: (typeof stack)[number]) => {
+  if (!t.brand) {
+    return t.mark.endsWith(".svg")
+      ? { art: svgFor(t.mark) }
+      : { artImg: pngFor(t.mark) };
+  }
+  const file = t.monoMark ?? t.mark;
+  if (file.endsWith(".svg")) return { svg: svgFor(file) };
+  const img = pngFor(file);
+  return { mask: img.src, ratio: `${img.width} / ${img.height}` };
+};
+
+// The marquee needs the list twice: the track travels exactly -50%, so the
+// second copy arrives where the first began and the loop is seamless.
+const bandItems = [...stack, ...stack].map((t) => ({ ...t, art: bandMark(t) }));
 ---
 
 <Layout title="Miles A. Moore">
-  <!-- Hero: portrait, name, role line, short bio -->
-  <section class="wrap hero">
+  <!-- Hero: portrait, greeting, the rotating "I do ___" line, bio -->
+  <section class="wrap wrap-wide hero">
     <img
       class="hero-photo"
       src={hero.photo}
       alt={hero.name}
-      width="128"
-      height="128"
+      width="140"
+      height="140"
       loading="eager"
     />
-    <h1>{hero.name}</h1>
+    <h1>Hi, I&rsquo;m <em>{hero.greetingFirst}</em> &mdash; {hero.greetingRole}</h1>
+
+    <p class="hero-doing">
+      I do <span class="rotator" id="rotator" aria-hidden="true">{doing[0]}</span>
+    </p>
+
+    <!-- The real list, for assistive tech and for the script to read from.
+         Editing `doing` in src/data/home.ts is all it takes to change both. -->
+    <ul class="sr-only" id="rotator-source">
+      {doing.map((phrase) => <li>{phrase}</li>)}
+    </ul>
+
     <p class="hero-roles">{hero.roles.join(" · ")}</p>
     <p class="hero-bio">{hero.bio}</p>
 
@@ -37,10 +119,118 @@ const fmtDate = (d: Date) =>
     </div>
   </section>
 
-  <!-- Research areas -->
-  <section class="wrap band">
+  <!-- Credentials -->
+  <section class="wrap wrap-wide">
+    <div class="credbar">
+      {
+        credentials.map((c) => (
+          <div class="cred">
+            <img
+              class="cred-mark"
+              src={logoUrl(c.logo)}
+              style={`--mark-h: ${c.logoHeight}px`}
+              alt=""
+              loading="lazy"
+            />
+            <div class="cred-text">
+              <p class="cred-title">{c.title}</p>
+              <p class="cred-org">{c.org}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Tools marquee. aria-hidden because every name here is announced
+       again, with its description, in the Toolkit rail further down.
+       Hovering pauses the band and blooms each mark into its brand colour;
+       --brand carries that colour per item. -->
+  <section class="wrap wrap-wide toolband-section">
+    <p class="eyebrow bandlabel">Tools I use</p>
+    <div class="toolband" aria-hidden="true">
+      <div class="toolband-track">
+        {
+          bandItems.map((t) => (
+            <div class="toolband-item" style={`--brand: ${t.brand}`}>
+              {t.art.svg && <span class="toolband-mark" set:html={t.art.svg} />}
+              {t.art.mask && (
+                <span
+                  class="toolband-mark toolband-mark--mask"
+                  style={`--mask: url(${t.art.mask}); --ratio: ${t.art.ratio}`}
+                />
+              )}
+              {t.art.art && (
+                <span
+                  class="toolband-mark toolband-mark--art"
+                  set:html={t.art.art}
+                />
+              )}
+              {t.art.artImg && (
+                <span class="toolband-mark toolband-mark--art">
+                  <img
+                    src={t.art.artImg.src}
+                    width={t.art.artImg.width}
+                    height={t.art.artImg.height}
+                    alt=""
+                  />
+                </span>
+              )}
+              <b>{t.name}</b>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise: what people actually hire me for, as a numbered list,
+       each row with a small diagram of what that work looks like. The
+       numerals are decorative — the list reads in order regardless — so
+       they are aria-hidden, as are the drawings beside them. -->
+  <section class="wrap wrap-wide band expertise">
+    <h2>{expertise.title}</h2>
+    <p class="lede">{expertise.intro}</p>
+
+    <ol class="exp-list">
+      {
+        expertise.items.map((item, i) => (
+          <li class="exp-item">
+            <span class="exp-num" aria-hidden="true">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <div class="exp-text">
+              <h3 class="exp-title">{item.title}</h3>
+              <p class="exp-blurb">{item.blurb}</p>
+            </div>
+            <div class="exp-fig" aria-hidden="true" set:html={figureFor(item.figure)} />
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <!-- Research: themes as a soft grid, then the areas themselves -->
+  <section class="wrap wrap-wide band">
     <h2>Research</h2>
     <p class="lede">{researchIntro}</p>
+
+    <div class="bubbles">
+      {
+        themes.map((t) => (
+          <span
+            class:list={[
+              "bubble",
+              t.tone === "moss" && "bubble--moss",
+              t.tone === "slate" && "bubble--slate",
+            ]}
+          >
+            {t.label}
+          </span>
+        ))
+      }
+    </div>
+
     <div class="entries areas">
       {
         researchAreas.map((area) => (
@@ -55,7 +245,7 @@ const fmtDate = (d: Date) =>
   </section>
 
   <!-- Selected publications -->
-  <section class="wrap band">
+  <section class="wrap wrap-wide band">
     <h2>Selected work</h2>
     <div class="entries">
       {
@@ -82,7 +272,7 @@ const fmtDate = (d: Date) =>
   </section>
 
   <!-- Recent news -->
-  <section class="wrap band">
+  <section class="wrap wrap-wide band">
     <h2>Recent</h2>
     <div class="entries">
       {
@@ -104,27 +294,42 @@ const fmtDate = (d: Date) =>
     <p class="more"><a href="/news/">All news →</a></p>
   </section>
 
-  <!-- Toolkit -->
-  <section class="wrap band">
+  <!-- Toolkit: every tool, with its mark and what I use it for. The marks
+       are decorative here — the name is right beside each one — so their alt
+       text is empty rather than repeating it.
+       tabindex on the rail is what lets a keyboard user scroll a region
+       whose contents are not themselves focusable. -->
+  <section class="wrap wrap-wide band">
     <h2>Toolkit</h2>
-    <div class="cols">
+    <p class="rail-hint">Scroll sideways... there's more to the right!</p>
+    <div class="rail" tabindex="0" role="region" aria-label="Tools and platforms">
       {
-        skills.map((group) => (
-          <div>
-            <h4>{group.category}</h4>
-            <ul>
-              {group.items.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </div>
+        stack.map((t) => (
+          <article class="rail-card">
+            <div class="rail-mark" style={t.brand ? `color: ${t.brand}` : undefined}>
+              {t.mark.endsWith(".svg") ? (
+                <Fragment set:html={svgFor(t.mark)} />
+              ) : (
+                <img
+                  src={pngFor(t.mark).src}
+                  width={pngFor(t.mark).width}
+                  height={pngFor(t.mark).height}
+                  alt=""
+                  loading="lazy"
+                />
+              )}
+            </div>
+            <p class="rail-kind">{t.kind}</p>
+            <h3 class="rail-name">{t.name}</h3>
+            <p class="rail-blurb">{t.blurb}</p>
+          </article>
         ))
       }
     </div>
   </section>
 
   <!-- Elsewhere -->
-  <section class="wrap band">
+  <section class="wrap wrap-wide band">
     <h2>Elsewhere</h2>
     <div class="entries">
       {
@@ -148,16 +353,93 @@ const fmtDate = (d: Date) =>
   </section>
 </Layout>
 
+<script>
+  /* The hero's "I do ___" line.
+
+     Phrases come from the #rotator-source list in the markup, so they
+     are edited in src/data/home.ts and never here. Held still for anyone
+     who has asked for reduced motion (WCAG 2.2.2) — the first phrase
+     then just sits there, which reads fine on its own. */
+  const rotator = document.getElementById("rotator");
+  const source = document.getElementById("rotator-source");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (rotator && source && !reduceMotion) {
+    const phrases = Array.from(source.querySelectorAll("li"))
+      .map((li) => li.textContent?.trim() ?? "")
+      .filter(Boolean);
+
+    if (phrases.length > 1) {
+      const HOLD = 2200; // how long each phrase stays up
+      const OUT = 280; // must match the rotator-out animation
+      let index = 0;
+
+      /* The whole line stays centred, so its width has to track the
+         current phrase. Measure them all off-screen up front and set the
+         slot's min-width on every swap — CSS transitions that, so the
+         line glides to its new centre instead of "I do" snapping sideways.
+         Clamped to the container so a long phrase can never introduce a
+         sideways scroll. */
+      let widths: number[] = [];
+
+      const measure = () => {
+        const cs = window.getComputedStyle(rotator);
+        const probe = document.createElement("span");
+        probe.style.cssText =
+          "position:absolute;left:-9999px;top:0;white-space:nowrap;";
+        probe.style.font = cs.font;
+        probe.style.fontFamily = cs.fontFamily;
+        probe.style.fontSize = cs.fontSize;
+        probe.style.fontWeight = cs.fontWeight;
+        probe.style.letterSpacing = cs.letterSpacing;
+        document.body.appendChild(probe);
+
+        const room = (rotator.parentElement as HTMLElement).clientWidth;
+        widths = phrases.map((text) => {
+          probe.textContent = text;
+          return Math.min(Math.ceil(probe.getBoundingClientRect().width), room);
+        });
+        probe.remove();
+        rotator.style.minWidth = `${widths[index]}px`;
+      };
+
+      measure();
+
+      /* The first measurement can land before Newsreader/Work Sans have
+         loaded, in which case it sizes against the fallback and comes up
+         a few pixels short. Re-measure once the real faces are in. */
+      if (document.fonts?.ready) {
+        document.fonts.ready.then(measure);
+      }
+      window.addEventListener("resize", measure);
+
+      const swap = () => {
+        rotator.classList.add("is-out");
+        window.setTimeout(() => {
+          index = (index + 1) % phrases.length;
+          rotator.textContent = phrases[index];
+          rotator.style.minWidth = `${widths[index]}px`;
+          rotator.classList.remove("is-out");
+          rotator.classList.add("is-in");
+          window.setTimeout(() => rotator.classList.remove("is-in"), 420);
+        }, OUT);
+      };
+
+      window.setInterval(swap, HOLD + OUT);
+    }
+  }
+</script>
+
 <style>
   .hero {
     padding-top: 3.5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2.5rem;
     text-align: center;
   }
 
   .hero-photo {
-    width: 128px;
-    height: 128px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
     /* Frames the face in the headshot's off-center composition. */
@@ -166,8 +448,23 @@ const fmtDate = (d: Date) =>
   }
 
   .hero h1 {
-    font-size: 2.15rem;
-    margin-bottom: 0.55rem;
+    font-size: clamp(1.9rem, 4.2vw, 2.6rem);
+    margin-bottom: 0.7rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  /* The rotating line. Sized between the h1 and the body so it reads as
+     a second headline rather than a caption. */
+  .hero-doing {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+    line-height: 1.35;
+    color: var(--muted);
+    margin-bottom: 1.1rem;
   }
 
   .hero-roles {
@@ -180,7 +477,7 @@ const fmtDate = (d: Date) =>
     font-size: 1.02rem;
     line-height: 1.85;
     color: var(--ink-2);
-    max-width: 54ch;
+    max-width: 60ch;
     margin: 0 auto 2rem;
   }
 
@@ -188,9 +485,17 @@ const fmtDate = (d: Date) =>
     justify-content: center;
   }
 
+  .toolband-section {
+    padding-block: 2.25rem 0.5rem;
+  }
+
   /* Research areas sit tighter than publication entries */
   .areas .entry {
     padding: 1.15rem 0;
+  }
+
+  .areas {
+    margin-top: 1.9rem;
   }
 
   .tools {

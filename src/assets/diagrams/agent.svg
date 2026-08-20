@@ -1,0 +1,13 @@
+<svg viewBox="0 0 120 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+  <!-- The loop the agent drives: fit, check, revise, report -->
+  <circle cx="60" cy="48" r="33" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.45" fill="none"/>
+  <path d="M85.7 27.1 L80.5 24.3 L82.9 21.8 Z" fill="currentColor" opacity="0.65"/><path d="M80.9 73.7 L83.7 68.5 L86.2 70.9 Z" fill="currentColor" opacity="0.65"/><path d="M34.3 68.9 L39.5 71.7 L37.1 74.2 Z" fill="currentColor" opacity="0.65"/><path d="M39.1 22.3 L36.3 27.5 L33.8 25.1 Z" fill="currentColor" opacity="0.65"/>
+  <circle cx="60.0" cy="15.0" r="6" stroke="currentColor" stroke-width="1.3" fill="var(--paper)"/><circle cx="93.0" cy="48.0" r="6" stroke="currentColor" stroke-width="1.3" fill="var(--paper)"/><circle cx="60.0" cy="81.0" r="6" stroke="currentColor" stroke-width="1.3" fill="var(--paper)"/><circle cx="27.0" cy="48.0" r="6" stroke="currentColor" stroke-width="1.3" fill="var(--paper)"/>
+  <!-- The model at the centre stays mine -->
+  <rect x="49" y="37" width="22" height="22" rx="3" stroke="var(--accent)" stroke-width="1.5" fill="var(--accent-wash)"/>
+  <g stroke="var(--accent)" stroke-width="1.2" opacity="0.75">
+    <line x1="55" y1="44" x2="65" y2="44"/>
+    <line x1="55" y1="48" x2="62" y2="48"/>
+    <line x1="55" y1="52" x2="64" y2="52"/>
+  </g>
+</svg>

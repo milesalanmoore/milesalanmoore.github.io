@@ -1,0 +1,25 @@
+<svg viewBox="0 0 120 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+  <!-- Plate: the repeated observations -->
+  <rect x="8" y="64" width="104" height="28" rx="3" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+  <!-- Edges, drawn first so the nodes sit over them -->
+  <g stroke="currentColor" stroke-width="1.2" opacity="0.55">
+    <path d="M56 18 L38 37"/>
+    <path d="M64 18 L82 37"/>
+    <path d="M32 51 L26 71"/>
+    <path d="M40 51 L56 71"/>
+    <path d="M88 51 L94 71"/>
+    <path d="M80 51 L64 71"/>
+  </g>
+  <!-- Latent nodes -->
+  <g stroke="currentColor" stroke-width="1.4" fill="var(--paper)">
+    <circle cx="60" cy="13" r="7"/>
+    <circle cx="36" cy="44" r="7"/>
+    <circle cx="84" cy="44" r="7"/>
+  </g>
+  <!-- Observed nodes -->
+  <g stroke="var(--accent)" stroke-width="1.4" fill="var(--accent-wash)">
+    <rect x="17" y="71" width="14" height="14" rx="2"/>
+    <rect x="53" y="71" width="14" height="14" rx="2"/>
+    <rect x="89" y="71" width="14" height="14" rx="2"/>
+  </g>
+</svg>
