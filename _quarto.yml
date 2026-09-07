@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - assets/miles-pgp-public-key.asc
 
 website:
   title: "miles a. moore"
@@ -31,7 +33,12 @@ website:
       <a class="link-dark me-1" href="https://orcid.org/0009-0003-0173-7602" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
       <a class="link-dark me-1" href="https://scholar.google.com/citations?user=SaaaeRYAAAAJ&hl=en" title="orcid" target="_blank" rel="noopener">{{< fa brands google-scholar >}}</a>
 
-    right: 
+      <div class="pgp-footer">
+      <a href="/assets/miles-pgp-public-key.asc">{{< fa key >}} PGP public key</a> &nbsp;&nbsp;{{< fa fingerprint >}} Fingerprint:
+      <div class="pgp-fingerprint"><span>BE80 BED9 34C2 3E0F 83F6</span> <span>5E47 7B1E 6A16 8E98 55F9</span></div>
+      </div>
+
+    right:
       - text: "AI"
         aria-label: "AI"
         href: "ai/index.qmd"
