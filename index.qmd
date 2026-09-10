@@ -16,12 +16,12 @@ execute:
 
 ::: {.hero}
 ::: {.hero-text}
-[PhD student · Computational ecologist · DOE CSGF Fellow]{.eyebrow}
+[PhD student · Computational ecologist · Eco-evolutionary Biologist]{.eyebrow}
 
-<h1 class="hero-name">Studying the <em>timing</em> of life in a changing climate.</h1>
+<h1 class="hero-name">Studying the <em>timing</em> of life in a changing environment.</h1>
 
 ::: {.lede}
-I am a PhD student and [DOE Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) at the University of Colorado Boulder. I build **Bayesian generative models** of phenology, the timing of growth, reproduction, and dispersal, and use **machine learning** and **high-performance computing** to understand how alpine and agricultural plants respond to an uncertain environment.
+I am a PhD student at the University of Colorado Boulder. I build **Bayesian generative models** of phenology, the timing of growth, reproduction, and dispersal, and use **machine learning** and **high-performance computing** to understand how herbaceous alpine and agricultural plants respond to an uncertain environment.
 :::
 
 ::: {.hero-actions}
@@ -36,19 +36,19 @@ I am a PhD student and [DOE Computational Science Graduate Fellow](https://www.k
 Ecology & Evolutionary Biology
 :::
 ::: {.stat}
-**DOE CSGF**
-Computational Science Graduate Fellow
+**Institute of Arctic and Alpine Research**
+Niwot Ridge LTER
 :::
 ::: {.stat}
-**Phenology**
-Alpine tundra & sunflower
+**Department of Energy**
+Computational Graduate Science Fellow
 :::
 :::
 :::
 
 <figure class="hero-figure">
 <img src="assets/images/background.jpg" alt="Alpine meadow and grey peaks under an overcast sky near the Furka Pass, Switzerland.">
-<figcaption>Furka Pass, Switzerland. Shot on film.</figcaption>
+<!-- <figcaption>Furka Pass, Switzerland. Shot on film.</figcaption> -->
 </figure>
 :::
 

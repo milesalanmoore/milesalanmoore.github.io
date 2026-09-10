@@ -8,7 +8,7 @@ toc: false
 ::: {.about-grid}
 
 ::: {.about-aside}
-![Miles on a foggy beach, Point Reyes, California.](assets/images/bio-photo-1.jpg){fig-alt="Miles Moore standing on a sandy beach in fog with rocks behind him."}
+![Miles at Point Reyes, California.](assets/images/bio-photo-1.jpg){fig-alt="Miles Moore standing on a sandy beach in fog with rocks behind him."}
 
 <dl class="about-meta">
 <dt>Position</dt><dd>PhD student, Ecology &amp; Evolutionary Biology</dd>
@@ -28,7 +28,7 @@ I am a PhD student and Department of Energy Computational Science Graduate Fello
 I have extensive experience with *hierarchical* and *causal* models in the life sciences. For my research I develop mechanistic models based on **state-space** and **latent-variable** frameworks, including time-to-event ("survival") and **hidden Markov models**.
 
 ::: {.chip-row}
-[Bayesian inference]{.chip} [State-space models]{.chip} [Survival analysis]{.chip} [Hidden Markov models]{.chip} [Remote sensing]{.chip} [HPC]{.chip} [R]{.chip} [Stan]{.chip} [Python]{.chip}
+[Bayesian inference]{.chip} [State-space models]{.chip} [Survival analysis]{.chip} [HPC]{.chip} [R]{.chip} [Stan]{.chip} [Python]{.chip}
 :::
 
 Outside of research I enjoy rock climbing, running, cycling, fly-fishing, reading, snowboarding, film photography, and most of all, spending time with my wife.
