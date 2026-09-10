@@ -1,26 +1,17 @@
 ---
-title: "News" 
+title: "News"
+pagetitle: "News · Miles A. Moore"
 description: |
-    A page for news about my research and whereabouts.
-listing: 
-  contents: 
-  - "**/index.qmd"
+    Updates about my research and whereabouts.
+listing:
+  id: news-listing
+  contents:
+    - "**/index.qmd"
   sort: "date desc"
-  type: default
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [title, date, image]
-  image-align: right
-  # image-height: 10em
+  template: ../assets/news-list.ejs
+page-layout: article
+toc: false
+---
 
-format: 
-  html: 
-    page-layout: full
-title-block-banner: false
-
-header-includes: >
-  <link rel="stylesheet" href="../assets/news.css">
-resources:
-  - ../assets/news.css
---- 
+::: {#news-listing}
+:::

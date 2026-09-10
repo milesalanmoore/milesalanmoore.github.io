@@ -1,24 +1,2 @@
-/* css styles */
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
-
-body, input, textarea, button {
-  font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
-
-/* PGP block in the page footer */
-.pgp-footer {
-  margin-top: 0.75rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-.pgp-footer .pgp-fingerprint {
-  margin-top: 0.35rem;
-  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  opacity: 0.85;
-}
-.pgp-footer .pgp-fingerprint span {
-  display: inline-block;
-  white-space: nowrap;
-}
+/* Site-wide styles live in assets/theme.scss (with colors in assets/miles/).
+   This file is kept for small, non-SCSS overrides. */
