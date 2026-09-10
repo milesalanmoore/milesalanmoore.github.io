@@ -1,0 +1,12 @@
+<ul class="news-list">
+<% for (const item of items) {
+     const d = new Date(item.date);
+     const when = isNaN(d) ? "" : d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+%>
+  <li class="news-item">
+    <time datetime="<%- isNaN(d) ? "" : d.toISOString().slice(0, 10) %>"><%= when %></time>
+    <a class="news-title" href="<%- item.path %>"><%= item.title %></a>
+    <% if (item.image) { %><img class="news-thumb" src="<%- item.image %>" alt="" loading="lazy"><% } else { %><span class="news-thumb-empty"></span><% } %>
+  </li>
+<% } %>
+</ul>

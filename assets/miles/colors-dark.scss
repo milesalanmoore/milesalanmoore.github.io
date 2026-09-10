@@ -1,15 +1,25 @@
 /*-- scss:defaults --*/
 
-// Miles' Color Palette 
-$mm-primary:        #ececec;
-$mm-primary-light:  #f4f1e2;
-$mm-secondary:      #ebe5d8;
-$mm-secondary-light:#c6bfb6;
+// Miles' palette — dark
+// Deep pine with warm, low-contrast text. Same hues as light mode,
+// inverted in value.
 
-$mm-accent:         #E05E4D;
-$mm-accent-light:   #F8A79C;
-$mm-accent-dark:    #B9483B;
+$mm-bg:             #141a16;   // pine
+$mm-bg-2:           #1a221d;
+$mm-surface:        #1d2622;
+$mm-ink:            #ebe7dd;
+$mm-ink-2:          #cfcbc0;
+$mm-muted:          #97a097;
+$mm-line:           #2b352f;
+$mm-line-strong:    #3b483f;
 
-$mm-bg-0:           #464c5b;
-$mm-bg-1:           #f0efec;
-$mm-bg-00:          #00000010;
+$mm-primary:        #8fc19c;   // pale moss
+$mm-primary-strong: #b9dcc2;
+$mm-primary-soft:   #22342a;
+
+$mm-accent:         #e2a06c;   // warm ochre
+$mm-accent-strong:  #f0bd93;
+$mm-accent-soft:    #3a2a1d;
+
+$mm-shadow:         rgba(0, 0, 0, 0.35);
+$mm-selection:      #4a3a24;

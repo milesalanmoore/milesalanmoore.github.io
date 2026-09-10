@@ -1,21 +1,21 @@
 ---
-title: "Film" 
+title: "Film"
+pagetitle: "Film · Miles A. Moore"
 description: |
-    A sampling of my film photography
-
+    A sampling of my film photography. Mostly mountains, mostly 35mm.
 lightbox: true
-
-format: 
-  html: 
-    page-layout: full
-title-block-banner: false
-
+page-layout: full
+toc: false
 ---
+
+::: {.film-grid}
 
 ![Furka Pass](../assets/images/willkommen.jpg){group="film-field"}
 
+![Central Alps sunrise](../assets/images/rainy-ch.jpg){group="film-field"}
 
-![Central Alps Sunrise](../assets/images/rainy-ch.jpg){group="film-field"}
+![Alpfor glacier](../assets/images/swiss-glacier.jpg){group="film-field"}
 
+![Ridgeline at dawn](../assets/images/research-banner.jpg){group="film-field"}
 
-![Alpfor Glacier](../assets/images/swiss-glacier.jpg){group="film-field"}
+:::

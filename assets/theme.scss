@@ -1,0 +1,489 @@
+/*-- scss:defaults --*/
+
+// Shared theme. Colors come from assets/miles/colors-{light,dark}.scss,
+// which must be listed AFTER this file in _quarto.yml (Quarto emits later
+// files' defaults first).
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+
+// ---- Bootstrap / Quarto variables ------------------------------------
+
+$primary:                  $mm-primary;
+$secondary:                $mm-muted;
+$body-bg:                  $mm-bg;
+$body-color:               $mm-ink-2;
+$body-secondary:           $mm-muted;
+
+$font-family-sans-serif:   "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif:        "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+$font-family-monospace:    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+$headings-font-family:     $font-family-serif;
+$headings-font-weight:     500;
+$headings-color:           $mm-ink;
+$font-size-base:           1.0rem;
+$line-height-base:         1.65;
+
+$link-color:               $mm-primary;
+$link-hover-color:         $mm-accent-strong;
+$link-decoration:          underline;
+
+$border-radius:            0.5rem;
+$border-color:             $mm-line;
+
+$navbar-bg:                transparent;
+$navbar-fg:                $mm-ink;
+$navbar-hl:                $mm-primary;
+$footer-bg:                transparent;
+$footer-fg:                $mm-muted;
+
+$code-bg:                  $mm-bg-2;
+$code-color:               $mm-primary-strong;
+$code-block-bg:            $mm-bg-2;
+$code-block-border-left:   $mm-line-strong;
+
+$toc-color:                $mm-muted;
+$toc-active-border:        $mm-accent;
+$toc-inactive-border:      $mm-line;
+
+$table-border-color:       $mm-line;
+$table-group-separator-color: $mm-line-strong;
+
+$callout-border-width:     2px;
+
+/*-- scss:rules --*/
+
+// ---- Base ------------------------------------------------------------
+
+::selection { background: $mm-selection; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  // Subtle paper grain so large empty areas don't read as flat.
+  background-image: radial-gradient($mm-line 0.6px, transparent 0.6px);
+  background-size: 22px 22px;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-family-serif;
+  font-variation-settings: "opsz" 96, "SOFT" 30;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+h1 { font-size: 2.6rem; }
+h2 { font-size: 1.9rem; margin-top: 2.6rem; }
+h3 { font-size: 1.35rem; margin-top: 1.8rem; }
+
+// Section headings get a small ochre rule — the site's recurring motif.
+main h2:not(.hero-name):not(.anchored-plain)::before {
+  content: "";
+  display: block;
+  width: 2.25rem;
+  height: 2px;
+  background: $mm-accent;
+  margin-bottom: 0.7rem;
+}
+
+p, li { max-width: 68ch; }
+strong { color: $mm-ink; font-weight: 600; }
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: rgba($mm-primary, 0.45);
+  transition: color 120ms ease, text-decoration-color 120ms ease;
+  &:hover { text-decoration-color: currentColor; }
+}
+
+hr { border-color: $mm-line; opacity: 1; }
+
+// Eyebrow: small caps label used above titles and cards.
+.eyebrow {
+  display: block;
+  font-family: $font-family-sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $mm-muted;
+  margin-bottom: 0.6rem;
+}
+
+.lede {
+  font-family: $font-family-serif;
+  font-variation-settings: "opsz" 24, "SOFT" 50;
+  font-size: 1.32rem;
+  line-height: 1.5;
+  color: $mm-ink;
+  max-width: 34em;
+}
+
+.muted { color: $mm-muted; }
+
+.arrow-link {
+  font-weight: 500;
+  text-decoration: none;
+  color: $mm-primary;
+  &::after { content: " \2192"; display: inline-block; transition: transform 140ms ease; }
+  &:hover { color: $mm-accent-strong; }
+  &:hover::after { transform: translateX(3px); }
+}
+
+// ---- Navbar ------------------------------------------------------------
+
+.navbar {
+  background: rgba($mm-bg, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid $mm-line;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.navbar-brand {
+  font-family: $font-family-serif;
+  font-variation-settings: "opsz" 24, "SOFT" 60;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: $mm-ink !important;
+  letter-spacing: 0.005em;
+  .navbar-title::before {
+    content: "";
+    display: inline-block;
+    width: 0.5em; height: 0.5em;
+    border-radius: 50%;
+    background: $mm-accent;
+    margin-right: 0.55em;
+    vertical-align: 0.1em;
+  }
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $mm-ink-2 !important;
+  padding: 0.35rem 0.7rem !important;
+  border-radius: 999px;
+  transition: background 120ms ease, color 120ms ease;
+  &:hover { background: $mm-primary-soft; color: $mm-primary-strong !important; }
+  &.active { color: $mm-primary-strong !important; }
+  &.active::after {
+    content: ""; display: block; height: 2px; margin: 0.15rem 0.2rem 0;
+    background: $mm-accent; border-radius: 2px;
+  }
+}
+
+.navbar .quarto-color-scheme-toggle i { color: $mm-muted; }
+
+// Email button injected by _includes/email-button.html
+.nav-email-link {
+  display: inline-flex; align-items: center; gap: 0.4em;
+  margin-left: 0.6rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.875rem; font-weight: 500;
+  color: $mm-bg !important;
+  background: $mm-primary;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 120ms ease, transform 120ms ease;
+  &:hover { background: $mm-primary-strong; transform: translateY(-1px); }
+}
+
+// ---- Page title block (generic pages: AI, License, news posts) -----------
+
+#title-block-header.quarto-title-block.default {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $mm-line;
+  .title {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 500;
+    color: $mm-ink;
+  }
+  .description, .subtitle { color: $mm-muted; font-size: 1.1rem; max-width: 50ch; }
+  .quarto-title-meta { color: $mm-muted; font-size: 0.85rem; }
+}
+
+// ---- Sidebar / TOC ------------------------------------------------------
+
+#TOC, .sidebar nav[role="doc-toc"] {
+  .toc-title, h2 { font-family: $font-family-sans-serif; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: $mm-muted; }
+  ul li a { font-size: 0.88rem; color: $mm-muted; }
+  ul li a.active { color: $mm-ink; font-weight: 500; }
+}
+
+// ---- Cards ------------------------------------------------------------------
+
+.mm-card {
+  display: block;
+  background: $mm-surface;
+  border: 1px solid $mm-line;
+  border-radius: $border-radius;
+  padding: 1.25rem 1.35rem;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+  &:hover { transform: translateY(-2px); box-shadow: 0 10px 28px $mm-shadow; border-color: $mm-line-strong; }
+  h3 { font-size: 1.15rem; margin: 0.25rem 0 0.5rem; }
+  p { font-size: 0.93rem; color: $mm-ink-2; margin: 0; }
+  .card-icon { font-size: 1.3rem; color: $mm-accent; }
+}
+
+// ---- Home ------------------------------------------------------------------
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 3rem;
+  align-items: center;
+  padding: 3.5rem 0 3rem;
+}
+.hero-name {
+  font-size: clamp(2.8rem, 6.5vw, 4.6rem);
+  font-weight: 400;
+  font-variation-settings: "opsz" 144, "SOFT" 20;
+  line-height: 1.02;
+  margin: 0 0 1.25rem;
+  color: $mm-ink;
+  em { font-style: italic; color: $mm-primary; }
+}
+.hero-actions {
+  display: flex; flex-wrap: wrap; gap: 0.75rem 1.75rem; margin-top: 1.5rem; align-items: center;
+  p { margin: 0; display: contents; }
+  .arrow-link { margin-right: 0.5rem; }
+}
+.hero-figure {
+  margin: 0;
+  position: relative;
+  img { width: 100%; border-radius: $border-radius; display: block; aspect-ratio: 4 / 5; object-fit: cover; box-shadow: 0 20px 40px $mm-shadow; }
+  figcaption { margin-top: 0.6rem; font-size: 0.78rem; color: $mm-muted; text-align: right; }
+  &::before {
+    content: ""; position: absolute; inset: -0.75rem 0.75rem 0.75rem -0.75rem;
+    border: 1px solid $mm-line-strong; border-radius: $border-radius; z-index: -1;
+  }
+}
+
+.btn-mm {
+  display: inline-block;
+  padding: 0.6rem 1.15rem;
+  background: $mm-primary; color: $mm-bg !important;
+  border-radius: 999px; font-weight: 500; text-decoration: none;
+  transition: background 120ms ease, transform 120ms ease;
+  &:hover { background: $mm-primary-strong; transform: translateY(-1px); }
+}
+
+.band {
+  margin: 2.5rem 0;
+  padding: 2.25rem 0 0.5rem;
+  border-top: 1px solid $mm-line;
+}
+.band-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+  margin-bottom: 1.25rem;
+  h2 { margin: 0; font-size: 1.6rem; }
+  h2::before { display: none !important; }
+}
+
+.stat-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  margin: 2rem 0 0;
+  .stat { border-left: 2px solid $mm-accent; padding-left: 0.9rem; }
+  .stat b { display: block; font-family: $font-family-serif; font-size: 1.5rem; font-weight: 500; color: $mm-ink; line-height: 1.1; }
+  .stat span { font-size: 0.8rem; color: $mm-muted; }
+}
+
+// ---- News list (custom EJS template, home + news page) ----------------------
+
+.news-list {
+  list-style: none; padding: 0; margin: 0;
+  li { max-width: none; }
+}
+.news-item {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr) auto;
+  gap: 1.25rem; align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid $mm-line;
+  &:first-child { border-top: 1px solid $mm-line; }
+  time { font-family: $font-family-monospace; font-size: 0.78rem; color: $mm-muted; }
+  a.news-title { font-family: $font-family-serif; font-size: 1.15rem; color: $mm-ink; text-decoration: none; }
+  a.news-title:hover { color: $mm-primary; }
+  .news-thumb { width: 4.5rem; height: 3.25rem; object-fit: cover; border-radius: 0.3rem; border: 1px solid $mm-line; }
+  .news-thumb-empty { width: 4.5rem; }
+}
+
+// ---- About ----------------------------------------------------------------
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 5fr);
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.about-aside {
+  position: sticky; top: 5.5rem; align-self: start;
+  img { width: 100%; border-radius: $border-radius; display: block; }
+  .about-meta { margin-top: 1.25rem; font-size: 0.9rem; }
+  .about-meta dt { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: $mm-muted; margin-top: 0.75rem; font-weight: 600; }
+  .about-meta dd { margin: 0.1rem 0 0; color: $mm-ink-2; }
+}
+.about-main > h2:first-of-type { margin-top: 0; }
+
+.timeline {
+  list-style: none; padding: 0; margin: 0 0 1rem;
+  border-left: 1px solid $mm-line-strong;
+}
+.tl-item {
+  position: relative; padding: 0 0 1.4rem 1.5rem; max-width: none;
+  &::before {
+    content: ""; position: absolute; left: -0.3rem; top: 0.45rem;
+    width: 0.55rem; height: 0.55rem; border-radius: 50%;
+    background: $mm-bg; border: 2px solid $mm-accent;
+  }
+  .tl-when { display: block; font-family: $font-family-monospace; font-size: 0.75rem; color: $mm-muted; margin-bottom: 0.2rem; }
+  .tl-what { display: block; font-weight: 600; color: $mm-ink; }
+  .tl-where { display: block; color: $mm-ink-2; font-size: 0.93rem; }
+  .tl-note { display: block; color: $mm-muted; font-size: 0.86rem; margin-top: 0.15rem; }
+  p { margin: 0; }
+}
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.5rem 0 1rem; }
+.chip {
+  font-size: 0.8rem; font-weight: 500;
+  padding: 0.25rem 0.7rem; border-radius: 999px;
+  background: $mm-primary-soft; color: $mm-primary-strong;
+}
+
+// ---- Research -----------------------------------------------------------
+
+.research-banner {
+  height: clamp(160px, 26vw, 260px);
+  background-image: url("/assets/images/research-banner.jpg");
+  background-size: cover; background-position: center;
+  border-radius: $border-radius;
+  margin: 1.5rem 0 2.5rem;
+  position: relative; overflow: hidden;
+  &::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(20, 26, 22, 0.55), transparent 60%);
+  }
+  .banner-caption {
+    position: absolute; right: 1rem; bottom: 0.75rem; z-index: 1;
+    color: rgba(255,255,255,0.8); font-size: 0.75rem;
+  }
+}
+
+.pub-card {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.35rem 0;
+  border-top: 1px solid $mm-line;
+  &:last-of-type { border-bottom: 1px solid $mm-line; }
+  .pub-year {
+    font-family: $font-family-monospace; font-size: 0.8rem; color: $mm-muted;
+    padding-top: 0.35rem;
+  }
+  .pub-title {
+    font-family: $font-family-serif; font-size: 1.25rem; font-weight: 500;
+    color: $mm-ink; line-height: 1.3; margin-bottom: 0.4rem;
+    p { max-width: none; margin: 0; }
+  }
+  .pub-authors { font-size: 0.93rem; color: $mm-ink-2; margin-bottom: 0.6rem; p { max-width: none; margin: 0; } }
+  .pub-links { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.35rem;
+    p { margin: 0; max-width: none; } }
+  .pub-links .btn {
+    font-size: 0.78rem; font-weight: 500;
+    border-radius: 999px; padding: 0.2rem 0.7rem;
+    border: 1px solid $mm-line-strong; color: $mm-primary-strong; background: transparent;
+    &:hover { background: $mm-primary; border-color: $mm-primary; color: $mm-bg; }
+    &.disabled { opacity: 0.5; }
+  }
+}
+
+.ref-list {
+  list-style: none; padding: 0;
+  li { max-width: none; padding: 0.8rem 0; border-top: 1px solid $mm-line; font-size: 0.93rem; }
+  li:last-child { border-bottom: 1px solid $mm-line; }
+  a { word-break: break-all; }
+}
+
+// ---- Film -----------------------------------------------------------
+
+.film-grid {
+  columns: 2; column-gap: 1rem;
+  margin-top: 1.5rem;
+  figure, .quarto-figure { break-inside: avoid; margin: 0 0 1rem; }
+  img { width: 100%; border-radius: 0.4rem; display: block; }
+  figcaption { font-size: 0.78rem; color: $mm-muted; margin-top: 0.35rem; text-align: left; }
+}
+
+// ---- Callouts / blockquotes ----------------------------------------------
+
+.callout, .callout.callout-style-default {
+  border-radius: $border-radius;
+  border: 1px solid $mm-line;
+  border-left: 3px solid $mm-accent !important;
+  background: $mm-surface;
+  .callout-header { background: $mm-bg-2 !important; font-family: $font-family-serif; font-size: 1.05rem; color: $mm-ink; }
+  .callout-icon::before { filter: grayscale(1); opacity: 0.7; }
+}
+blockquote, .blockquote {
+  border-left: 2px solid $mm-accent;
+  padding-left: 1.2rem; margin-left: 0;
+  font-family: $font-family-serif; font-variation-settings: "opsz" 24, "SOFT" 60;
+  font-size: 1.25rem; color: $mm-ink; font-style: italic;
+}
+
+// ---- Code ---------------------------------------------------------------------
+
+p code:not(.sourceCode), li code:not(.sourceCode) {
+  font-size: 0.86em; padding: 0.1em 0.35em; border-radius: 0.3rem;
+}
+div.sourceCode { border: 1px solid $mm-line; border-radius: $border-radius; }
+
+// ---- Footer -----------------------------------------------------------------
+
+.nav-footer {
+  border-top: 1px solid $mm-line;
+  margin-top: 4rem;
+  padding: 2rem 0 2.5rem;
+  font-size: 0.85rem;
+  color: $mm-muted;
+  a { color: $mm-muted; text-decoration: none; &:hover { color: $mm-primary; } }
+  .nav-footer-center i { font-size: 1.1rem; margin: 0 0.35rem; color: $mm-ink-2; }
+  .nav-footer-center a:hover i { color: $mm-accent; }
+}
+.pgp-footer {
+  margin-top: 0.85rem; text-align: center; font-size: 0.8rem;
+  .pgp-fingerprint { margin-top: 0.3rem; font-family: $font-family-monospace; font-size: 0.72rem; letter-spacing: 0.05em; opacity: 0.8; }
+  .pgp-fingerprint span { display: inline-block; white-space: nowrap; }
+}
+
+// ---- Mobile --------------------------------------------------------------
+
+@media (max-width: 991.98px) {
+  .hero { grid-template-columns: 1fr; gap: 2rem; padding-top: 2rem; }
+  .hero-figure { max-width: 22rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-aside { position: static; img { max-width: 18rem; } }
+  .stat-row { grid-template-columns: 1fr; gap: 0.75rem; }
+  .news-item { grid-template-columns: 1fr; gap: 0.35rem; .news-thumb, .news-thumb-empty { display: none; } }
+  .pub-card { grid-template-columns: 1fr; gap: 0.25rem; }
+  .film-grid { columns: 1; }
+  .nav-footer { flex-direction: column; text-align: center; }
+  .nav-footer-center { order: 1; }
+  .nav-footer-left { order: 2; }
+  .nav-footer-right { order: 3; }
+  .nav-email-link { margin: 0.5rem 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .mm-card, .btn-mm, .nav-email-link, .arrow-link::after { transition: none; }
+}

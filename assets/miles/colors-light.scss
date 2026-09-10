@@ -1,15 +1,25 @@
 /*-- scss:defaults --*/
 
-// Miles' Color Palette 
-$mm-primary:        #002244; // deep navy
-$mm-primary-light:  #334d66; // lighter navy
-$mm-secondary:      #344f2e; // forest green
-$mm-secondary-light:#6f8b67; // sage green
+// Miles' palette — light
+// Warm paper, moss green, ochre. Chosen to sit with the film photographs
+// (grey rock, alpine meadow, sand, overcast sky).
 
-$mm-accent:         #FF6F61; // coral
-$mm-accent-light:   #FFB3AB;
-$mm-accent-dark:    #B0443A; // deeper accent
+$mm-bg:             #f6f3ec;   // paper
+$mm-bg-2:           #efeae0;   // slightly deeper paper (bands, code)
+$mm-surface:        #fffdf8;   // cards
+$mm-ink:            #1e231f;   // near-black with a green cast
+$mm-ink-2:          #3f473f;   // body text, slightly softer
+$mm-muted:          #6b736a;   // captions, dates, eyebrows
+$mm-line:           #e0d9cc;   // hairlines
+$mm-line-strong:    #c9c0b0;
 
-$mm-bg-0:           #ececec; // neutral beige
-$mm-bg-1:           #2B2B2B; // dark
-$mm-bg-00:          #00000020; // stronger subtle shadow
+$mm-primary:        #3b6347;   // moss
+$mm-primary-strong: #2a4a34;   // moss, hover / headings
+$mm-primary-soft:   #e1eadf;   // tint for chips
+
+$mm-accent:         #c2703b;   // ochre
+$mm-accent-strong:  #9d5628;
+$mm-accent-soft:    #f6e6d6;
+
+$mm-shadow:         rgba(30, 35, 31, 0.08);
+$mm-selection:      #ffe2c2;

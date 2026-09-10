@@ -1,86 +1,105 @@
 ---
 title: "About"
-about:
-  template: trestles
-  image: assets/images/bio-photo-1.jpg
-  image-width: 28em
-  id: hero-heading
-page-layout: article
-format:
-  html: 
-    grid:
-      sidebar-width: 100px
-      body-width: 1500px
-      margin-width: 150px
-      gutter-width: 1.5rem
-      
-header-includes: >
-  <link rel="stylesheet" href="assets/about.css">
-resources:
-  - assets/about.css
+pagetitle: "About · Miles A. Moore"
+page-layout: full
+toc: false
 ---
-::: {#hero-heading}
 
-I am a PhD student & Department of Energy Computational Science Graduate Fellow 
-at the University of Colorado Boulder. A **biostatistician**,
-**quantitiative ecologist**, and **eco-evolutionary biologist**, 
-my work focuses on phenology—the temporal 
-dynamics of key organismal life cycle events (i.e. growth, reproduction, 
-maturation)—in response to variable environmental information. My research is particularly 
-motivated by phenological changes in high-mountain and agricultural ecosystems due 
-to their importance for ecological reslience and human food & water security.
+::: {.about-grid}
 
-I have extensive expertise in *hierarchical* and *causal* models in the 
-life-sciences. For my research, I develop novel mechanistic models based on
-**state-space** and **latent-variable** frameworks, including
-time-to-event ("survival") and **hidden markov models.**
+::: {.about-aside}
+![Miles on a foggy beach, Point Reyes, California.](assets/images/bio-photo-1.jpg){fig-alt="Miles Moore standing on a sandy beach in fog with rocks behind him."}
 
-Outside of research, I enjoy rock climbing, running, cycling, fly-fishing, 
-reading, snowboarding, film photography, and most of all, spending time with my 
-wife.
+<dl class="about-meta">
+<dt>Position</dt><dd>PhD student, Ecology &amp; Evolutionary Biology</dd>
+<dt>Institution</dt><dd>University of Colorado Boulder</dd>
+<dt>Fellowship</dt><dd><a href="https://www.krellinst.org/csgf/">DOE CSGF</a></dd>
+<dt>Based in</dt><dd>Boulder, Colorado</dd>
+<dt>Email</dt><dd><a href="mailto:miles@milesalanmoore.com">miles@milesalanmoore.com</a></dd>
+</dl>
+:::
 
-[Read about my research &rarr;](/research){.about-links .subtitle}
+::: {.about-main}
 
+::: {.lede}
+I am a PhD student and Department of Energy Computational Science Graduate Fellow at the University of Colorado Boulder. A **biostatistician**, **quantitative ecologist**, and **eco-evolutionary biologist**, I work on phenology, the temporal dynamics of key life-cycle events like growth, reproduction, and maturation, in response to variable environmental information. I am particularly motivated by phenological change in high-mountain and agricultural ecosystems because of what it means for ecological resilience and for human food and water security.
+:::
 
-# Education
-**Ph.D. Ecology and Evolutionary Biology**  
-University of Colorado Boulder | Boulder, CO  
-08.2024 - 05.2029 (expected)  
+I have extensive experience with *hierarchical* and *causal* models in the life sciences. For my research I develop mechanistic models based on **state-space** and **latent-variable** frameworks, including time-to-event ("survival") and **hidden Markov models**.
 
-**B.A. Ecology and Evolutionary Biology**  
-Certificate in GIS & Computational Science  
-University of Colorado Boulder | Boulder, CO  
-*summa cum laude*, With distinction, GPA: 4.0  
-01.2022 - 12.2023  
+::: {.chip-row}
+[Bayesian inference]{.chip} [State-space models]{.chip} [Survival analysis]{.chip} [Hidden Markov models]{.chip} [Remote sensing]{.chip} [HPC]{.chip} [R]{.chip} [Stan]{.chip} [Python]{.chip}
+:::
 
-**Associate of Science**  
-Front Range Community College | Westminster, CO    
-08.2019 – 12.2021
+Outside of research I enjoy rock climbing, running, cycling, fly-fishing, reading, snowboarding, film photography, and most of all, spending time with my wife.
 
+[Read about my research](research/index.qmd){.arrow-link}
 
-# Research Experience 
-09.2025 – Present  
-Department of Energy Computational Science Graduate Fellow, *Krell Institute* 
+## Education
 
-05.2025 – 08.2025  
-Graduate Research Assistant, *Cooperative Institute for Research in Environmental Sciences*, Boulder, CO  
+::: {.timeline}
+::: {.tl-item}
+[2024 – 2029 (expected)]{.tl-when}
+[Ph.D. Ecology and Evolutionary Biology]{.tl-what}
+[University of Colorado Boulder]{.tl-where}
+:::
+::: {.tl-item}
+[2022 – 2023]{.tl-when}
+[B.A. Ecology and Evolutionary Biology]{.tl-what}
+[University of Colorado Boulder]{.tl-where}
+[Certificate in GIS & Computational Science · *summa cum laude*, with distinction, GPA 4.0]{.tl-note}
+:::
+::: {.tl-item}
+[2019 – 2021]{.tl-when}
+[Associate of Science]{.tl-what}
+[Front Range Community College, Westminster, CO]{.tl-where}
+:::
+:::
 
-12.2023 – 08.2024  
-Professional Scientist I, *Institute of Arctic and Alpine Research*, Boulder, CO  
+## Research experience
 
-05.2023 – 12.2023  
-Remote Sensing Intern, *National Aeronautics and Space Administration*, Greenbelt, MD  
+::: {.timeline}
+::: {.tl-item}
+[Sep 2025 – present]{.tl-when}
+[DOE Computational Science Graduate Fellow]{.tl-what}
+[Krell Institute]{.tl-where}
+:::
+::: {.tl-item}
+[May – Aug 2025]{.tl-when}
+[Graduate Research Assistant]{.tl-what}
+[Cooperative Institute for Research in Environmental Sciences, Boulder, CO]{.tl-where}
+:::
+::: {.tl-item}
+[Dec 2023 – Aug 2024]{.tl-when}
+[Professional Scientist I]{.tl-what}
+[Institute of Arctic and Alpine Research, Boulder, CO]{.tl-where}
+:::
+::: {.tl-item}
+[May – Dec 2023]{.tl-when}
+[Remote Sensing Intern]{.tl-what}
+[National Aeronautics and Space Administration, Greenbelt, MD]{.tl-where}
+:::
+::: {.tl-item}
+[Aug 2021 – Dec 2023]{.tl-when}
+[Data Management Assistant]{.tl-what}
+[Institute of Arctic and Alpine Research, Boulder, CO]{.tl-where}
+:::
+::: {.tl-item}
+[May – Aug 2021]{.tl-when}
+[Field Research Assistant]{.tl-what}
+[Niwot Ridge Long Term Ecological Research (LTER) site, Boulder, CO]{.tl-where}
+:::
+:::
 
-08.2021 – 12.2023  
-Data Management Assistant, *Institute of Arctic and Alpine Research*, Boulder, CO  
+## Teaching
 
-05.2021 – 08.2021  
-Field Research Assistant, *Niwot Ridge Long Term Ecological Research (LTER) site*, Boulder, CO  
+::: {.timeline}
+::: {.tl-item}
+[Aug – Dec 2024]{.tl-when}
+[Teaching Assistant, EBIO 4410 / 5410 Biological Statistics]{.tl-what}
+[University of Colorado Boulder]{.tl-where}
+:::
+:::
 
-
-# Teaching
-08.2024 – 12.2024  
-Teaching Assistant, *University of Colorado Boulder*  
-EBIO 4410 / 5410 Biological Statistics
-
-:::   
+:::
+:::

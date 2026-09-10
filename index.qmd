@@ -1,45 +1,120 @@
 ---
-title: "Miles A. Moore"
 pagetitle: "Miles A. Moore"
-subtitle: "Computational Ecologist"
-image: assets/images/background.jpg
-image-alt: "A visualization of a 10-dimensionsal isotropic normal distribution **projected** to 2-D with principal component analysis and color with a terrain color pallette via a 2d kernel density estimator. Higher density regions are white lower densitys move through an earthy grey-brown into a green-grey, suggesting a high-altitude mountain and a subalpine-nival ecotone."
-
-about:
-  template: trestles
-  image-width: 28em
-  # id: hero-heading
 page-layout: full
-
+toc: false
+listing:
+  id: latest-news
+  contents: news/*/index.qmd
+  sort: "date desc"
+  max-items: 4
+  template: assets/news-list.ejs
 execute:
   freeze: false
   echo: false
   warning: false
-
-header-includes: >
-  <link rel="stylesheet" href="assets/index.css">
-resources:
-  - assets/index.css
 ---
-<!-- 
-<style>
-  body {
-  background-image: url("assets/images/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-  
-</style> -->
 
+::: {.hero}
+::: {.hero-text}
+[PhD student · Computational ecologist · DOE CSGF Fellow]{.eyebrow}
 
-<br><br>
+<h1 class="hero-name">Studying the <em>timing</em> of life in a changing climate.</h1>
 
-
-::: {#hero-heading}
-
-I am a PhD student and [DOE CSGF](https://www.krellinst.org/csgf/) Fellow at the University of Colorado Boulder developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. By integrating **Bayesian generative modeling**, **machine learning**, and **high-performance computing**, I aim to build theoretically-grounded, data-driven models that advance our understanding of natural systems.
-
-[about me &rarr;](/about.html){.about-links .subtitle}
-
+::: {.lede}
+I am a PhD student and [DOE Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) at the University of Colorado Boulder. I build **Bayesian generative models** of phenology, the timing of growth, reproduction, and dispersal, and use **machine learning** and **high-performance computing** to understand how alpine and agricultural plants respond to an uncertain environment.
 :::
-<!-- hero-heading -->
+
+::: {.hero-actions}
+[Read about my research](research/index.qmd){.btn-mm}
+[About me](about.qmd){.arrow-link}
+[Get in touch](mailto:miles@milesalanmoore.com){.arrow-link}
+:::
+
+::: {.stat-row}
+::: {.stat}
+**CU Boulder**
+Ecology & Evolutionary Biology
+:::
+::: {.stat}
+**DOE CSGF**
+Computational Science Graduate Fellow
+:::
+::: {.stat}
+**Phenology**
+Alpine tundra & sunflower
+:::
+:::
+:::
+
+<figure class="hero-figure">
+<img src="assets/images/background.jpg" alt="Alpine meadow and grey peaks under an overcast sky near the Furka Pass, Switzerland.">
+<figcaption>Furka Pass, Switzerland. Shot on film.</figcaption>
+</figure>
+:::
+
+::: {.band}
+::: {.band-head}
+## What I work on
+[Research](research/index.qmd){.arrow-link}
+:::
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-4}
+::: {.mm-card}
+[{{< fa seedling >}}]{.card-icon}
+
+### Phenology
+The when of growth, maturation, reproduction, and dispersal, and why it shifts as the environment varies. Mostly alpine tundra and crops.
+:::
+:::
+::: {.g-col-12 .g-col-md-4}
+::: {.mm-card}
+[{{< fa diagram-project >}}]{.card-icon}
+
+### Generative models
+Hierarchical, state-space, and latent-variable models that encode biological mechanism and quantify uncertainty honestly.
+:::
+:::
+::: {.g-col-12 .g-col-md-4}
+::: {.mm-card}
+[{{< fa microchip >}}]{.card-icon}
+
+### Computation at scale
+Simulation-based inference and machine learning on high-performance computing systems, so the models can be as mechanistic as the biology demands.
+:::
+:::
+:::
+:::
+
+::: {.band}
+::: {.band-head}
+## Recent publications
+[All publications](research/index.qmd#publications){.arrow-link}
+:::
+
+```{r}
+#| output: asis
+pubs <- yaml::read_yaml("research/publications.yml")
+pubs <- pubs[seq_len(min(3, length(pubs)))]
+for (pub in pubs) {
+  cat("::: {.pub-card}\n")
+  cat("::: {.pub-year}\n", pub$year, "\n:::\n", sep = "")
+  cat("::: {.pub-body}\n")
+  cat("::: {.pub-title}\n", pub$title, "\n:::\n", sep = "")
+  cat("::: {.pub-authors}\n", pub$authors,
+      if (nchar(pub$journal) > 0) paste0(". *", pub$journal, "*") else "",
+      "\n:::\n", sep = "")
+  cat(":::\n:::\n\n")
+}
+```
+:::
+
+::: {.band}
+::: {.band-head}
+## Latest news
+[All news](news/index.qmd){.arrow-link}
+:::
+
+::: {#latest-news}
+:::
+:::
