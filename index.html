@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Miles A. Moore – miles a. moore</title>
+<title>Miles A. Moore</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,19 +37,22 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./assets/miles/favicon2.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c9abd6645c252a19ea3ce3d39a198b0f.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d834fbccc1ff65629c58ace63aa7982f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c9abd6645c252a19ea3ce3d39a198b0f.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-5db7610fca3ea74ceab0226f71e3f166.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b72d44010710761ef2be279569eaa82e.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-5db7610fca3ea74ceab0226f71e3f166.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b5045c82964c25cf1f38be6b1d900a87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-8420a03b06f07e8237dbc8accff2c933.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-b5045c82964c25cf1f38be6b1d900a87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-58ee01a943fc41ce1a0fd1423000d4ee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-2509045eb1c1cb1b133d023ab1d2d092.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-58ee01a943fc41ce1a0fd1423000d4ee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
@@ -81,8 +84,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link rel="stylesheet" href="assets/index.css">
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-latest-news .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-website','listing-format','listing-execute','listing-engines','listing-language','listing-title','listing-date','listing-image','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-title","listing-date","listing-image","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-latest-news'] = new List('listing-latest-news', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -257,7 +317,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">miles a. moore</span>
+    <span class="navbar-title">Miles A. Moore</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -275,16 +335,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./film/index.html"> 
-<span class="menu-text">Film</span></a>
+    <a class="nav-link" href="./research/index.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./news/index.html"> 
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research/index.html"> 
-<span class="menu-text">Research</span></a>
+    <a class="nav-link" href="./film/index.html"> 
+<span class="menu-text">Film</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -300,42 +360,151 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-trestles column-page">
-  <div class="about-entity">
-    <img src="assets/images/background.jpg" alt="A visualization of a 10-dimensionsal isotropic normal distribution **projected** to 2-D with principal component analysis and color with a terrain color pallette via a 2d kernel density estimator. Higher density regions are white lower densitys move through an earthy grey-brown into a green-grey, suggesting a high-altitude mountain and a subalpine-nival ecotone." class="about-image
-  rounded " style="width: 28em;">
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Miles A. Moore</h1>
-<p class="subtitle lead">Computational Ecologist</p>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<div class="hero">
+<div class="hero-text">
+<p><span class="eyebrow">PhD student · Computational ecologist · DOE CSGF Fellow</span></p>
+<h1 class="hero-name">
+Studying the <em>timing</em> of life in a changing climate.
+</h1>
+<div class="lede">
+<p>I am a PhD student and <a href="https://www.krellinst.org/csgf/">DOE Computational Science Graduate Fellow</a> at the University of Colorado Boulder. I build <strong>Bayesian generative models</strong> of phenology, the timing of growth, reproduction, and dispersal, and use <strong>machine learning</strong> and <strong>high-performance computing</strong> to understand how alpine and agricultural plants respond to an uncertain environment.</p>
 </div>
-<div class="quarto-title-meta column-page">
-  </div>
-</header>
-  </div>
-  <div class="about-contents"><main class="content column-page" id="quarto-document-content">
-
-<!-- 
-<style>
-  body {
-  background-image: url("assets/images/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-</style> -->
-<p><br><br></p>
-<div id="hero-heading">
-<p>I am a PhD student and <a href="https://www.krellinst.org/csgf/">DOE CSGF</a> Fellow at the University of Colorado Boulder developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. By integrating <strong>Bayesian generative modeling</strong>, <strong>machine learning</strong>, and <strong>high-performance computing</strong>, I aim to build theoretically-grounded, data-driven models that advance our understanding of natural systems.</p>
-<p><a href="./about.html" class="about-links subtitle">about me →</a></p>
+<div class="hero-actions">
+<p><a href="./research/index.html" class="btn-mm">Read about my research</a> <a href="./about.html" class="arrow-link">About me</a> <a href="mailto:miles@milesalanmoore.com" class="arrow-link">Get in touch</a></p>
 </div>
-<!-- hero-heading -->
-
-
-</main></div>
+<div class="stat-row">
+<div class="stat">
+<p><strong>CU Boulder</strong> Ecology &amp; Evolutionary Biology</p>
 </div>
- <!-- /main -->
-<div id="nav-email-container"></div>
+<div class="stat">
+<p><strong>DOE CSGF</strong> Computational Science Graduate Fellow</p>
+</div>
+<div class="stat">
+<p><strong>Phenology</strong> Alpine tundra &amp; sunflower</p>
+</div>
+</div>
+</div>
+<figure class="hero-figure figure">
+<img src="assets/images/background.jpg" alt="Alpine meadow and grey peaks under an overcast sky near the Furka Pass, Switzerland." class="figure-img">
+<figcaption>
+Furka Pass, Switzerland. Shot on film.
+</figcaption>
+</figure>
+</div>
+<div class="band">
+<section id="what-i-work-on" class="level2 band-head">
+<h2 class="anchored" data-anchor-id="what-i-work-on">What I work on</h2>
+<p><a href="./research/index.html" class="arrow-link">Research</a></p>
+</section>
+<div class="grid">
+<div class="g-col-12 g-col-md-4">
+<div class="mm-card">
+<p><span class="card-icon"><i class="fa-solid fa-seedling" aria-label="seedling"></i></span></p>
+<section id="phenology" class="level3">
+<h3 class="anchored" data-anchor-id="phenology">Phenology</h3>
+<p>The when of growth, maturation, reproduction, and dispersal, and why it shifts as the environment varies. Mostly alpine tundra and crops.</p>
+</section>
+</div>
+</div>
+<div class="g-col-12 g-col-md-4">
+<div class="mm-card">
+<p><span class="card-icon"><i class="fa-solid fa-diagram-project" aria-label="diagram-project"></i></span></p>
+<section id="generative-models" class="level3">
+<h3 class="anchored" data-anchor-id="generative-models">Generative models</h3>
+<p>Hierarchical, state-space, and latent-variable models that encode biological mechanism and quantify uncertainty honestly.</p>
+</section>
+</div>
+</div>
+<div class="g-col-12 g-col-md-4">
+<div class="mm-card">
+<p><span class="card-icon"><i class="fa-solid fa-microchip" aria-label="microchip"></i></span></p>
+<section id="computation-at-scale" class="level3">
+<h3 class="anchored" data-anchor-id="computation-at-scale">Computation at scale</h3>
+<p>Simulation-based inference and machine learning on high-performance computing systems, so the models can be as mechanistic as the biology demands.</p>
+</section>
+</div>
+</div>
+</div>
+</div>
+<div class="band">
+<section id="recent-publications" class="level2 band-head">
+<h2 class="anchored" data-anchor-id="recent-publications">Recent publications</h2>
+<p><a href="./research/index.html#publications" class="arrow-link">All publications</a></p>
+</section>
+<div class="pub-card">
+<div class="pub-year">
+<p>2026</p>
+</div>
+<div class="pub-body">
+<div class="pub-title">
+<p>Divergent regional trends in alpine tundra productivity linked to changes in snow-free season length and summer warming</p>
+</div>
+<div class="pub-authors">
+<p><strong>Moore, M.A.</strong>, Emery, N. C., and Elmendorf, S. C.. <em>Environmental Research: Ecology</em></p>
+</div>
+</div>
+</div>
+<div class="pub-card">
+<div class="pub-year">
+<p>2025</p>
+</div>
+<div class="pub-body">
+<div class="pub-title">
+<p>Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower</p>
+</div>
+<div class="pub-authors">
+<p>Clark, E.I., <strong>Moore, M.A.</strong>, Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C.. <em>New Phytologist</em></p>
+</div>
+</div>
+</div>
+<div class="pub-card">
+<div class="pub-year">
+<p>Accepted</p>
+</div>
+<div class="pub-body">
+<div class="pub-title">
+<p>Genetic-environment decomposition reveals geographical disparities in sunflower yield improvement across the Great Plains</p>
+</div>
+<div class="pub-authors">
+<p>Elmendorf, S.C., Hulke, B.S., Clark, E.I., <strong>Moore, M.A.</strong>, Kane, N.C.. <em>Field Crops Research</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="band">
+<section id="latest-news" class="level2 band-head">
+<h2 class="anchored" data-anchor-id="latest-news">Latest news</h2>
+<p><a href="./news/index.html" class="arrow-link">All news</a></p>
+</section>
+<div id="listing-latest-news" class="quarto-listing quarto-listing-container-custom">
+<ul class="news-list">
+<li class="news-item">
+<time datetime="2026-01-13">Jan 13, 2026</time> <a class="news-title" href="./news/2026-01-13_Sp26Classes/index.html">Spring 2026 Classes: Computational Bayesian Statistics and Deep Learning</a> <span class="news-thumb-empty"></span>
+</li>
+<li class="news-item">
+<time datetime="2025-12-15">Dec 15, 2025</time> <a class="news-title" href="./news/2025-12-15-Fa25Classes/index.html">Fall 2025 Classes: Numerical Linear Algebra and HPC</a> <span class="news-thumb-empty"></span>
+</li>
+<li class="news-item">
+<time datetime="2025-12-09">Dec 9, 2025</time> <a class="news-title" href="./news/2025-12-09_Clarketal2025NP/index.html">New co-authored manuscript in <em>New Phytologist</em></a> <img class="news-thumb" src="./news/2025-12-09_Clarketal2025NP/thumbnail.png" alt="" loading="lazy">
+</li>
+<li class="news-item">
+<time datetime="2025-12-04">Dec 4, 2025</time> <a class="news-title" href="./news/2025-12-04_NPR/index.html">Niwot Ridge LTER, Emery Lab, and Miles’ work featured on NPR</a> <img class="news-thumb" src="./news/2025-12-04_NPR/thumbnail.png" alt="" loading="lazy">
+</li>
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</div>
 
+
+
+
+</main> <!-- /main -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const u = "miles";
@@ -345,9 +514,8 @@ ul.task-list li input[type="checkbox"] {
     link.href = `mailto:${u}@${d}`;
     link.title = "Email me";
     link.className = "nav-email-link";
-    link.innerHTML = `<span>📬</span><span>Contact</span>`;
+    link.innerHTML = `<i class="bi bi-envelope"></i><span>Contact</span>`;
 
-    // Insert into Quarto's navbar right section
     const navbarRight = document.querySelector(".navbar-nav.ms-auto, #navbarCollapse .navbar-nav");
     if (navbarRight) {
       const li = document.createElement("li");
@@ -357,28 +525,6 @@ ul.task-list li input[type="checkbox"] {
     }
   });
 </script>
-
-<style>
-  .nav-email-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4em;
-    padding: 0.25em 0.7em;
-    border: 1.5px solid rgba(255,255,255,0.6);
-    border-radius: 6px;
-    color: inherit;
-    text-decoration: none;
-    font-size: 0.875rem;
-    transition: all 0.2s;
-    margin-left: 0.5em;
-  }
-  .nav-email-link:hover {
-    background-color: rgba(255,255,255,0.15);
-    border-color: white;
-    color: inherit;
-    text-decoration: none;
-  }
-</style>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -394,6 +540,13 @@ ul.task-list li input[type="checkbox"] {
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -792,7 +945,7 @@ ul.task-list li input[type="checkbox"] {
 <p>© 2025 Miles Alan Moore ∙ Made with <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a class="link-dark me-1" href="https://bsky.app/profile/milesalanmoore.bsky.social" title="Bluesky" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky" aria-label="bluesky"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/milesalanmoore" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a class="link-dark me-1" href="https://github.com/milesalanmoore" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0009-0003-0173-7602" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" aria-label="orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=SaaaeRYAAAAJ&amp;hl=en" title="orcid" target="_blank" rel="noopener"><i class="fa-brands fa-google-scholar" aria-label="google-scholar"></i></a></p>
+<p><a href="https://bsky.app/profile/milesalanmoore.bsky.social" title="Bluesky" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky" aria-label="bluesky"></i></a> <a href="https://linkedin.com/in/milesalanmoore" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="https://github.com/milesalanmoore" title="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://orcid.org/0009-0003-0173-7602" title="ORCID" target="_blank" rel="noopener"><i class="ai  ai-orcid" aria-label="orcid"></i></a> <a href="https://scholar.google.com/citations?user=SaaaeRYAAAAJ&amp;hl=en" title="Google Scholar" target="_blank" rel="noopener"><i class="fa-brands fa-google-scholar" aria-label="google-scholar"></i></a></p>
 <div class="pgp-footer">
 <a href="./assets/miles-pgp-public-key.asc"><i class="fa-solid fa-key" aria-label="key"></i> PGP public key</a> &nbsp;&nbsp;<i class="fa-solid fa-fingerprint" aria-label="fingerprint"></i> Fingerprint:
 <div class="pgp-fingerprint">

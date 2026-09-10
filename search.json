@@ -4,7 +4,28 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I am a PhD student & Department of Energy Computational Science Graduate Fellow at the University of Colorado Boulder. A biostatistician, quantitiative ecologist, and eco-evolutionary biologist, my work focuses on phenology—the temporal dynamics of key organismal life cycle events (i.e. growth, reproduction, maturation)—in response to variable environmental information. My research is particularly motivated by phenological changes in high-mountain and agricultural ecosystems due to their importance for ecological reslience and human food & water security.\nI have extensive expertise in hierarchical and causal models in the life-sciences. For my research, I develop novel mechanistic models based on state-space and latent-variable frameworks, including time-to-event (“survival”) and hidden markov models.\nOutside of research, I enjoy rock climbing, running, cycling, fly-fishing, reading, snowboarding, film photography, and most of all, spending time with my wife.\nRead about my research →\n\nEducation\nPh.D. Ecology and Evolutionary Biology\nUniversity of Colorado Boulder | Boulder, CO\n08.2024 - 05.2029 (expected)\nB.A. Ecology and Evolutionary Biology\nCertificate in GIS & Computational Science\nUniversity of Colorado Boulder | Boulder, CO\nsumma cum laude, With distinction, GPA: 4.0\n01.2022 - 12.2023\nAssociate of Science\nFront Range Community College | Westminster, CO\n08.2019 – 12.2021\n\n\nResearch Experience\n09.2025 – Present\nDepartment of Energy Computational Science Graduate Fellow, Krell Institute\n05.2025 – 08.2025\nGraduate Research Assistant, Cooperative Institute for Research in Environmental Sciences, Boulder, CO\n12.2023 – 08.2024\nProfessional Scientist I, Institute of Arctic and Alpine Research, Boulder, CO\n05.2023 – 12.2023\nRemote Sensing Intern, National Aeronautics and Space Administration, Greenbelt, MD\n08.2021 – 12.2023\nData Management Assistant, Institute of Arctic and Alpine Research, Boulder, CO\n05.2021 – 08.2021\nField Research Assistant, Niwot Ridge Long Term Ecological Research (LTER) site, Boulder, CO\n\n\nTeaching\n08.2024 – 12.2024\nTeaching Assistant, University of Colorado Boulder\nEBIO 4410 / 5410 Biological Statistics"
+    "text": "Miles on a foggy beach, Point Reyes, California.\n\n\n\n\nPosition\n\n\nPhD student, Ecology & Evolutionary Biology\n\n\nInstitution\n\n\nUniversity of Colorado Boulder\n\n\nFellowship\n\n\nDOE CSGF\n\n\nBased in\n\n\nBoulder, Colorado\n\n\nEmail\n\n\nmiles@milesalanmoore.com\n\n\n\n\n\nI am a PhD student and Department of Energy Computational Science Graduate Fellow at the University of Colorado Boulder. A biostatistician, quantitative ecologist, and eco-evolutionary biologist, I work on phenology, the temporal dynamics of key life-cycle events like growth, reproduction, and maturation, in response to variable environmental information. I am particularly motivated by phenological change in high-mountain and agricultural ecosystems because of what it means for ecological resilience and for human food and water security.\n\nI have extensive experience with hierarchical and causal models in the life sciences. For my research I develop mechanistic models based on state-space and latent-variable frameworks, including time-to-event (“survival”) and hidden Markov models.\n\nBayesian inference State-space models Survival analysis Hidden Markov models Remote sensing HPC R Stan Python\n\nOutside of research I enjoy rock climbing, running, cycling, fly-fishing, reading, snowboarding, film photography, and most of all, spending time with my wife.\nRead about my research\n\n\n\n\n2024 – 2029 (expected) Ph.D. Ecology and Evolutionary Biology University of Colorado Boulder\n\n\n2022 – 2023 B.A. Ecology and Evolutionary Biology University of Colorado Boulder Certificate in GIS & Computational Science · summa cum laude, with distinction, GPA 4.0\n\n\n2019 – 2021 Associate of Science Front Range Community College, Westminster, CO\n\n\n\n\n\n\n\nSep 2025 – present DOE Computational Science Graduate Fellow Krell Institute\n\n\nMay – Aug 2025 Graduate Research Assistant Cooperative Institute for Research in Environmental Sciences, Boulder, CO\n\n\nDec 2023 – Aug 2024 Professional Scientist I Institute of Arctic and Alpine Research, Boulder, CO\n\n\nMay – Dec 2023 Remote Sensing Intern National Aeronautics and Space Administration, Greenbelt, MD\n\n\nAug 2021 – Dec 2023 Data Management Assistant Institute of Arctic and Alpine Research, Boulder, CO\n\n\nMay – Aug 2021 Field Research Assistant Niwot Ridge Long Term Ecological Research (LTER) site, Boulder, CO\n\n\n\n\n\n\n\nAug – Dec 2024 Teaching Assistant, EBIO 4410 / 5410 Biological Statistics University of Colorado Boulder"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "",
+    "text": "2024 – 2029 (expected) Ph.D. Ecology and Evolutionary Biology University of Colorado Boulder\n\n\n2022 – 2023 B.A. Ecology and Evolutionary Biology University of Colorado Boulder Certificate in GIS & Computational Science · summa cum laude, with distinction, GPA 4.0\n\n\n2019 – 2021 Associate of Science Front Range Community College, Westminster, CO"
+  },
+  {
+    "objectID": "about.html#research-experience",
+    "href": "about.html#research-experience",
+    "title": "About",
+    "section": "",
+    "text": "Sep 2025 – present DOE Computational Science Graduate Fellow Krell Institute\n\n\nMay – Aug 2025 Graduate Research Assistant Cooperative Institute for Research in Environmental Sciences, Boulder, CO\n\n\nDec 2023 – Aug 2024 Professional Scientist I Institute of Arctic and Alpine Research, Boulder, CO\n\n\nMay – Dec 2023 Remote Sensing Intern National Aeronautics and Space Administration, Greenbelt, MD\n\n\nAug 2021 – Dec 2023 Data Management Assistant Institute of Arctic and Alpine Research, Boulder, CO\n\n\nMay – Aug 2021 Field Research Assistant Niwot Ridge Long Term Ecological Research (LTER) site, Boulder, CO"
+  },
+  {
+    "objectID": "about.html#teaching",
+    "href": "about.html#teaching",
+    "title": "About",
+    "section": "",
+    "text": "Aug – Dec 2024 Teaching Assistant, EBIO 4410 / 5410 Biological Statistics University of Colorado Boulder"
   },
   {
     "objectID": "research/articles/sunflower-optimal/index.html",
@@ -32,14 +53,35 @@
     "href": "film/index.html",
     "title": "Film",
     "section": "",
-    "text": "Furka Pass\n\n\n\n\n\nCentral Alps Sunrise\n\n\n\n\n\nAlpfor Glacier"
+    "text": "Furka Pass\n\n\n\n\n\nCentral Alps sunrise\n\n\n\n\n\nAlpfor glacier\n\n\n\n\n\nRidgeline at dawn"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Miles A. Moore",
+    "title": "\nStudying the timing of life in a changing climate.\n",
     "section": "",
-    "text": "I am a PhD student and DOE CSGF Fellow at the University of Colorado Boulder developing advanced statistical and simulation-based methods to improve our understanding of biological systems under uncertainty. By integrating Bayesian generative modeling, machine learning, and high-performance computing, I aim to build theoretically-grounded, data-driven models that advance our understanding of natural systems.\nabout me →"
+    "text": "PhD student · Computational ecologist · DOE CSGF Fellow\n\n\nI am a PhD student and DOE Computational Science Graduate Fellow at the University of Colorado Boulder. I build Bayesian generative models of phenology, the timing of growth, reproduction, and dispersal, and use machine learning and high-performance computing to understand how alpine and agricultural plants respond to an uncertain environment.\n\n\nRead about my research About me Get in touch\n\n\n\nCU Boulder Ecology & Evolutionary Biology\n\n\nDOE CSGF Computational Science Graduate Fellow\n\n\nPhenology Alpine tundra & sunflower\n\n\n\n\n\n\nFurka Pass, Switzerland. Shot on film."
+  },
+  {
+    "objectID": "index.html#what-i-work-on",
+    "href": "index.html#what-i-work-on",
+    "title": "\nStudying the timing of life in a changing climate.\n",
+    "section": "What I work on",
+    "text": "What I work on\nResearch"
+  },
+  {
+    "objectID": "index.html#recent-publications",
+    "href": "index.html#recent-publications",
+    "title": "\nStudying the timing of life in a changing climate.\n",
+    "section": "Recent publications",
+    "text": "Recent publications\nAll publications"
+  },
+  {
+    "objectID": "index.html#latest-news",
+    "href": "index.html#latest-news",
+    "title": "\nStudying the timing of life in a changing climate.\n",
+    "section": "Latest news",
+    "text": "Latest news\nAll news"
   },
   {
     "objectID": "news/2025-12-15-Fa25Classes/index.html",
@@ -60,7 +102,7 @@
     "href": "news/index.html",
     "title": "News",
     "section": "",
-    "text": "Spring 2026 Classes: Computational Bayesian Statistics and Deep Learning\n\n\n\n\n\nJan 13, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nFall 2025 Classes: Numerical Linear Algebra and HPC\n\n\n\n\n\nDec 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nNew co-authored manuscript in New Phytologist\n\n\n\n\n\nDec 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nNiwot Ridge LTER, Emery Lab, and Miles’ work featured on NPR\n\n\n\n\n\nDec 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nConference: Supercomputing 2025 in St. Louis\n\n\n\n\n\nSep 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMiles is awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)\n\n\n\n\n\nMay 13, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Jan 13, 2026 Spring 2026 Classes: Computational Bayesian Statistics and Deep Learning \n\n\nDec 15, 2025 Fall 2025 Classes: Numerical Linear Algebra and HPC \n\n\nDec 9, 2025 New co-authored manuscript in New Phytologist \n\n\nDec 4, 2025 Niwot Ridge LTER, Emery Lab, and Miles’ work featured on NPR \n\n\nSep 5, 2025 Conference: Supercomputing 2025 in St. Louis \n\n\nMay 13, 2025 Miles is awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF) \n\n\nNo matching items"
   },
   {
     "objectID": "news/2025-12-09_Clarketal2025NP/index.html",
@@ -102,28 +144,28 @@
     "href": "research/index.html",
     "title": "Research",
     "section": "",
-    "text": "My research spans ecology, evolution, and ecophysiology. I study the role that time and uncertainity play in shaping plant responses to the environment. In particular, I focus on phenology, the timing of annually reoccuring life-history events like growth, maturation, reproduction, and dispersal. I view phenology as a unifying concept in ecology and evolution which integrates processes across biological scales and taxa, although my ecological and taxanomic expertise is primarily in alpine, arctic tundra, and agricultural plants.\nPhenology is an inherently individual and physiological process that can directly impact fitness, demography, and population persistence. At higher levels of organization, variation in phenological plasticity among species generates novel temporal community assemblies under variable environmental conditions. Taken together, these processes may scale to impact land surface and ecosystem phenology with critical implications for water, energy, agriculture, and ecosystem health."
+    "text": "Central Alps, on film\nI view phenology as a unifying concept in ecology and evolution which integrates processes across biological scales and taxa, although my ecological and taxonomic expertise is primarily in alpine, arctic tundra, and agricultural plants.\nPhenology is an inherently individual and physiological process that can directly impact fitness, demography, and population persistence. At higher levels of organization, variation in phenological plasticity among species generates novel temporal community assemblies under variable environmental conditions. Taken together, these processes may scale to impact land surface and ecosystem phenology with critical implications for water, energy, agriculture, and ecosystem health."
   },
   {
     "objectID": "research/index.html#publications",
     "href": "research/index.html#publications",
     "title": "Research",
     "section": "Publications",
-    "text": "Publications\n\n\nDivergent regional trends in alpine tundra productivity linked to changes in snow-free season length and summer warming\n\n\nMoore, M.A., Emery, N. C., and Elmendorf, S. C. (2026). Environmental Research: Ecology.\n\n\n Preprint  DOI  Full-text\n\n\n\n\nClimate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower\n\n\nClark, E.I., Moore, M.A., Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C. (2025). New Phytologist.\n\n\n Details  DOI  Full-text\n\n\n\n\nGenetic-environment decomposition reveals geographical disparities in sunflower yield improvement across the Great Plains\n\n\nElmendorf, S.C., Hulke, B.S., Clark, E.I., Moore, M.A., Kane, N.C. (Accepted). Field Crops Research.\n\n\n\n\nIn-situ soil moisture and active layer thickness in Alaska and Northwestern Canada, 2005-2024\n\n\nMoore, M.A., Hoy, E. E., Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., et al. (Accepted). Scientific Data.\n\n\n\n\nForty-six years of sunflower multi-environment trials in the Great Plains\n\n\nElmendorf, S.C., Hulke, B.S., …, Clark, E.I., Moore, M.A., …, Kane, N.C. (In Review)"
+    "text": "Publications\n\n\n2026\n\n\n\nDivergent regional trends in alpine tundra productivity linked to changes in snow-free season length and summer warming\n\n\nMoore, M.A., Emery, N. C., and Elmendorf, S. C.. Environmental Research: Ecology.\n\n\n Preprint  DOI  Full-text\n\n\n\n\n\n2025\n\n\n\nClimate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower\n\n\nClark, E.I., Moore, M.A., Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C.. New Phytologist.\n\n\n Details  DOI  Full-text\n\n\n\n\n\nAccepted\n\n\n\nGenetic-environment decomposition reveals geographical disparities in sunflower yield improvement across the Great Plains\n\n\nElmendorf, S.C., Hulke, B.S., Clark, E.I., Moore, M.A., Kane, N.C.. Field Crops Research.\n\n\n\n\n\nAccepted\n\n\n\nIn-situ soil moisture and active layer thickness in Alaska and Northwestern Canada, 2005-2024\n\n\nMoore, M.A., Hoy, E. E., Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., et al.. Scientific Data.\n\n\n\n\n\nIn Review\n\n\n\nForty-six years of sunflower multi-environment trials in the Great Plains\n\n\nElmendorf, S.C., Hulke, B.S., …, Clark, E.I., Moore, M.A., …, Kane, N.C."
   },
   {
     "objectID": "research/index.html#presentations",
     "href": "research/index.html#presentations",
     "title": "Research",
     "section": "Presentations",
-    "text": "Presentations\nMoore, M.A., Hoy, E. E., Griffith, P. C., Schaefer, K. M., & Bourgeau-Chavez, L. L. (2023). From Field to Air: Integrating Field Data in Support of the ABoVE Airborne Campaign. 2023, B31B-08. American Geophysical Union Fall Meeting. San Francisco, CA. https://ui.adsabs.harvard.edu/abs/2023AGUFM.B31B..08M"
+    "text": "Presentations\n\n\nMoore, M.A., Hoy, E. E., Griffith, P. C., Schaefer, K. M., & Bourgeau-Chavez, L. L. (2023). From Field to Air: Integrating Field Data in Support of the ABoVE Airborne Campaign. 2023, B31B-08. American Geophysical Union Fall Meeting. San Francisco, CA. https://ui.adsabs.harvard.edu/abs/2023AGUFM.B31B..08M"
   },
   {
     "objectID": "research/index.html#datasets",
     "href": "research/index.html#datasets",
     "title": "Research",
     "section": "Datasets",
-    "text": "Datasets\nMoore, M.A., K. Schaefer, L.K. Clayton, E.E. Hoy, M. Auclair, K. Bakian-Dogaheh, M.J. Battaglia, K. Bennett, W.R. Bolton, L.L. Bourgeau-Chavez, … Y. Zhao, and S. Zwieback. (2025). ABoVE: Soil Moisture and Active Layer Thickness in Alaska, USA and Canada, 2005-2022. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/2369\nWhite, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Losleben, M., & Moore, M. A. (2025). Homogenized, gap-filled, daily air temperature data for Saddle, 1986—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/49a2171ec028c4ddef298752bc9ebe8d\nWhite, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for Saddle, 1981—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/8caa444276521b797e4a16485dc0e137\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (202a). Infilled daily air temperature data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/0b4f8747ea72258e46681bb511c262f3\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily air temperature data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/b05689181c21ac40d35b6c1c01e2f8a\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/5f896d7d1eb19649ee2ff9fca7166160\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/02b125f7d0dc87a6d40e6ca7001471ce\nMoore, M.A., Orellana-Soto,M.E., Hartman,N.R. and Kane,N.C. (2024). Helianthus agrestis isolate USDA PI 673199 cultivar PI 468416 chloroplast, complete genome. NCBI Nucleotide. Accession NC_086875.1. Available from: https://www.ncbi.nlm.nih.gov/nuccore/NC_086875.1"
+    "text": "Datasets\n\n\nMoore, M.A., K. Schaefer, L.K. Clayton, E.E. Hoy, M. Auclair, K. Bakian-Dogaheh, M.J. Battaglia, K. Bennett, W.R. Bolton, L.L. Bourgeau-Chavez, … Y. Zhao, and S. Zwieback. (2025). ABoVE: Soil Moisture and Active Layer Thickness in Alaska, USA and Canada, 2005-2022. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/2369\nWhite, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Losleben, M., & Moore, M. A. (2025). Homogenized, gap-filled, daily air temperature data for Saddle, 1986—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/49a2171ec028c4ddef298752bc9ebe8d\nWhite, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for Saddle, 1981—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/8caa444276521b797e4a16485dc0e137\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (202a). Infilled daily air temperature data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/0b4f8747ea72258e46681bb511c262f3\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily air temperature data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/b05689181c21ac40d35b6c1c01e2f8a\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/5f896d7d1eb19649ee2ff9fca7166160\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/02b125f7d0dc87a6d40e6ca7001471ce\nMoore, M.A., Orellana-Soto,M.E., Hartman,N.R. and Kane,N.C. (2024). Helianthus agrestis isolate USDA PI 673199 cultivar PI 468416 chloroplast, complete genome. NCBI Nucleotide. Accession NC_086875.1. Available from: https://www.ncbi.nlm.nih.gov/nuccore/NC_086875.1"
   },
   {
     "objectID": "license.html",
