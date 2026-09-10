@@ -2,6 +2,10 @@
 title: "Research"
 page-layout: full
 toc-location: right
+# Always re-execute: this page reads publications.yml at render time, and
+# Quarto's freeze cache only tracks the .qmd source, not files the code reads.
+execute:
+  freeze: false
 format:
     html:
         css: /research/research.css
