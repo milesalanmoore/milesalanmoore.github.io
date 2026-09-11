@@ -125,6 +125,9 @@ Connecting theory to data and comparing candidate models requires latent-variabl
 :::
 :::
 
+::: {.lede}
+I am a PhD student and [DOE Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) at the University of Colorado Boulder. I build **Bayesian generative models** of phenology, the timing of growth, reproduction, and dispersal, and use **machine learning** and **high-performance computing** to understand how alpine and agricultural plants respond to an uncertain environment.
+:::
 
 
 ::: {.g-col-12 .g-col-md-4}
@@ -134,6 +137,52 @@ Connecting theory to data and comparing candidate models requires latent-variabl
 ### Computation at scale
 Simulation-based inference, multithreaded Bayesian models, and machine learning on high-performance systems, so the models can be as mechanistic as the biology demands, built as tested, reproducible research software.
 
+### Generative models
+Hierarchical, state-space, and latent-variable models that encode biological mechanism and quantify uncertainty honestly.
+:::
+:::
+::: {.g-col-12 .g-col-md-4}
+::: {.mm-card}
+[{{< fa microchip >}}]{.card-icon}
+
+### Computation at scale
+Simulation-based inference and machine learning on high-performance computing systems, so the models can be as mechanistic as the biology demands.
+:::
+:::
+:::
+:::
+
+::: {.band}
+::: {.band-head}
+## Recent publications
+[All publications](research/index.qmd#publications){.arrow-link}
+:::
+
+```{r}
+#| output: asis
+pubs <- yaml::read_yaml("research/publications.yml")
+pubs <- pubs[seq_len(min(3, length(pubs)))]
+for (pub in pubs) {
+  cat("::: {.pub-card}\n")
+  cat("::: {.pub-year}\n", pub$year, "\n:::\n", sep = "")
+  cat("::: {.pub-body}\n")
+  cat("::: {.pub-title}\n", pub$title, "\n:::\n", sep = "")
+  cat("::: {.pub-authors}\n", pub$authors,
+      if (nchar(pub$journal) > 0) paste0(". *", pub$journal, "*") else "",
+      "\n:::\n", sep = "")
+  cat(":::\n:::\n\n")
+}
+```
+:::
+
+::: {.band}
+::: {.band-head}
+## Latest news
+[All news](news/index.qmd){.arrow-link}
+:::
+
+::: {#latest-news}
+:::
 :::
 :::
 
