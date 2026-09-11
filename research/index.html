@@ -52,8 +52,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-58ee01a943fc41ce1a0fd1423000d4ee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-2509045eb1c1cb1b133d023ab1d2d092.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-58ee01a943fc41ce1a0fd1423000d4ee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -84,6 +84,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -357,7 +386,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Divergent regional trends in alpine tundra productivity linked to changes in snow-free season length and summer warming</p>
 </div>
 <div class="pub-authors">
-<p><strong>Moore, M.A.</strong>, Emery, N. C., and Elmendorf, S. C.. <em>Environmental Research: Ecology</em>.</p>
+<p><strong>Moore, M.A.</strong>, Emery, N. C., and Elmendorf, S. C. <em>Environmental Research: Ecology</em>.</p>
 </div>
 <div class="pub-links">
 <p><a href="https://doi.org/10.22541/essoar.176005847.72387941/v1" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-pencil" aria-label="pencil"></i> Preprint</a> <a href="https://doi.org/10.1088/2752-664X/ae6d04" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-link" aria-label="link"></i> DOI</a> <a href="https://iopscience.iop.org/article/10.1088/2752-664X/ae6d04/pdf" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> Full-text</a></p>
@@ -373,7 +402,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower</p>
 </div>
 <div class="pub-authors">
-<p>Clark, E.I., <strong>Moore, M.A.</strong>, Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C.. <em>New Phytologist</em>.</p>
+<p>Clark, E.I., <strong>Moore, M.A.</strong>, Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C. <em>New Phytologist</em>.</p>
 </div>
 <div class="pub-links">
 <p><a href="articles/sunflower-optimal" class="btn btn-outline-info btn-sm"><i class="fa-solid fa-circle-info" aria-label="circle-info"></i> Details</a> <a href="https://doi.org/10.1111/nph.70790" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-link" aria-label="link"></i> DOI</a> <a href="https://onlinelibrary.wiley.com/share/author/4EAASTMRPFVR9PUSPKAE?target=10.1111/nph.70790" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> Full-text</a></p>
@@ -389,7 +418,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Genetic-environment decomposition reveals geographical disparities in sunflower yield improvement across the Great Plains</p>
 </div>
 <div class="pub-authors">
-<p>Elmendorf, S.C., Hulke, B.S., Clark, E.I., <strong>Moore, M.A.</strong>, Kane, N.C.. <em>Field Crops Research</em>.</p>
+<p>Elmendorf, S.C., Hulke, B.S., Clark, E.I., <strong>Moore, M.A.</strong>, Kane, N.C. <em>Field Crops Research</em>.</p>
 </div>
 </div>
 </div>
@@ -402,7 +431,7 @@ ul.task-list li input[type="checkbox"] {
 <p>In-situ soil moisture and active layer thickness in Alaska and Northwestern Canada, 2005-2024</p>
 </div>
 <div class="pub-authors">
-<p><strong>Moore, M.A.</strong>, Hoy, E. E., Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., et al.. <em>Scientific Data</em>.</p>
+<p><strong>Moore, M.A.<span class="math inline">\(^{†}\)</span></strong>, Hoy, E. E.<span class="math inline">\(^{†}\)</span>, Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., et al (<span class="small"><span class="math inline">\(^{†}\)</span>Joint first authors</span>). <em>Scientific Data</em>.</p>
 </div>
 </div>
 </div>
@@ -415,7 +444,33 @@ ul.task-list li input[type="checkbox"] {
 <p>Forty-six years of sunflower multi-environment trials in the Great Plains</p>
 </div>
 <div class="pub-authors">
-<p>Elmendorf, S.C., Hulke, B.S., …, Clark, E.I., <strong>Moore, M.A.</strong>, …, Kane, N.C.</p>
+<p>Elmendorf, S.C., Hulke, B.S., …, Clark, E.I., <strong>Moore, M.A.</strong>, …, Kane, N.C</p>
+</div>
+</div>
+</div>
+<div class="pub-card">
+<div class="pub-year">
+<p>In Review</p>
+</div>
+<div class="pub-body">
+<div class="pub-title">
+<p>Scale- and stage-dependent effects of temperature, light, and urbanization on barn swallow (<em>Hirundo rustica</em>) breeding performance and nestling development</p>
+</div>
+<div class="pub-authors">
+<p>Garcia, S.R., Laubach, Z.M., Keller, K.P., <strong>Moore, M.A.</strong>, Meredith Joy, I.J., Safran, R.J</p>
+</div>
+</div>
+</div>
+<div class="pub-card">
+<div class="pub-year">
+<p>In Review</p>
+</div>
+<div class="pub-body">
+<div class="pub-title">
+<p>Genetic control of phenology and phenological plasticity are decoupled in cultivated sunflower</p>
+</div>
+<div class="pub-authors">
+<p>Innes P., McNellie, J.P., Clark, E.I., <strong>Moore, M.A.</strong>, Keepers, K.G., Elmendorf, S.C., Hulke, B.S., &amp; Kane, N.C</p>
 </div>
 </div>
 </div>
@@ -424,7 +479,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="presentations">Presentations</h2>
 <div class="ref-list">
 <ul>
-<li><strong>Moore, M.A.</strong>, Hoy, E. E., Griffith, P. C., Schaefer, K. M., &amp; Bourgeau-Chavez, L. L. (2023). From Field to Air: Integrating Field Data in Support of the ABoVE Airborne Campaign. 2023, B31B-08. <em>American Geophysical Union</em> Fall Meeting. San Francisco, CA. https://ui.adsabs.harvard.edu/abs/2023AGUFM.B31B..08M</li>
+<li><p><strong>Moore, M.A.</strong>, Hulke, B.S., Kane, N.C., &amp; Elmendorf, S.C. (2026). High-performance computing enabled generative models of flowering time in cultivated sunflower. <em>Department of Energy Compuational Science Graduate Fellowship: Annual Program Review</em>. Washington, D.C.</p></li>
+<li><p><strong>Moore, M.A.</strong>, Hoy, E. E., Griffith, P. C., Schaefer, K. M., &amp; Bourgeau-Chavez, L. L. (2023). From Field to Air: Integrating Field Data in Support of the ABoVE Airborne Campaign. 2023, B31B-08. <em>American Geophysical Union</em> Fall Meeting. San Francisco, CA. https://ui.adsabs.harvard.edu/abs/2023AGUFM.B31B..08M</p></li>
 </ul>
 </div>
 </section>
