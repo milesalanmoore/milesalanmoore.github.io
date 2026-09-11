@@ -16,12 +16,12 @@ execute:
 
 ::: {.hero}
 ::: {.hero-text}
-[PhD student · Computational ecologist · DOE CSGF Fellow]{.eyebrow}
+[PhD student · Computational ecologist · Eco-evo Biologist]{.eyebrow}
 
-<h1 class="hero-name">Studying the <em>timing</em> of life in a changing climate.</h1>
+<h1 class="hero-name">Studying the <em>timing</em> of life in a changing environment.</h1>
 
 ::: {.lede}
-I am a PhD student and [DOE Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) at the University of Colorado Boulder. I build **Bayesian generative models** of phenology, the timing of growth, reproduction, and dispersal, and use **machine learning** and **high-performance computing** to understand how alpine and agricultural plants respond to an uncertain environment.
+I'm a PhD student and **DOE Computational Science Graduate Fellow** at the University of Colorado Boulder studying plant biology & phenology (the timing of growth, reproduction, and dispersal). Biological data are always messy and complex. I build advanced models that make the most of imperfect observations by connecting theory, observation processes, and data to drive **actionable conclusions**. What's driving change? How certain are we? Where should we look next?
 :::
 
 ::: {.hero-actions}
@@ -36,40 +36,106 @@ I am a PhD student and [DOE Computational Science Graduate Fellow](https://www.k
 Ecology & Evolutionary Biology
 :::
 ::: {.stat}
-**DOE CSGF**
-Computational Science Graduate Fellow
+**Institute of Arctic and Alpine Research**
+Niwot Ridge LTER
 :::
 ::: {.stat}
-**Phenology**
-Alpine tundra & sunflower
+**Department of Energy**
+Computational Science Graduate Fellow
 :::
 :::
 :::
 
 <figure class="hero-figure">
-<img src="assets/images/background.jpg" alt="Alpine meadow and grey peaks under an overcast sky near the Furka Pass, Switzerland.">
-<figcaption>Furka Pass, Switzerland. Shot on film.</figcaption>
+<img src="assets/images/background.jpg" alt="Alpine meadow and grey peaks under an overcast sky near Furka Pass, Switzerland.">
+<!-- <figcaption>Furka Pass, Switzerland. Shot on film.</figcaption> -->
 </figure>
 :::
 
+<!-- -------------------------------------------------------------------------->
+<!-- What I work on -->
+<!-- -------------------------------------------------------------------------->
+
 ::: {.band}
 ::: {.band-head}
-## What I work on
+## [{{< fa microscope >}}]{.card-icon} What I work on
 [Research](research/index.qmd){.arrow-link}
 :::
 
 ::: {.grid}
 ::: {.g-col-12 .g-col-md-4}
 ::: {.mm-card}
-[{{< fa seedling >}}]{.card-icon}
+[{{< fa mountain-sun >}}]{.card-icon}
 
-### Phenology
-The when of growth, maturation, reproduction, and dispersal, and why it shifts as the environment varies. Mostly alpine tundra and crops.
+### What sets the timing of life?
+How snowmelt, heat, and drought control when plants grow, flower, and set seed, and why those responses diverge across places and species, from high alpine tundra to agriculture.
 :::
 :::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.mm-card}
+[{{< fa wheat-awn >}}]{.card-icon}
+
+### Adaptation or mismatch?
+When a shift in timing tracks a moving climate optimum, and when it leaves wild plants and crops out of step with their environment, with consequences for yield, resilience, and food security.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.mm-card}
+[{{< fa scale-balanced >}}]{.card-icon}
+
+### What can the data support?
+Separating real drivers of ecological change from noise: evaluating whether interventions like restoration actually work, and connecting field and satellite observations to the models used to forecast land-surface change.
+:::
+:::
+
+:::
+:::
+
+<!-- -------------------------------------------------------------------------->
+<!-- Tools I use -->
+<!-- -------------------------------------------------------------------------->
+
+::: {.band}
+::: {.band-head}
+## [{{< fa screwdriver-wrench >}}]{.card-icon} Tools I use
+[GitHub](https://github.com/milesalanmoore){.arrow-link}
+:::
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.mm-card}
+[{{< fa square-binary >}}]{.card-icon}
+
+### Theory & simulation
+I build mechanistic, theory-based models of biological systems from first principles and study how low-level biology scales to produce emergent ecological processes.
+
+:::
+:::
+
 ::: {.g-col-12 .g-col-md-4}
 ::: {.mm-card}
 [{{< fa diagram-project >}}]{.card-icon}
+
+### Hierarchical Bayesian modeling
+Connecting theory to data and comparing candidate models requires latent-variable frameworks with explicit observation processes. I build bespoke and novel models that propogate uncertainity and enable decision making.
+
+:::
+:::
+
+::: {.lede}
+I am a PhD student and [DOE Computational Science Graduate Fellow](https://www.krellinst.org/csgf/) at the University of Colorado Boulder. I build **Bayesian generative models** of phenology, the timing of growth, reproduction, and dispersal, and use **machine learning** and **high-performance computing** to understand how alpine and agricultural plants respond to an uncertain environment.
+:::
+
+
+::: {.g-col-12 .g-col-md-4}
+::: {.mm-card}
+[{{< fa microchip >}}]{.card-icon}
+
+### Computation at scale
+Simulation-based inference, multithreaded Bayesian models, and machine learning on high-performance systems, so the models can be as mechanistic as the biology demands, built as tested, reproducible research software.
 
 ### Generative models
 Hierarchical, state-space, and latent-variable models that encode biological mechanism and quantify uncertainty honestly.
@@ -85,6 +151,45 @@ Simulation-based inference and machine learning on high-performance computing sy
 :::
 :::
 :::
+
+::: {.band}
+::: {.band-head}
+## Recent publications
+[All publications](research/index.qmd#publications){.arrow-link}
+:::
+
+```{r}
+#| output: asis
+pubs <- yaml::read_yaml("research/publications.yml")
+pubs <- pubs[seq_len(min(3, length(pubs)))]
+for (pub in pubs) {
+  cat("::: {.pub-card}\n")
+  cat("::: {.pub-year}\n", pub$year, "\n:::\n", sep = "")
+  cat("::: {.pub-body}\n")
+  cat("::: {.pub-title}\n", pub$title, "\n:::\n", sep = "")
+  cat("::: {.pub-authors}\n", pub$authors,
+      if (nchar(pub$journal) > 0) paste0(". *", pub$journal, "*") else "",
+      "\n:::\n", sep = "")
+  cat(":::\n:::\n\n")
+}
+```
+:::
+
+::: {.band}
+::: {.band-head}
+## Latest news
+[All news](news/index.qmd){.arrow-link}
+:::
+
+::: {#latest-news}
+:::
+:::
+:::
+
+:::
+:::
+
+<!-- -------------------------------------------------------------------------->
 
 ::: {.band}
 ::: {.band-head}

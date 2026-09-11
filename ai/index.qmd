@@ -27,22 +27,26 @@ tasks ranging from mundane to mission-critical. Here's how I am using
 I was inspired to write this page by [Andrew Heiss' own version](https://www.andrewheiss.com/ai/) of this sort of statement, as well as the references he linked: ["The '/ai' manifesto"](https://www.bydamo.la/p/ai-manifesto). See [the /ai public database](https://slashai.page/) for more.
 :::
 
+
 # Writing
-I am strongly opposed to the use of AI for *writing* anything. I have been 
+I am **strongly** opposed to the use of AI for *writing* anything. I have been 
 particularly persuaded by arguments in this area that, because LLMs are 
 statistical prediction machines, the model is completely and utterly incapable 
 of regard for the moral or ethical content of the text that it generates. It is 
 also almost impossible to verify the intellectual provenance of any text 
-generated. This means that they generate meaningless, immoral, nonsensical text 
-with no real ideas stringing anything together. In short, there is not a human 
-behind the writing, so how could it possibly be worth reading? For this reason, 
-I do not use LLMs to generate any portion of a research paper, cover letter, 
-email, blog post, course assignment, or similar text. 
+generated. In short, there is not a human behind the writing, so how could it 
+possibly be worth reading? For this reason, **I do not use LLMs to generate any 
+portion of a research paper, cover letter, grant, email, blog post, 
+course assignment, or similar text**. While this website was built with extensive 
+(and agentic) help from Gen. A.I., all of the text on this website is my own 
+writing.
 
 
 # Coding
-I am still figuring out how I feel about this one. I do sometimes use LLMs 
-in my coding—most often to:
+Generative A.I. tools are amazingly good at coding. Transformers and embeddings 
+are really amazing technologies and the rigid syntactical structure of programming 
+is a match made in heaven for them. I use Gen. AI to help me write code. 
+Specifically, I use them to: 
 
 ::: {}
 1. Document or comment on long scripts or functions.  
@@ -53,27 +57,35 @@ in my coding—most often to:
 6. Plotting data
 :::
 
-I've found LLMs are really crazy good at these things and bad at most others. 
-An important note is that I am *extremely* against the use of LLMs/AI for coding 
-(even in the use cases above) when it comes to anything near a statistical model 
-or other research-related data analysis. See the **Researching** section below 
-for more discussion on this.
+Some important nuance is worth discussing here. As a scientist, it is extremely 
+important to me that I have complete ownership over the most critical software 
+and ideas upon which my scientific inference depends. That is: theory, simulations, 
+statistical models, etc. The central code is and always will be code and logic 
+that *I wrote.* Having said that, in addition to the uses above, I also use AI 
+to help me write this critical code. However, I think adding friction to my 
+workflow when developing the most important code is a good thing (i.e. Using the 
+web-based chat interface to frontier intelligence models rather than agentic harnesses). 
+This ensures I stay on top of what the code and math I am writing is actually doing. 
+IF I do leverage agentic (Claude Code, OpenCode, etc.) tools to build models, I use 
+seperate working directories and only simulated data. I sometimes use this 
+more automated modality to prototype ideas. When I do, I like to use Agents that 
+I built myself so that the output is very similar to how I write code and in this
+way is much easier to audit and review en masse.
 
 # Learning
 I think this might be one of the worst use cases for LLMs, depending on *what* 
 exactly is being "learned." I value the struggle in learning something new. I 
 think that is what actually develops problem-solving and critical thinking. 
-Admittedly, though, I did use OpenAI's ChatGPT to help me understand some 
-Numerical Linear Algebra homework recently, and it was really helpful. As a 
-general pattern, though, I try not to use it. Whenever I find myself using it 
-I later come to regret not having just gone straight to a textbook, documentation, 
-or other primary source where I realized I would've learned what I needed and 
-then some...
+Nonetheless, I do find Gen A.I. to be occassionally very helpful in learning 
+a new concept in math or programming. It isn't where I turn to first though. I 
+am a huge fan of hardcopy textbooks, visualize demonstrations, lecture videos, 
+and doing exercises to learn material.
 
 
 # Images and Video
 I have less sophisticated thoughts here currently. I have used Generative AI to 
 create images before. In fact, the little favicon for this website was generated 
-using an LLM! When I see AI generated figures in manuscripts though, something 
+using an LLM! When I see AI generated figures in presentations though, something 
 about it irritates me a bit. Maybe I shouldn't be so grumpy about it though... 
-if the graphic communicates information effectively I guess it is fine.
+if the graphic communicates information effectively I guess it is fine. Don't 
+get me started on A.I. video though... 
