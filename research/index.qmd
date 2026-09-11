@@ -24,7 +24,7 @@ I view phenology as a unifying concept in ecology and evolution which integrates
 
 Phenology is an inherently individual and physiological process that can directly impact fitness, demography, and population persistence. At higher levels of organization, variation in phenological plasticity among species generates novel temporal community assemblies under variable environmental conditions. Taken together, these processes may scale to impact land surface and ecosystem phenology with critical implications for water, energy, agriculture, and ecosystem health.
 
-## Publications  
+## Publications
  
 ```{r}
 #| echo: false
@@ -80,8 +80,10 @@ for (pub in pubs) {
 ## Presentations
 
 ::: {.ref-list}
-- **Moore, M.A.**, Hoy, E. E., Griffith, P. C., Schaefer, K. M., & Bourgeau-Chavez, L. L. (2023). From Field to Air: Integrating Field Data in Support of the ABoVE Airborne Campaign. 2023, B31B-08. *American Geophysical Union* Fall Meeting. San Francisco, CA. https://ui.adsabs.harvard.edu/abs/2023AGUFM.B31B..08M
 
+- **Moore, M.A.**, Hulke, B.S., Kane, N.C., & Elmendorf, S.C. (2026). High-performance computing enabled generative models of flowering time in cultivated sunflower. *Department of Energy Compuational Science Graduate Fellowship: Annual Program Review*. Washington, D.C.
+
+- **Moore, M.A.**, Hoy, E. E., Griffith, P. C., Schaefer, K. M., & Bourgeau-Chavez, L. L. (2023). From Field to Air: Integrating Field Data in Support of the ABoVE Airborne Campaign. 2023, B31B-08. *American Geophysical Union* Fall Meeting. San Francisco, CA. https://ui.adsabs.harvard.edu/abs/2023AGUFM.B31B..08M
 
 :::
 

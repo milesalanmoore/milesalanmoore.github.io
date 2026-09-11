@@ -2,7 +2,7 @@
 title: "Film"
 pagetitle: "Film · Miles A. Moore"
 description: |
-    A sampling of my film photography. Mostly mountains, mostly 35mm.
+    A sampling of my film photography, 35mm and medium format.
 lightbox: true
 page-layout: full
 toc: false

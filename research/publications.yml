@@ -1,5 +1,5 @@
 - title: "Divergent regional trends in alpine tundra productivity linked to changes in snow-free season length and summer warming"
-  authors: "**Moore, M.A.**, Emery, N. C., and Elmendorf, S. C."
+  authors: "**Moore, M.A.**, Emery, N. C., and Elmendorf, S. C"
   year: 2026
   journal: "Environmental Research: Ecology"
   links:
@@ -17,7 +17,7 @@
       type: "primary"
 
 - title: "Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower"
-  authors: "Clark, E.I., **Moore, M.A.**, Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C."
+  authors: "Clark, E.I., **Moore, M.A.**, Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C"
   year: 2025
   journal: "New Phytologist"
   slug: "sunflower-optimal"
@@ -32,19 +32,32 @@
       type: "primary"
 
 - title: "Genetic-environment decomposition reveals geographical disparities in sunflower yield improvement across the Great Plains"
-  authors: "Elmendorf, S.C., Hulke, B.S., Clark, E.I., **Moore, M.A.**, Kane, N.C."
+  authors: "Elmendorf, S.C., Hulke, B.S., Clark, E.I., **Moore, M.A.**, Kane, N.C"
   year: "Accepted"
   journal: "Field Crops Research"
   links:
 
 - title: "In-situ soil moisture and active layer thickness in Alaska and Northwestern Canada, 2005-2024"
-  authors: "**Moore, M.A.**, Hoy, E. E., Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., et al."
+  authors: "**Moore, M.A.$^{†}$**, Hoy, E. E.$^{†}$, Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., et al ([$^{†}$Joint first authors]{.small})"
   year: "Accepted"
   journal: "Scientific Data"
   links:
 
 - title: "Forty-six years of sunflower multi-environment trials in the Great Plains"
-  authors: "Elmendorf, S.C., Hulke, B.S., ..., Clark, E.I., **Moore, M.A.**, ..., Kane, N.C."
+  authors: "Elmendorf, S.C., Hulke, B.S., ..., Clark, E.I., **Moore, M.A.**, ..., Kane, N.C"
   year: "In Review"
   journal: ""
   links:
+
+- title: "Scale- and stage-dependent effects of temperature, light, and urbanization on barn swallow (*Hirundo rustica*) breeding performance and nestling development"
+  authors: "Garcia, S.R., Laubach, Z.M., Keller, K.P., **Moore, M.A.**, Meredith Joy, I.J., Safran, R.J"
+  year: "In Review"
+  journal: ""
+  links:
+
+- title: "Genetic control of phenology and phenological plasticity are decoupled in cultivated sunflower "
+  authors: "Innes P., McNellie, J.P., Clark, E.I., **Moore, M.A.**, Keepers, K.G., Elmendorf, S.C., Hulke, B.S., & Kane, N.C"
+  year: "In Review"
+  journal: ""
+  links:
+
