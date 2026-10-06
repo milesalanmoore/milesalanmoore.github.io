@@ -16,6 +16,21 @@
       icon: "file-pdf"
       type: "primary"
 
+- title: "Genetic-environment decomposition reveals geographical disparities in sunflower yield improvement across the Great Plains"
+  authors: "Elmendorf, S.C., Hulke, B.S., Clark, E.I., **Moore, M.A.**, Kane, N.C"
+  year: 2026
+  journal: "Field Crops Research"
+  slug: "sunflower-yield"
+  links:
+    - text: "DOI"
+      url: "https://doi.org/10.1016/j.fcr.2026.110623"
+      icon: "link"
+      type: "primary"
+    - text: "Full-text"
+      url: "https://authors.elsevier.com/c/1nulD1M2tVgkWq"
+      icon: "file-pdf"
+      type: "primary"
+
 - title: "Climate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower"
   authors: "Clark, E.I., **Moore, M.A.**, Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C"
   year: 2025
@@ -30,12 +45,6 @@
       url: "https://onlinelibrary.wiley.com/share/author/4EAASTMRPFVR9PUSPKAE?target=10.1111/nph.70790"
       icon: "file-pdf"
       type: "primary"
-
-- title: "Genetic-environment decomposition reveals geographical disparities in sunflower yield improvement across the Great Plains"
-  authors: "Elmendorf, S.C., Hulke, B.S., Clark, E.I., **Moore, M.A.**, Kane, N.C"
-  year: "Accepted"
-  journal: "Field Crops Research"
-  links:
 
 - title: "In-situ soil moisture and active layer thickness in Alaska and Northwestern Canada, 2005-2024"
   authors: "**Moore, M.A.$^{†}$**, Hoy, E. E.$^{†}$, Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., et al ([$^{†}$Joint first authors]{.small})"
