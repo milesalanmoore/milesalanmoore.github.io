@@ -1,5 +1,54 @@
 [
   {
+    "objectID": "news/2025-12-09_Clarketal2025NP/index.html",
+    "href": "news/2025-12-09_Clarketal2025NP/index.html",
+    "title": "New co-authored manuscript in New Phytologist",
+    "section": "",
+    "text": "Details  DOI  Full-text\n\n\nMy colleagues and I have a new manuscript out! Published in New Phytologist, we used 46 years of digitized multi-environment trial data for hundreds of genotypes of agricultural sunflower to exmaine the relationship between flower timing, crop yield (reproductive performance), and climate.\nDr. Eliza Clark led this publication along with Dr. Sarah Elmendorf. Please checkout their work and consider reading this manuscript.\n Figure 5: Model predictions of optimal number of days to flowering across a range of planting days, average site degree days, and yearly anomalies. Predicted optimal days to flowering is indicated by the color of each cell. The black square outline on each panel shows a site with an average of about 900 growing degree days planted on the same day in four scenarios: (A) a colder than average year, (B) average year, (C) warmer year, (D) and an average mid-century year (2040-2069) as projected from a climate change model. The number in the top left of each panel shows the predicted optimal days to flowering for a site within the black outlined cell indicated on each panel.\n\nThumbnail image is a screenshot from the submitted version of the manuscript."
+  },
+  {
+    "objectID": "news/2026-01-13_Sp26Classes/index.html",
+    "href": "news/2026-01-13_Sp26Classes/index.html",
+    "title": "Spring 2026 Classes: Computational Bayesian Statistics and Deep Learning",
+    "section": "",
+    "text": "This semester, I am in two classes:\n\nComputational Bayesian Statistics: This course, a graduate-level class in the Applied Mathematics Department at CU Boulder, covers Bayesian statistics. In particular, we build from simple single parameter conjugate-prior Bayesian models and analytic posterior solutions through Importance Sampling, Hamiltonian Monte Carlo, and Cholesky Factorizations to full hierarchical models!\nFundamentals of Neural Networks & Deep Learning: This graduate course in the Computer Science Department rigorously teaches the foundational models, techniques, and optimization methods that underpin our most advanced artificial intelligence models today. We learned to apply backpropogation and find parameter gradients in deep convolutional neural networks by hand (yikes!) before finally being releived of that tedium and introduced to the PyTorch library for Deep Learning! From there, we are developing a deep theoretical understanding of Transformer architectures, the advanced technology underlying foundational AI models from OpenAI, Anthropic, and Google."
+  },
+  {
+    "objectID": "news/2025-12-04_NPR/index.html",
+    "href": "news/2025-12-04_NPR/index.html",
+    "title": "Niwot Ridge LTER, Emery Lab, and Miles’ work featured on NPR",
+    "section": "",
+    "text": "Link to NPR/KUNC Article  Emery Lab  Niwot Ridge LTER\n\n\n\n\n\n\nLast week, I joined my advisor, Nancy Emery, along with my labmate Katie Bardsley, and NPR journalist Isabella Escobedo on a trip up to our field experiment at the Niwot Ridge LTER to talk about our work on alpine plant responses to a changing environment.\nIn 2024, we established a Turf Transplant Experiment (which is now one in a global network of coordinated Turf Transplant Experiments). Using 512 0.25 \\(\\times\\) 0.25 m subplots in 80 plots across four carefully chosen sites, a third were transplanted to a paired site (from Cold to Warm or Warm to Cold), another third were transplanted within-site, and the final third are untreated control subplots.\nMy labmate labmate Katie and I are tracking the phenology, demography, and fitness of more than a 1000 individually marked plants of the species Bistorta bistortoides and Bistorta vivipara. These two closely related species have very different life histories and understanding their sensitivites to environmental change will help scientists build a predictive framework for vegetation change in high elevation ecosystems (i.e. when and why do we expect a species to shift it’s vegetative or reproductive phenology in response to the environment). Vegetation composition and phenology are important controls on water and energy cycles in alpine ecosystems which provide resources for humans and agriculture for billions of people worldwide.\nCheck out Isabella’s article at kunc.org here. Thumbnail image Copyright Isabella Escobedo / KUNC."
+  },
+  {
+    "objectID": "news/index.html",
+    "href": "news/index.html",
+    "title": "News",
+    "section": "",
+    "text": "Jan 13, 2026 Spring 2026 Classes: Computational Bayesian Statistics and Deep Learning \n\n\nDec 15, 2025 Fall 2025 Classes: Numerical Linear Algebra and HPC \n\n\nDec 9, 2025 New co-authored manuscript in New Phytologist \n\n\nDec 4, 2025 Niwot Ridge LTER, Emery Lab, and Miles’ work featured on NPR \n\n\nSep 5, 2025 Conference: Supercomputing 2025 in St. Louis \n\n\nMay 13, 2025 Miles is awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF) \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/articles/sunflower-optimal/index.html",
+    "href": "research/articles/sunflower-optimal/index.html",
+    "title": "Climate drives variation in optimal phenology",
+    "section": "",
+    "text": "Published paper ||  Full-text"
+  },
+  {
+    "objectID": "research/articles/sunflower-optimal/index.html#abstract",
+    "href": "research/articles/sunflower-optimal/index.html#abstract",
+    "title": "Climate drives variation in optimal phenology",
+    "section": "Abstract",
+    "text": "Abstract\n\nPhenological shifts are near ubiquitous responses to climate change in both wild and agricultural systems, but the fitness consequences of these shifts are unclear. We evaluate how flowering phenology influences fitness and how climate influences the relationship between flowering phenology and fitness.\nWe use a large dataset of performance trials of oilseed sunflower varieties (Helianthus annuus L.) conducted since 1978 across the Great Plains of North America. We estimate the flowering time that optimizes yield (fitness) in 341 environments to quantify how climate variation impacts the optimal flowering time.\nWe find that temperature is a key driver of optimal phenology, with earlier and faster flowering favored in hotter years and locations. Flowering time differences explain 9% of the variation in fitness between sunflower genotypes within trials. Flowering shifts a week away from the optimum incurred substantial penalties, with a median yield reduction of 23%.\nOur results indicate that the shifts to earlier phenology commonly observed under climate warming may be beneficial. In sunflower, maximizing agricultural productivity under future climates will likely require both careful selection of varieties to match new conditions as well as breeding new varieties that flower faster than material that is currently available commercially."
+  },
+  {
+    "objectID": "research/articles/sunflower-optimal/index.html#context",
+    "href": "research/articles/sunflower-optimal/index.html#context",
+    "title": "Climate drives variation in optimal phenology",
+    "section": "Context",
+    "text": "Context\nThis work builds on decades of agricultural trial data to understand how plant life-history traits and the environment interact. Our findings have important implicaitons for both evolutionary ecology and agricultural adaptation to environmental change."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -28,32 +77,11 @@
     "text": "Aug – Dec 2024 Teaching Assistant, EBIO 4410 / 5410 Biological Statistics University of Colorado Boulder"
   },
   {
-    "objectID": "research/articles/sunflower-optimal/index.html",
-    "href": "research/articles/sunflower-optimal/index.html",
-    "title": "Climate drives variation in optimal phenology",
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
     "section": "",
-    "text": "Published paper ||  Full-text"
-  },
-  {
-    "objectID": "research/articles/sunflower-optimal/index.html#abstract",
-    "href": "research/articles/sunflower-optimal/index.html#abstract",
-    "title": "Climate drives variation in optimal phenology",
-    "section": "Abstract",
-    "text": "Abstract\n\nPhenological shifts are near ubiquitous responses to climate change in both wild and agricultural systems, but the fitness consequences of these shifts are unclear. We evaluate how flowering phenology influences fitness and how climate influences the relationship between flowering phenology and fitness.\nWe use a large dataset of performance trials of oilseed sunflower varieties (Helianthus annuus L.) conducted since 1978 across the Great Plains of North America. We estimate the flowering time that optimizes yield (fitness) in 341 environments to quantify how climate variation impacts the optimal flowering time.\nWe find that temperature is a key driver of optimal phenology, with earlier and faster flowering favored in hotter years and locations. Flowering time differences explain 9% of the variation in fitness between sunflower genotypes within trials. Flowering shifts a week away from the optimum incurred substantial penalties, with a median yield reduction of 23%.\nOur results indicate that the shifts to earlier phenology commonly observed under climate warming may be beneficial. In sunflower, maximizing agricultural productivity under future climates will likely require both careful selection of varieties to match new conditions as well as breeding new varieties that flower faster than material that is currently available commercially."
-  },
-  {
-    "objectID": "research/articles/sunflower-optimal/index.html#context",
-    "href": "research/articles/sunflower-optimal/index.html#context",
-    "title": "Climate drives variation in optimal phenology",
-    "section": "Context",
-    "text": "Context\nThis work builds on decades of agricultural trial data to understand how plant life-history traits and the environment interact. Our findings have important implicaitons for both evolutionary ecology and agricultural adaptation to environmental change."
-  },
-  {
-    "objectID": "film/index.html",
-    "href": "film/index.html",
-    "title": "Film",
-    "section": "",
-    "text": "Furka Pass\n\n\n\n\n\nCentral Alps sunrise\n\n\n\n\n\nAlpfor glacier\n\n\n\n\n\nRidgeline at dawn"
+    "text": "I reserve all rights to any images on this website unless explicitly stated otherwise. They are not to be distributed, sold, modified, or otherwise reused without explicit permission.\nAll blog posts (coming soon!) are released under a Creative Commons Attribution-ShareAlike 4.0 International License."
   },
   {
     "objectID": "index.html",
@@ -91,60 +119,18 @@
     "text": "Latest news\nAll news"
   },
   {
-    "objectID": "news/2025-12-15-Fa25Classes/index.html",
-    "href": "news/2025-12-15-Fa25Classes/index.html",
-    "title": "Fall 2025 Classes: Numerical Linear Algebra and HPC",
-    "section": "",
-    "text": "This semester, I took 2 classes:\n\nNumerical Linear Algebra: This rigorous proof-based numerical methods class covered various decompositions and matrix factorizations (EVD, SVD, QR, Cholesky, and many more!). We proved and demonstrated how useful orthogonal matrices are in statistical modeling, and introduced conditioning and algorithmic stability of various algorithms to compute these factorizations.\nHigh-Performance Computing: This was a very hands-on course that taught the fundamentals of high-performance computing and algorithmic optimization. In particular, we were challenged to apply vectorization, multithreading (OpenMP), multiprocessing (MPI), and GPU acceleration (CUDA) to finite-element and finite-difference solutions to partial differential equations (including non-linear and transient dynamic equations). This course was taught entirely in C++."
-  },
-  {
-    "objectID": "news/2025-05-13_DOECSGF/index.html",
-    "href": "news/2025-05-13_DOECSGF/index.html",
-    "title": "Miles is awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)",
-    "section": "",
-    "text": "I am very grateful and excited to have been selected as one of 30 incoming Department of Energy Computational Science Graduate Fellows (DOE CSGF)! See the full press release on the DOE’s website, here."
-  },
-  {
-    "objectID": "news/index.html",
-    "href": "news/index.html",
-    "title": "News",
-    "section": "",
-    "text": "Jan 13, 2026 Spring 2026 Classes: Computational Bayesian Statistics and Deep Learning \n\n\nDec 15, 2025 Fall 2025 Classes: Numerical Linear Algebra and HPC \n\n\nDec 9, 2025 New co-authored manuscript in New Phytologist \n\n\nDec 4, 2025 Niwot Ridge LTER, Emery Lab, and Miles’ work featured on NPR \n\n\nSep 5, 2025 Conference: Supercomputing 2025 in St. Louis \n\n\nMay 13, 2025 Miles is awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF) \n\n\nNo matching items"
-  },
-  {
-    "objectID": "news/2025-12-09_Clarketal2025NP/index.html",
-    "href": "news/2025-12-09_Clarketal2025NP/index.html",
-    "title": "New co-authored manuscript in New Phytologist",
-    "section": "",
-    "text": "Details  DOI  Full-text\n\n\nMy colleagues and I have a new manuscript out! Published in New Phytologist, we used 46 years of digitized multi-environment trial data for hundreds of genotypes of agricultural sunflower to exmaine the relationship between flower timing, crop yield (reproductive performance), and climate.\nDr. Eliza Clark led this publication along with Dr. Sarah Elmendorf. Please checkout their work and consider reading this manuscript.\n Figure 5: Model predictions of optimal number of days to flowering across a range of planting days, average site degree days, and yearly anomalies. Predicted optimal days to flowering is indicated by the color of each cell. The black square outline on each panel shows a site with an average of about 900 growing degree days planted on the same day in four scenarios: (A) a colder than average year, (B) average year, (C) warmer year, (D) and an average mid-century year (2040-2069) as projected from a climate change model. The number in the top left of each panel shows the predicted optimal days to flowering for a site within the black outlined cell indicated on each panel.\n\nThumbnail image is a screenshot from the submitted version of the manuscript."
-  },
-  {
-    "objectID": "news/2025-12-04_NPR/index.html",
-    "href": "news/2025-12-04_NPR/index.html",
-    "title": "Niwot Ridge LTER, Emery Lab, and Miles’ work featured on NPR",
-    "section": "",
-    "text": "Link to NPR/KUNC Article  Emery Lab  Niwot Ridge LTER\n\n\n\n\n\n\nLast week, I joined my advisor, Nancy Emery, along with my labmate Katie Bardsley, and NPR journalist Isabella Escobedo on a trip up to our field experiment at the Niwot Ridge LTER to talk about our work on alpine plant responses to a changing environment.\nIn 2024, we established a Turf Transplant Experiment (which is now one in a global network of coordinated Turf Transplant Experiments). Using 512 0.25 \\(\\times\\) 0.25 m subplots in 80 plots across four carefully chosen sites, a third were transplanted to a paired site (from Cold to Warm or Warm to Cold), another third were transplanted within-site, and the final third are untreated control subplots.\nMy labmate labmate Katie and I are tracking the phenology, demography, and fitness of more than a 1000 individually marked plants of the species Bistorta bistortoides and Bistorta vivipara. These two closely related species have very different life histories and understanding their sensitivites to environmental change will help scientists build a predictive framework for vegetation change in high elevation ecosystems (i.e. when and why do we expect a species to shift it’s vegetative or reproductive phenology in response to the environment). Vegetation composition and phenology are important controls on water and energy cycles in alpine ecosystems which provide resources for humans and agriculture for billions of people worldwide.\nCheck out Isabella’s article at kunc.org here. Thumbnail image Copyright Isabella Escobedo / KUNC."
-  },
-  {
-    "objectID": "news/2026-01-13_Sp26Classes/index.html",
-    "href": "news/2026-01-13_Sp26Classes/index.html",
-    "title": "Spring 2026 Classes: Computational Bayesian Statistics and Deep Learning",
-    "section": "",
-    "text": "This semester, I am in two classes:\n\nComputational Bayesian Statistics: This course, a graduate-level class in the Applied Mathematics Department at CU Boulder, covers Bayesian statistics. In particular, we build from simple single parameter conjugate-prior Bayesian models and analytic posterior solutions through Importance Sampling, Hamiltonian Monte Carlo, and Cholesky Factorizations to full hierarchical models!\nFundamentals of Neural Networks & Deep Learning: This graduate course in the Computer Science Department rigorously teaches the foundational models, techniques, and optimization methods that underpin our most advanced artificial intelligence models today. We learned to apply backpropogation and find parameter gradients in deep convolutional neural networks by hand (yikes!) before finally being releived of that tedium and introduced to the PyTorch library for Deep Learning! From there, we are developing a deep theoretical understanding of Transformer architectures, the advanced technology underlying foundational AI models from OpenAI, Anthropic, and Google."
-  },
-  {
-    "objectID": "news/2025-09-05_SC25/index.html",
-    "href": "news/2025-09-05_SC25/index.html",
-    "title": "Conference: Supercomputing 2025 in St. Louis",
-    "section": "",
-    "text": "I am excited to share that I will be attending Supercomputing 2025 (SC25) this November in St. Louis, Missouri. SC is the leading international conference for high performance computing, networking, storage, and analysis. I am particularly interested in how large-scale computation enables generative Bayesian modeling, causal inference, and machine learning for environmental data. I’m looking forward to the tutorials, talks, and workshops!"
-  },
-  {
     "objectID": "ai/index.html",
     "href": "ai/index.html",
     "title": "Artificial Intelligence Use",
     "section": "",
     "text": "I believe in being transparent and explicit about the use of Generative Artificial Intelligence (AI) tools, like Large Language Models (LLMs), in my intellectual work. On this page, you’ll find a collection of statements about if and how I use AI for specific tasks.\n\n\nEverything in my research and on this website was written by me.\n\n\nAI tools are becoming ubiquitous in the daily workflow of many knowledge workers. These text-generation models are showing up in email applications, coding environments, job application portals, internet search engines, and just about anywhere else they can be embedded. The implicit promise of these tools is that they save time and money by reducing the amount of human effort required in tasks ranging from mundane to mission-critical. Here’s how I am using (or not using) these tools:\n\n\n\n\n\n\nNoteThe /ai manifesto\n\n\n\nI was inspired to write this page by Andrew Heiss’ own version of this sort of statement, as well as the references he linked: “The ‘/ai’ manifesto”. See the /ai public database for more.\n\n\n\nWriting\nI am strongly opposed to the use of AI for writing anything. I have been particularly persuaded by arguments in this area that, because LLMs are statistical prediction machines, the model is completely and utterly incapable of regard for the moral or ethical content of the text that it generates. It is also almost impossible to verify the intellectual provenance of any text generated. In short, there is not a human behind the writing, so how could it possibly be worth reading? For this reason, I do not use LLMs to generate any portion of a research paper, cover letter, grant, email, blog post, course assignment, or similar text. While this website was built with extensive (and agentic) help from Gen. A.I., all of the text on this website is my own writing.\n\n\nCoding\nGenerative A.I. tools are amazingly good at coding. Transformers and embeddings are really amazing technologies and the rigid syntactical structure of programming is a match made in heaven for them. I use Gen. AI to help me write code. Specifically, I use them to:\n\n\nDocument or comment on long scripts or functions.\n\nTurn a chunk of code I’ve written into a more general function with type checks and tests.\n\nTranslate from one language to another.\n\nExplain complex code chunks.\n\nReview code for logical errors or potential problems.\n\nPlotting data\n\n\nSome important nuance is worth discussing here. As a scientist, it is extremely important to me that I have complete ownership over the most critical software and ideas upon which my scientific inference depends. That is: theory, simulations, statistical models, etc. The central code is and always will be code and logic that I wrote. Having said that, in addition to the uses above, I also use AI to help me write this critical code. However, I think adding friction to my workflow when developing the most important code is a good thing (i.e. Using the web-based chat interface to frontier intelligence models rather than agentic harnesses). This ensures I stay on top of what the code and math I am writing is actually doing. IF I do leverage agentic (Claude Code, OpenCode, etc.) tools to build models, I use seperate working directories and only simulated data. I sometimes use this more automated modality to prototype ideas. When I do, I like to use Agents that I built myself so that the output is very similar to how I write code and in this way is much easier to audit and review en masse.\n\n\nLearning\nI think this might be one of the worst use cases for LLMs, depending on what exactly is being “learned.” I value the struggle in learning something new. I think that is what actually develops problem-solving and critical thinking. Nonetheless, I do find Gen A.I. to be occassionally very helpful in learning a new concept in math or programming. It isn’t where I turn to first though. I am a huge fan of hardcopy textbooks, visualize demonstrations, lecture videos, and doing exercises to learn material.\n\n\nImages and Video\nI have less sophisticated thoughts here currently. I have used Generative AI to create images before. In fact, the little favicon for this website was generated using an LLM! When I see AI generated figures in presentations though, something about it irritates me a bit. Maybe I shouldn’t be so grumpy about it though… if the graphic communicates information effectively I guess it is fine. Don’t get me started on A.I. video though…"
+  },
+  {
+    "objectID": "film/index.html",
+    "href": "film/index.html",
+    "title": "Film",
+    "section": "",
+    "text": "Furka Pass\n\n\n\n\n\nCentral Alps sunrise\n\n\n\n\n\nAlpfor glacier\n\n\n\n\n\nRidgeline at dawn"
   },
   {
     "objectID": "research/index.html",
@@ -158,7 +144,7 @@
     "href": "research/index.html#publications",
     "title": "Research",
     "section": "Publications",
-    "text": "Publications\n\n\n2026\n\n\n\nDivergent regional trends in alpine tundra productivity linked to changes in snow-free season length and summer warming\n\n\nMoore, M.A., Emery, N. C., and Elmendorf, S. C. Environmental Research: Ecology.\n\n\n Preprint  DOI  Full-text\n\n\n\n\n\n2025\n\n\n\nClimate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower\n\n\nClark, E.I., Moore, M.A., Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C. New Phytologist.\n\n\n Details  DOI  Full-text\n\n\n\n\n\nAccepted\n\n\n\nGenetic-environment decomposition reveals geographical disparities in sunflower yield improvement across the Great Plains\n\n\nElmendorf, S.C., Hulke, B.S., Clark, E.I., Moore, M.A., Kane, N.C. Field Crops Research.\n\n\n\n\n\nAccepted\n\n\n\nIn-situ soil moisture and active layer thickness in Alaska and Northwestern Canada, 2005-2024\n\n\nMoore, M.A.\\(^{†}\\), Hoy, E. E.\\(^{†}\\), Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., et al (\\(^{†}\\)Joint first authors). Scientific Data.\n\n\n\n\n\nIn Review\n\n\n\nForty-six years of sunflower multi-environment trials in the Great Plains\n\n\nElmendorf, S.C., Hulke, B.S., …, Clark, E.I., Moore, M.A., …, Kane, N.C\n\n\n\n\n\nIn Review\n\n\n\nScale- and stage-dependent effects of temperature, light, and urbanization on barn swallow (Hirundo rustica) breeding performance and nestling development\n\n\nGarcia, S.R., Laubach, Z.M., Keller, K.P., Moore, M.A., Meredith Joy, I.J., Safran, R.J\n\n\n\n\n\nIn Review\n\n\n\nGenetic control of phenology and phenological plasticity are decoupled in cultivated sunflower\n\n\nInnes P., McNellie, J.P., Clark, E.I., Moore, M.A., Keepers, K.G., Elmendorf, S.C., Hulke, B.S., & Kane, N.C"
+    "text": "Publications\n\n\n2026\n\n\n\nDivergent regional trends in alpine tundra productivity linked to changes in snow-free season length and summer warming\n\n\nMoore, M.A., Emery, N. C., and Elmendorf, S. C. Environmental Research: Ecology.\n\n\n Preprint  DOI  Full-text\n\n\n\n\n\n2026\n\n\n\nGenetic-environment decomposition reveals geographical disparities in sunflower yield improvement across the Great Plains\n\n\nElmendorf, S.C., Hulke, B.S., Clark, E.I., Moore, M.A., Kane, N.C. Field Crops Research.\n\n\n Details  DOI  Full-text\n\n\n\n\n\n2025\n\n\n\nClimate drives variation in optimal phenology: 46 years of multi-environment trials in sunflower\n\n\nClark, E.I., Moore, M.A., Khoury, C.K., Hulke, B.S., Kane, N.C. and Elmendorf, S.C. New Phytologist.\n\n\n Details  DOI  Full-text\n\n\n\n\n\nAccepted\n\n\n\nIn-situ soil moisture and active layer thickness in Alaska and Northwestern Canada, 2005-2024\n\n\nMoore, M.A.\\(^{†}\\), Hoy, E. E.\\(^{†}\\), Clayton, L. K., Schaefer, K., Bourgeau-Chavez, L. L., et al (\\(^{†}\\)Joint first authors). Scientific Data.\n\n\n\n\n\nIn Review\n\n\n\nForty-six years of sunflower multi-environment trials in the Great Plains\n\n\nElmendorf, S.C., Hulke, B.S., …, Clark, E.I., Moore, M.A., …, Kane, N.C\n\n\n\n\n\nIn Review\n\n\n\nScale- and stage-dependent effects of temperature, light, and urbanization on barn swallow (Hirundo rustica) breeding performance and nestling development\n\n\nGarcia, S.R., Laubach, Z.M., Keller, K.P., Moore, M.A., Meredith Joy, I.J., Safran, R.J\n\n\n\n\n\nIn Review\n\n\n\nGenetic control of phenology and phenological plasticity are decoupled in cultivated sunflower\n\n\nInnes P., McNellie, J.P., Clark, E.I., Moore, M.A., Keepers, K.G., Elmendorf, S.C., Hulke, B.S., & Kane, N.C"
   },
   {
     "objectID": "research/index.html#presentations",
@@ -175,10 +161,45 @@
     "text": "Datasets\n\n\nMoore, M.A., K. Schaefer, L.K. Clayton, E.E. Hoy, M. Auclair, K. Bakian-Dogaheh, M.J. Battaglia, K. Bennett, W.R. Bolton, L.L. Bourgeau-Chavez, … Y. Zhao, and S. Zwieback. (2025). ABoVE: Soil Moisture and Active Layer Thickness in Alaska, USA and Canada, 2005-2022. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/2369\nWhite, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Losleben, M., & Moore, M. A. (2025). Homogenized, gap-filled, daily air temperature data for Saddle, 1986—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/49a2171ec028c4ddef298752bc9ebe8d\nWhite, C. T., Morse, J. F., Brandes, H., Chowanski, K., Kittel, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for Saddle, 1981—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/8caa444276521b797e4a16485dc0e137\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (202a). Infilled daily air temperature data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/0b4f8747ea72258e46681bb511c262f3\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily air temperature data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/b05689181c21ac40d35b6c1c01e2f8a\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for C1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/5f896d7d1eb19649ee2ff9fca7166160\nKittel, T., White, C., Hartman, M., Chowanski, K., Ackerman, T., Williams, M., Losleben, M., & Moore, M. A. (2025). Infilled daily precipitation data for D1 chart recorder, 1952—Ongoing. Environmental Data Initiative. https://doi.org/10.6073/pasta/02b125f7d0dc87a6d40e6ca7001471ce\nMoore, M.A., Orellana-Soto,M.E., Hartman,N.R. and Kane,N.C. (2024). Helianthus agrestis isolate USDA PI 673199 cultivar PI 468416 chloroplast, complete genome. NCBI Nucleotide. Accession NC_086875.1. Available from: https://www.ncbi.nlm.nih.gov/nuccore/NC_086875.1"
   },
   {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "License",
+    "objectID": "research/articles/sunflower-yield/index.html",
+    "href": "research/articles/sunflower-yield/index.html",
+    "title": "Genetic-environment decomposition reveals geographical disparities in sunflower yield improvement",
     "section": "",
-    "text": "I reserve all rights to any images on this website unless explicitly stated otherwise. They are not to be distributed, sold, modified, or otherwise reused without explicit permission.\nAll blog posts (coming soon!) are released under a Creative Commons Attribution-ShareAlike 4.0 International License."
+    "text": "Published paper ||  Full-text"
+  },
+  {
+    "objectID": "research/articles/sunflower-yield/index.html#highlights",
+    "href": "research/articles/sunflower-yield/index.html#highlights",
+    "title": "Genetic-environment decomposition reveals geographical disparities in sunflower yield improvement",
+    "section": "Highlights",
+    "text": "Highlights\n\nGenetic improvement has been focused on Northern Great Plains states.\nSunflower yield increased by ~50% in northern states with less or no improvement in other areas.\nGenetic and environmental components both contribute to yield gain variation.\nEnvironmental change sometimes counteracted yield and quality improvements."
+  },
+  {
+    "objectID": "research/articles/sunflower-yield/index.html#abstract",
+    "href": "research/articles/sunflower-yield/index.html#abstract",
+    "title": "Genetic-environment decomposition reveals geographical disparities in sunflower yield improvement",
+    "section": "Abstract",
+    "text": "Abstract\nContext. While past decades have seen substantial gains in crop productivity, how much of this is due to genetic improvement versus changes in growing environment, including climate and management practices, remains unclear. Separating the roles of breeding improvements and environmental changes in crop improvement requires comprehensive data, including phenotypic data on plant varieties released over multiple years and environmental data that characterizes the variable growing conditions. Leveraging long-term variety field trial data is one way to evaluate the relative effects of crop genetic improvement and changes in environment to overall crop improvement over time.\nMethods. Using a dataset of 46 years of commercial sunflower variety trial data from across the Great Plains of the US, we quantified the contributions of plant genotype (hybrid variety) and environment (including agronomy and climate) to overall productivity in these trials and compared them to long-term public farm-gate data. We determined the major meteorological drivers of sunflower yield improvements and projected how environmental quality for sunflower production in the Great Plains will change in the future.\nResults. The rate of genetic improvement varied across the region, and environmental change was sometimes antagonistic to the goal of yield and quality improvements. The northern Great Plains experienced substantial increases in sunflower yield since the 1970s due to gains in both breeding and environmental quality, whereas the southern Great Plains had smaller genetic gains which were largely offset by a decrease in environmental quality. High yielding environments were associated with an optimal daily maximum temperature near 28°C at flowering time, low vapor pressure deficit, and high growing degree days. Under projected future climate scenarios, environmental quality for sunflower production, as defined by these parameters, will decrease across much of the growing region. As a result, sunflower production would be reduced in much of the Great Plains by mid-century, unless breeding and agronomy change to broaden environmental tolerances.\nImplications. These insights inform strategies for breeders, agronomists, and farmers to optimize crop performance to local and regional climates, improve climate resilience, and maximize food security."
+  },
+  {
+    "objectID": "news/2025-05-13_DOECSGF/index.html",
+    "href": "news/2025-05-13_DOECSGF/index.html",
+    "title": "Miles is awarded the Department of Energy Computational Science Graduate Fellowship (DOE CSGF)",
+    "section": "",
+    "text": "I am very grateful and excited to have been selected as one of 30 incoming Department of Energy Computational Science Graduate Fellows (DOE CSGF)! See the full press release on the DOE’s website, here."
+  },
+  {
+    "objectID": "news/2025-09-05_SC25/index.html",
+    "href": "news/2025-09-05_SC25/index.html",
+    "title": "Conference: Supercomputing 2025 in St. Louis",
+    "section": "",
+    "text": "I am excited to share that I will be attending Supercomputing 2025 (SC25) this November in St. Louis, Missouri. SC is the leading international conference for high performance computing, networking, storage, and analysis. I am particularly interested in how large-scale computation enables generative Bayesian modeling, causal inference, and machine learning for environmental data. I’m looking forward to the tutorials, talks, and workshops!"
+  },
+  {
+    "objectID": "news/2025-12-15-Fa25Classes/index.html",
+    "href": "news/2025-12-15-Fa25Classes/index.html",
+    "title": "Fall 2025 Classes: Numerical Linear Algebra and HPC",
+    "section": "",
+    "text": "This semester, I took 2 classes:\n\nNumerical Linear Algebra: This rigorous proof-based numerical methods class covered various decompositions and matrix factorizations (EVD, SVD, QR, Cholesky, and many more!). We proved and demonstrated how useful orthogonal matrices are in statistical modeling, and introduced conditioning and algorithmic stability of various algorithms to compute these factorizations.\nHigh-Performance Computing: This was a very hands-on course that taught the fundamentals of high-performance computing and algorithmic optimization. In particular, we were challenged to apply vectorization, multithreading (OpenMP), multiprocessing (MPI), and GPU acceleration (CUDA) to finite-element and finite-difference solutions to partial differential equations (including non-linear and transient dynamic equations). This course was taught entirely in C++."
   }
 ]
