@@ -2,6 +2,7 @@ project:
   type: website
   resources:
     - assets/miles-pgp-public-key.asc
+    - assets/CV.pdf
 
 website:
   title: "Miles A. Moore"
@@ -18,6 +19,9 @@ website:
         text: News
       - href: film/index.qmd
         text: Film
+      - href: assets/CV.pdf
+        text: CV
+        target: _blank
   page-footer:
     left: >-
      &#169; 2025 Miles Alan Moore &#8729; Made with [Quarto](https://quarto.org)
