@@ -18,10 +18,10 @@ execute:
 ::: {.hero-text}
 [PhD student · Computational ecologist · Eco-evo Biologist]{.eyebrow}
 
-<h1 class="hero-name">Studying the <em>timing</em> of life in a changing environment.</h1>
+<h1 class="hero-name">Miles A. Moore</h1>
 
 ::: {.lede}
-I'm a PhD student and **DOE Computational Science Graduate Fellow** at the University of Colorado Boulder studying plant biology & phenology (the timing of growth, reproduction, and dispersal). Biological data are always messy and complex. I build advanced models that make the most of imperfect observations by connecting theory, observation processes, and data to drive **actionable conclusions**. What's driving change? How certain are we? Where should we look next?
+I'm a PhD student and **DOE Computational Science Graduate Fellow** at the University of Colorado Boulder studying plant biology & phenology. I build advanced models that make the most of imperfect observations by connecting theory, observation processes, and data to drive **actionable conclusions**.
 :::
 
 ::: {.hero-actions}
